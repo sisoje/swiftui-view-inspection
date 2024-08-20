@@ -8,15 +8,15 @@ import SwiftUI
 }
 
 @MainActor public extension Loadable {
-    func loadAsync(_ asyncThrowingFunc: @MainActor () async throws -> Void) async {
+    func loadAsync(_ asyncThrowingFunc: () async throws -> Void) async {
         DebugLogger.debugLogger?.info("loadAsync started")
         await projectedValue.load(asyncThrowingFunc)
     }
 
-    func loadSync(_ asyncThrowingFunc: @escaping @MainActor () async throws -> Void) {
+    func loadSync(_ asyncThrowingFunc: @escaping () async throws -> Void) {
         DebugLogger.debugLogger?.info("loadSync started")
         $taskWrapper.load { @MainActor in
-            await loadAsync(asyncThrowingFunc)
+            await projectedValue.load(asyncThrowingFunc)
         }
     }
 }
@@ -24,5 +24,8 @@ import SwiftUI
 public extension View {
     @ViewBuilder func taskLoadable(_ loadable: Loadable) -> some View {
         taskWrapper(loadable.taskWrapper)
+            .onDisappear {
+                loadable.taskWrapper = .init()
+            }
     }
 }

@@ -1,3 +1,4 @@
+[![Swift](https://github.com/sisoje/swiftui-native/actions/workflows/swift.yml/badge.svg)](https://github.com/sisoje/swiftui-native/actions/workflows/swift.yml)
 # SwiftUI Native
 ### Introduction
 SwiftUI is based on Elm / MVU architectural pattern, meaning, this repository demonstrates how to use SwiftUI in the pure form and as close to MVU as possible.
