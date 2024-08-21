@@ -1,7 +1,7 @@
 import SwiftUI
 
-public extension Binding {
-    @MainActor static func variable<T>(_ initial: T) -> Binding<T> {
+extension Binding {
+    static func variable<T>(_ initial: T) -> Binding<T> {
         var temp = initial
         return Binding<T> {
             temp

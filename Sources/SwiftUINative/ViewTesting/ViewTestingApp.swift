@@ -9,7 +9,7 @@ public struct ViewTestingApp: App {
     }
 
     public var body: some Scene {
-        let _ = ViewHosting.hostView = hostView
+        let _ = ViewHostingService.hostView = hostView
         WindowGroup {
             AnyView(view)
         }

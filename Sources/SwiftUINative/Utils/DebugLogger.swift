@@ -18,4 +18,4 @@ public extension DebugLoggable {
     }
 }
 
-enum DebugLogger: DebugLoggable {}
+public enum DebugLogger: DebugLoggable {}

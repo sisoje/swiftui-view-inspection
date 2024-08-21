@@ -10,13 +10,13 @@ final class ViewLifecycleTests: HostingTestsBase {}
             @State var number = 0
             var body: some View {
                 let _ = postBodyEvaluationNotification()
-                number.onAppear {
+                ProgressView().onAppear {
                     number += 1
                 }
             }
         }
         
-        ViewHosting.hostView {
+        ViewHostingService.hostView {
             DummyView()
         }
         
@@ -29,13 +29,13 @@ final class ViewLifecycleTests: HostingTestsBase {}
             @State var number = 0
             var body: some View {
                 let _ = postBodyEvaluationNotification()
-                number.task {
+                Text(number.description).task {
                     number = await .asyncInc(number)
                 }
             }
         }
         
-        ViewHosting.hostView {
+        ViewHostingService.hostView {
             DummyView()
         }
         

@@ -11,14 +11,14 @@ final class LoadableTests: HostingTestsBase {}
             var state: LoadingState { _number.state }
             var body: some View {
                 let _ = postBodyEvaluationNotification()
-                number.task {
+                ProgressView().task {
                     await _number.loadAsync { await .asyncInc(number) }
                 }
                 .disabled(_number.state.isLoading)
             }
         }
 
-        ViewHosting.hostView {
+        ViewHostingService.hostView {
             Dummy()
         }
 
@@ -39,15 +39,15 @@ final class LoadableTests: HostingTestsBase {}
             var state: LoadingState { _number.state }
             var body: some View {
                 let _ = postBodyEvaluationNotification()
-                number.onAppear {
+                ProgressView().onAppear {
                     _number.loadSync { await .asyncInc(number) }
                 }
-                .taskLoadable(_number.loadable)
+                .taskWrapper(_number.loadable)
                 .disabled(_number.state.isLoading)
             }
         }
 
-        ViewHosting.hostView {
+        ViewHostingService.hostView {
             Dummy()
         }
 

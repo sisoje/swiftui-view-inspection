@@ -22,10 +22,7 @@ import SwiftUI
 }
 
 public extension View {
-    @ViewBuilder func taskLoadable(_ loadable: Loadable) -> some View {
-        taskWrapper(loadable.taskWrapper)
-            .onDisappear {
-                loadable.taskWrapper = .init()
-            }
+    @ViewBuilder func taskWrapper(_ loadable: Loadable) -> some View {
+        taskWrapper(loadable.$taskWrapper)
     }
 }

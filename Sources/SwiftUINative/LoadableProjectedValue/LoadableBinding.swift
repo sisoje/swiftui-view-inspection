@@ -5,7 +5,7 @@ import SwiftUI
     @Loadable public var state
     public var projectedValue: Binding<T> { $wrappedValue.animation() }
     public var loadable: Loadable { _state }
-    
+
     public init(_ binding: Binding<T>) {
         _wrappedValue = binding
     }

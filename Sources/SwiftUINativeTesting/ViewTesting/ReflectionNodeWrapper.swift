@@ -13,8 +13,8 @@ extension ReflectionNodeWrapper {
     }
     
     var asyncActions: [TypedNodeReflection<() async -> Void>] {
-        let basetype = TypeInfo((() async -> Void).self).baseTypename
-        return node.allNodes.filter { $0.typeInfo.typename.hasSuffix(basetype) }.map(TypedNodeReflection.init)
+        let typename = TypeInfo((() async -> Void).self).typename
+        return node.allNodes.filter { $0.typeInfo.typename.hasSuffix(typename) }.map(TypedNodeReflection.init)
     }
     
     var actions: [TypedNodeReflection<() -> Void>] {

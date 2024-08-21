@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct TaskWrapper {
-    nonisolated(unsafe) fileprivate static var debugIds: Set<UUID> = []
+    fileprivate nonisolated(unsafe) static var debugIds: Set<UUID> = []
     var id = UUID()
     var asyncFunction: @Sendable () async -> Void = {}
 }
@@ -17,5 +17,12 @@ extension View {
     @ViewBuilder func taskWrapper(_ wrapper: TaskWrapper) -> some View {
         let _ = assert(TaskWrapper.debugIds.insert(wrapper.id).memberAfterInsert.uuidString.isContiguousUTF8, "mark task modifier as applied")
         task(id: wrapper.id, wrapper.asyncFunction)
+    }
+
+    @ViewBuilder func taskWrapper(_ wrapper: Binding<TaskWrapper>) -> some View {
+        taskWrapper(wrapper.wrappedValue)
+            .onDisappear {
+                wrapper.wrappedValue = .init()
+            }
     }
 }
