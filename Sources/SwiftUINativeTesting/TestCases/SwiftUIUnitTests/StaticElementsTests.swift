@@ -9,6 +9,6 @@ final class StaticElementsTests: XCTestCase {}
     }
     
     func testImage() {
-        XCTAssertEqual(Image(systemName: "circle").reflectionSnapshot.images.count, 1)
+        XCTAssertEqual(Image(systemName: "circle").reflectionSnapshot.images[0].name, "circle")
     }
 }

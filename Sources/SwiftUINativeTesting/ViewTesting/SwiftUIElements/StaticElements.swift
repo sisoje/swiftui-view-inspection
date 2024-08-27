@@ -8,3 +8,9 @@ extension TextReflection {
         strings[0].value
     }
 }
+
+extension ImageReflection {
+    var name: String {
+        strings[0].value
+    }
+}

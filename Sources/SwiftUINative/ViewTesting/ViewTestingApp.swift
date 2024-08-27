@@ -4,12 +4,10 @@ public struct ViewTestingApp: App {
     public init() {}
     @State private var view: any View = EmptyView()
 
-    @MainActor private func hostView(@ViewBuilder content: @MainActor () -> any View) {
-        view = content().id(UUID())
-    }
-
     public var body: some Scene {
-        let _ = ViewHostingService.hostView = hostView
+        let _ = ViewHostingService.hostView = { builder in
+            view = builder().id(UUID())
+        }
         WindowGroup {
             AnyView(view)
         }

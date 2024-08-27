@@ -2,7 +2,7 @@ import Foundation
 
 struct TypeInfo: Equatable {
     let typename: String
-    
+
     var baseTypename: String {
         typename.components(separatedBy: "<")[0]
     }

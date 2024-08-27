@@ -41,7 +41,7 @@ final class ViewLifecycleTests: HostingTestsBase {}
         
         let view = try await DummyView.getTestView()
         XCTAssertEqual(view.number, 0)
-        _ = try await DummyView.getTestView()
+        try await DummyView.getTestView()
         XCTAssertEqual(view.number, 1)
     }
 }
