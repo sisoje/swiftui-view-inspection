@@ -3,7 +3,7 @@ import XCTest
 
 class HostedViewsTestsBase: XCTestCase {
     @MainActor override func setUp() async throws {
-        guard ViewHostingService.hostView != nil else {
+        guard ViewHostingApp.hostView != nil else {
             throw XCTSkip("stateful view need hosting")
         }
     }

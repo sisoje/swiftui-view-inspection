@@ -16,7 +16,7 @@ final class ViewLifecycleTests: HostedViewsTestsBase {}
             }
         }
         
-        ViewHostingService.hostView {
+        ViewHostingApp.hostView {
             DummyView()
         }
         
@@ -35,7 +35,7 @@ final class ViewLifecycleTests: HostedViewsTestsBase {}
             }
         }
         
-        ViewHostingService.hostView {
+        ViewHostingApp.hostView {
             DummyView()
         }
         
