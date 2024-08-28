@@ -2,7 +2,7 @@ import SwiftUI
 @testable import ViewHosting
 import XCTest
 
-final class ViewLifecycleTests: ViewHostingTestsBase {}
+final class ViewLifecycleTests: HostedViewsTestsBase {}
 
 @MainActor extension ViewLifecycleTests {
     func testOnAppear() async throws {
@@ -20,7 +20,7 @@ final class ViewLifecycleTests: ViewHostingTestsBase {}
             DummyView()
         }
         
-        let view = try await DummyView.getTestView()
+        let view = try await DummyView.getBodyEvaluation()
         XCTAssertEqual(view.number, 1)
     }
     
@@ -30,7 +30,7 @@ final class ViewLifecycleTests: ViewHostingTestsBase {}
             var body: some View {
                 let _ = postBodyEvaluation()
                 Text(number.description).task {
-                    number = await .asyncInc(number)
+                    number = number + 1
                 }
             }
         }
@@ -39,9 +39,9 @@ final class ViewLifecycleTests: ViewHostingTestsBase {}
             DummyView()
         }
         
-        let view = try await DummyView.getTestView()
+        let view = try await DummyView.getBodyEvaluation()
         XCTAssertEqual(view.number, 0)
-        try await DummyView.getTestView()
+        try await DummyView.getBodyEvaluation()
         XCTAssertEqual(view.number, 1)
     }
 }

@@ -1,7 +1,7 @@
 enum CastingUtils {
-    static func memoryCast<T2>(_ x: Any, _ t: T2.Type = T2.self) -> T2 {
+    static func memoryCast<T>(_ x: Any, _ t: T.Type = T.self) -> T {
         withUnsafePointer(to: x) {
-            $0.withMemoryRebound(to: T2.self, capacity: 1) { $0.pointee }
+            $0.withMemoryRebound(to: T.self, capacity: 1) { $0.pointee }
         }
     }
 }

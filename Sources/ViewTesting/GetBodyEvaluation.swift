@@ -9,7 +9,7 @@ extension Notification: @unchecked Sendable {}
 #endif
 
 extension View {
-    @discardableResult @MainActor static func getTestView(timeout: TimeInterval = 1) async throws -> Self {
+    @discardableResult @MainActor static func getBodyEvaluation(timeout: TimeInterval = 1) async throws -> Self {
         // normally we get notification immediately but if there is any problem we dont want to wait forever
         let timeoutTask = Task {
             try await Task.sleep(nanoseconds: UInt64(timeout * 1_000_000_000))
