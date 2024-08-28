@@ -1,9 +1,12 @@
 import SwiftUI
 @testable import ViewHosting
 
-extension Notification: @unchecked @retroactive Sendable {
-    // this silences the "notification is not sendable" warning
-}
+// this silences the "notification is not sendable" warning
+#if swift(>=6.0)
+extension Notification: @unchecked @retroactive Sendable {}
+#else
+extension Notification: @unchecked Sendable {}
+#endif
 
 extension View {
     @discardableResult @MainActor static func getTestView(timeout: TimeInterval = 1) async throws -> Self {
