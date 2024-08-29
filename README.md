@@ -1,63 +1,197 @@
+# SwiftUI View Testing Framework
+
 [![Swift](https://github.com/sisoje/swiftui-native/actions/workflows/swift.yml/badge.svg)](https://github.com/sisoje/swiftui-native/actions/workflows/swift.yml)
-# SwiftUI View Testing
-### Introduction
-SwiftUI is based on Elm / MVU architectural pattern, meaning, this repository demonstrates how to use SwiftUI in the pure form and as close to MVU as possible.
 
-### What is MVU?
-The MVU pattern is known for its simplicity, predictability, and ease of testing, making it an excellent choice for managing state and handling user interactions in modern front-end applications.
+## Introduction
 
-The Model-View-Update (MVU) pattern is a simple and effective way to structure applications. It divides the application logic into three distinct parts:
+This framework provides a powerful solution for testing SwiftUI views, with a particular focus on testing views with changing state. It offers tools for introspection, reflection, and interaction with SwiftUI components, enabling developers to verify the correctness and behavior of their user interfaces throughout the view lifecycle.
 
-- Model: Represents the state of the current view. It typically includes data structures that hold all the necessary information about the current state. In SwiftUI, views and their state are managed using immutable structs, ensuring a clear and predictable data flow.
-- View: A function that takes the current state (model) and returns a user interface representation.
-- Update: A function that takes the current state (model) and a message (an action or event) and returns a new state. The update function defines how the state changes in response to different messages. It may also trigger side effects, such as network requests, which are handled asynchronously.
+## Key Features
 
-### Example: LoginModel in SwiftUI
-Below is an example of how the MVU pattern can be implemented in SwiftUI using a LoginModel component.
+- **State Change Testing**: Easily test views with changing state, including `@State`, `@Binding`, and other property wrappers.
+- **Lifecycle Event Testing**: Verify the behavior of views during different lifecycle events such as `onAppear` and `task`.
+- **Asynchronous Testing**: Support for testing asynchronous operations in SwiftUI views.
+- **View Hosting**: APIs for hosting views during tests, ensuring controlled testing environments.
+
+## Installation
+
+Add the following to your `Package.swift` file:
 
 ```swift
-// MARK: - model (state)
-struct LoginModel {
-    @Environment(\.backendService) private var backendService
-    @LoadableValue private var user: User?
-    @State private var username = ""
-    @State private var password = ""
-}
+dependencies: [
+    .package(url: "https://github.com/sisoje/swiftui-native.git", from: "1.0.0")
+]
+```
 
-// MARK: - update (actions)
-private extension LoginModel {
-    func loginAction() {
-        _user.loadSync {
-            try await backendService.getUser(username, password)
-        }
-    }
-}
+Then, import the frameworks in your test files:
 
-// MARK: - view (body function)
-extension LoginModel: View {
+```swift
+import ViewTesting
+@testable import ViewHosting
+```
+
+## Usage Guide: Testing Views with Changing State
+
+### Step 1: Set Up Your Test Environment
+
+First, ensure your test class inherits from `HostedViewsTestsBase`:
+
+```swift
+class MyViewTests: HostedViewsTestsBase {}
+```
+
+This base class provides the necessary setup for hosting your views during tests.
+
+### Step 2: Create Your Test View
+
+Define a view that includes the state changes you want to test. For example:
+
+```swift
+struct DummyView: View {
+    @State var number = 0
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 16) {
-                TextField("Username", text: $username)
-
-                SecureField("Password", text: $password)
-
-                Button("Login", action: loginAction)
-                
-                if _user.state.error != nil {
-                    Text("Error logging in")
-                }
-            }
-            .overlay {
-                if _user.state.isLoading {
-                    ProgressView()
-                }
-            }
-            .navigationDestination(item: $user) { user in
-                UserDetailsView(user: user)
-            }
+        let _ = postBodyEvaluation()
+        Text(number.description).task {
+            number = number + 1
         }
-        .taskLoadable(_user.loadable)
     }
 }
 ```
+
+Note the `postBodyEvaluation()` call, which is crucial for our testing framework to observe state changes.
+
+### Step 3: Host Your View
+
+In your test method, use `ViewHostingApp.hostView` to host your view:
+
+```swift
+@MainActor func testStateChange() async throws {
+    ViewHostingApp.hostView {
+        DummyView()
+    }
+    // ... rest of the test
+}
+```
+
+### Step 4: Observe and Assert State Changes
+
+Use the `observeBodyEvaluation()` method to capture the view's state at different points:
+
+```swift
+let initialView = try await DummyView.observeBodyEvaluation()
+XCTAssertEqual(initialView.number, 0)
+
+// Wait for the task to complete and trigger a state change
+try await DummyView.observeBodyEvaluation()
+XCTAssertEqual(initialView.number, 1)
+```
+
+### Complete Example
+
+Here's a full example demonstrating how to test a view with changing state:
+
+```swift
+import XCTest
+import SwiftUI
+@testable import ViewHosting
+import ViewTesting
+
+final class ViewLifecycleTests: HostedViewsTestsBase {
+    @MainActor func testTask() async throws {
+        struct DummyView: View {
+            @State var number = 0
+            var body: some View {
+                let _ = postBodyEvaluation()
+                Text(number.description).task {
+                    number = number + 1
+                }
+            }
+        }
+
+        ViewHostingApp.hostView {
+            DummyView()
+        }
+
+        let view = try await DummyView.observeBodyEvaluation()
+        XCTAssertEqual(view.number, 0)
+        try await DummyView.observeBodyEvaluation()
+        XCTAssertEqual(view.number, 1)
+    }
+}
+```
+
+This test verifies that:
+1. The initial state of `number` is 0.
+2. After the `task` modifier runs, `number` is incremented to 1.
+
+## Advanced Testing Scenarios
+
+### Testing onAppear
+
+You can also test state changes triggered by `onAppear`:
+
+```swift
+@MainActor func testOnAppear() async throws {
+    struct DummyView: View {
+        @State var number = 0
+        var body: some View {
+            let _ = postBodyEvaluation()
+            ProgressView().onAppear {
+                number += 1
+            }
+        }
+    }
+
+    ViewHostingApp.hostView {
+        DummyView()
+    }
+
+    let view = try await DummyView.observeBodyEvaluation()
+    XCTAssertEqual(view.number, 1)
+}
+```
+
+### Testing Asynchronous Operations
+
+For testing asynchronous operations, you can use multiple `observeBodyEvaluation` calls:
+
+```swift
+@MainActor func testAsyncOperation() async throws {
+    struct DummyView: View {
+        @State var result: String = ""
+        var body: some View {
+            let _ = postBodyEvaluation()
+            Text(result).task {
+                // Simulate async operation
+                try? await Task.sleep(nanoseconds: 1_000_000_000)
+                result = "Completed"
+            }
+        }
+    }
+
+    ViewHostingApp.hostView {
+        DummyView()
+    }
+
+    let initialView = try await DummyView.observeBodyEvaluation()
+    XCTAssertEqual(initialView.result, "")
+
+    // Wait for the async operation to complete
+    let updatedView = try await DummyView.observeBodyEvaluation()
+    XCTAssertEqual(updatedView.result, "Completed")
+}
+```
+
+## Contributing
+
+We welcome contributions! To contribute:
+
+1. Fork the repository and create your branch from `main`.
+2. Ensure your code follows the existing style and architecture.
+3. Write unit tests for your changes.
+4. Run all tests to ensure they pass.
+5. Submit a pull request with a clear description of your changes.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
