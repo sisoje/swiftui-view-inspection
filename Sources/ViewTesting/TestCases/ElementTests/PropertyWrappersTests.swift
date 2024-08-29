@@ -11,7 +11,7 @@ final class PropertyWrappersTests: XCTestCase {}
         }
         let t = Dummy().reflectionTree.environments
         XCTAssertEqual(t.count, 2)
-        XCTAssert(t[1].root.parent === t[0].root)
+        XCTAssert(t[1].node.parent === t[0].node)
     }
     
     func testState() {

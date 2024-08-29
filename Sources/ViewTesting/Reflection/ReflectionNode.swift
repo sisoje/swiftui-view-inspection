@@ -27,34 +27,56 @@ extension ReflectionNode {
         children.reduce([self]) { $0 + $1.allNodes }
     }
     
-    func baseTypeElements<T: ReflectionTree, GEN>(_ t: GEN.Type) -> [T] {
-        let basetype = TypeInfo(GEN.self).baseTypename
-        return allNodes.filter { $0.typeInfo.baseTypename == basetype }.map(T.init)
+    func basetypeElements<T>() -> [TypeDerivedElement<T>] {
+        allNodes.filter(TypeDerivedElement<T>.isSameBasetype).toElements()
     }
     
-    var toggles: [TestUI._Toggle] { baseTypeElements(Toggle<AnyView>.self) }
+    func typeElements<T>() -> [TypeDerivedElement<T>] {
+        allNodes.filter(TypeDerivedElement<T>.isSameType).toElements()
+    }
+    
+    func closureElements<T>() -> [TypeDerivedElement<T>] {
+        allNodes.filter(TypeDerivedElement<T>.isSameClosure).toElements()
+    }
+    
+    var toggles: [Elements.UI._Toggle] { basetypeElements() }
 
-    var buttons: [TestUI._Button] { baseTypeElements(Button<AnyView>.self)  }
+    var buttons: [Elements.UI._Button] { basetypeElements()  }
     
-    var environments: [BenericTypeTree<Environment<Any>>] { baseTypeElements(Environment<Any>.self) }
+    var environments: [Elements.PropertyWrappers._Environment] { basetypeElements() }
     
-    var states: [BenericTypeTree<State<Any>>] { baseTypeElements(State<Any>.self) }
+    var states: [Elements.PropertyWrappers._State] { basetypeElements() }
     
-    var bindings: [BenericTypeTree<Binding<Any>>] { baseTypeElements(Binding<Any>.self) }
+    var bindings: [Elements.PropertyWrappers._Binding] { basetypeElements() }
     
-    var texts: [TestUI._Text] { baseTypeElements(Text.self) }
+    var texts: [Elements.UI._Text] { typeElements() }
     
-    var strings: [ExactTypeTree<String>] { baseTypeElements(String.self) }
+    var strings: [Elements.Native._String] { typeElements() }
     
-    var images: [TestUI._Image] { baseTypeElements(Image.self) }
+    var images: [Elements.UI._Image] { typeElements() }
     
-    var actions: [ExactTypeTree<() -> Void>] {
-        let basetype = TypeInfo((() -> Void).self).baseTypename
-        return allNodes.filter { $0.typeInfo.typename.hasSuffix(basetype) }.map(ExactTypeTree.init)
+    var actions: [Elements.Native._closure] { closureElements() }
+    
+    var asyncActions: [Elements.Native._asyncClosure] { closureElements() }
+    
+    var refreshableModifiers: [Elements.Modifiers._Refreshable] {
+        func isModifier(_ ref: ReflectionNode) -> Bool {
+            ref.typeInfo.baseTypename.hasPrefix("SwiftUI.") && ref.typeInfo.baseTypename.hasSuffix(".RefreshableModifier")
+        }
+        return allNodes.filter(isModifier).toElements()
     }
-    
-    var asyncActions: [ExactTypeTree<() async -> Void>] {
-        let basetype = TypeInfo((() async -> Void).self).baseTypename
-        return allNodes.filter { $0.typeInfo.typename.hasSuffix(basetype) }.map(ExactTypeTree.init)
+
+    var taskModifiers: [Elements.Modifiers._Task] {
+        func isModifier(_ ref: ReflectionNode) -> Bool {
+            ref.typeInfo.baseTypename.hasPrefix("SwiftUI.") && ref.typeInfo.baseTypename.hasSuffix("._TaskModifier")
+        }
+        return allNodes.filter(isModifier).toElements()
+    }
+
+    var onAppearModifiers: [Elements.Modifiers._OnAppear] {
+        func isModifier(_ ref: ReflectionNode) -> Bool {
+            ref.typeInfo.baseTypename.hasPrefix("SwiftUI.") && ref.typeInfo.baseTypename.hasSuffix("._AppearanceActionModifier")
+        }
+        return allNodes.filter(isModifier).toElements()
     }
 }

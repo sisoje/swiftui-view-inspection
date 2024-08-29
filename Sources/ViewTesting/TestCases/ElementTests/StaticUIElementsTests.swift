@@ -1,9 +1,9 @@
 import SwiftUI
 import XCTest
 
-final class StaticElementsTests: XCTestCase {}
+final class StaticUIElementsTests: XCTestCase {}
 
-@MainActor extension StaticElementsTests {
+@MainActor extension StaticUIElementsTests {
     func testText() {
         XCTAssertEqual(Text("a").reflectionTree.texts[0].string, "a")
     }

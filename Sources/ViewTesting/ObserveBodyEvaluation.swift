@@ -9,7 +9,7 @@ extension Notification: @unchecked Sendable {}
 #endif
 
 extension View {
-    @discardableResult @MainActor static func getBodyEvaluation(timeout: TimeInterval = 1) async throws -> Self {
+    @discardableResult @MainActor static func observeBodyEvaluation(timeout: TimeInterval = 1) async throws -> Self {
         // normally we get notification immediately but if there is any problem we dont want to wait forever
         let timeoutTask = Task {
             try await Task.sleep(nanoseconds: UInt64(timeout * 1_000_000_000))
@@ -19,7 +19,7 @@ extension View {
         defer { timeoutTask.cancel() }
         for await n in NotificationCenter.default.notifications(named: .bodyEvaluation) {
             guard let v = n.object else {
-                throw NSError(domain: "Add 'let _ = postBodyEvaluationNotification()' and refer to the state inside the body", code: 0)
+                throw NSError(domain: "Add 'let _ = postBodyEvaluation()' and refer to the state inside the body", code: 0)
             }
             guard let v = v as? Self else {
                 continue

@@ -20,7 +20,7 @@ final class ViewLifecycleTests: HostedViewsTestsBase {}
             DummyView()
         }
         
-        let view = try await DummyView.getBodyEvaluation()
+        let view = try await DummyView.observeBodyEvaluation()
         XCTAssertEqual(view.number, 1)
     }
     
@@ -39,9 +39,9 @@ final class ViewLifecycleTests: HostedViewsTestsBase {}
             DummyView()
         }
         
-        let view = try await DummyView.getBodyEvaluation()
+        let view = try await DummyView.observeBodyEvaluation()
         XCTAssertEqual(view.number, 0)
-        try await DummyView.getBodyEvaluation()
+        try await DummyView.observeBodyEvaluation()
         XCTAssertEqual(view.number, 1)
     }
 }
