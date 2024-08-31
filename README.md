@@ -9,9 +9,11 @@ This framework provides a powerful solution for testing SwiftUI views, with a pa
 ## Key Features
 
 - **State Change Testing**: Easily test views with changing state, including `@State`, `@Binding`, and other property wrappers.
-- **Lifecycle Event Testing**: Verify the behavior of views during different lifecycle events such as `onAppear` and `task`.
+- **Lifecycle Event Testing**: Verify the behavior of views during different lifecycle events such as `task`.
 - **Asynchronous Testing**: Support for testing asynchronous operations in SwiftUI views.
 - **View Hosting**: APIs for hosting views during tests, ensuring controlled testing environments.
+- **Navigation Testing**: Capabilities to test NavigationStack and navigation flow.
+- **Interactive Element Testing**: Test buttons, toggles, and other interactive SwiftUI components.
 
 ## Installation
 
@@ -26,165 +28,104 @@ dependencies: [
 Then, import the frameworks in your test files:
 
 ```swift
-import ViewTesting
-@testable import ViewHosting
-```
-
-## Usage Guide: Testing Views with Changing State
-
-### Step 1: Set Up Your Test Environment
-
-First, ensure your test class inherits from `HostedViewsTestsBase`:
-
-```swift
-class MyViewTests: HostedViewsTestsBase {}
-```
-
-This base class provides the necessary setup for hosting your views during tests.
-
-### Step 2: Create Your Test View
-
-Define a view that includes the state changes you want to test. For example:
-
-```swift
-struct DummyView: View {
-    @State var number = 0
-    var body: some View {
-        let _ = postBodyEvaluation()
-        Text(number.description).task {
-            number = number + 1
-        }
-    }
-}
-```
-
-Note the `postBodyEvaluation()` call, which is crucial for our testing framework to observe state changes.
-
-### Step 3: Host Your View
-
-In your test method, use `ViewHostingApp.hostView` to host your view:
-
-```swift
-@MainActor func testStateChange() async throws {
-    ViewHostingApp.hostView {
-        DummyView()
-    }
-    // ... rest of the test
-}
-```
-
-### Step 4: Observe and Assert State Changes
-
-Use the `observeBodyEvaluation()` method to capture the view's state at different points:
-
-```swift
-let initialView = try await DummyView.observeBodyEvaluation()
-XCTAssertEqual(initialView.number, 0)
-
-// Wait for the task to complete and trigger a state change
-try await DummyView.observeBodyEvaluation()
-XCTAssertEqual(initialView.number, 1)
-```
-
-### Complete Example
-
-Here's a full example demonstrating how to test a view with changing state:
-
-```swift
-import XCTest
 import SwiftUI
+import XCTest
 @testable import ViewHosting
 import ViewTesting
-
-final class ViewLifecycleTests: HostedViewsTestsBase {
-    @MainActor func testTask() async throws {
-        struct DummyView: View {
-            @State var number = 0
-            var body: some View {
-                let _ = postBodyEvaluation()
-                Text(number.description).task {
-                    number = number + 1
-                }
-            }
-        }
-
-        ViewHostingApp.hostView {
-            DummyView()
-        }
-
-        let view = try await DummyView.observeBodyEvaluation()
-        XCTAssertEqual(view.number, 0)
-        try await DummyView.observeBodyEvaluation()
-        XCTAssertEqual(view.number, 1)
-    }
-}
 ```
 
-This test verifies that:
-1. The initial state of `number` is 0.
-2. After the `task` modifier runs, `number` is incremented to 1.
+## Usage Guide
 
-## Advanced Testing Scenarios
+### Testing Navigation
 
-### Testing onAppear
-
-You can also test state changes triggered by `onAppear`:
+Here's an example of how to test navigation using NavigationStack:
 
 ```swift
-@MainActor func testOnAppear() async throws {
-    struct DummyView: View {
-        @State var number = 0
+@available(iOS 16, *)
+@MainActor func testNavigation() async throws {
+    struct One: View {
+        @State private var numbers: [Int] = []
         var body: some View {
             let _ = postBodyEvaluation()
-            ProgressView().onAppear {
-                number += 1
+            NavigationStack(path: $numbers) {
+                Button("One") { numbers.append(1) }
+                    .navigationDestination(
+                        for: Int.self,
+                        destination: Two.init
+                    )
             }
         }
     }
 
-    ViewHostingApp.hostView {
-        DummyView()
+    struct Two: View {
+        let number: Int
+        var body: some View {
+            let _ = postBodyEvaluation()
+            Text(number.description)
+        }
     }
-
-    let view = try await DummyView.observeBodyEvaluation()
-    XCTAssertEqual(view.number, 1)
+    
+    let one = try await One.hostedView { One() }
+    one.body.reflectionTree.buttons[0].tap()
+    
+    let two = try await Two.observeBodyEvaluation()
+    XCTAssertEqual(two.body.reflectionTree.texts[0].string, "1")
 }
 ```
 
-### Testing Asynchronous Operations
+### Testing Task
 
-For testing asynchronous operations, you can use multiple `observeBodyEvaluation` calls:
+Test asynchronous operations using the `task` modifier:
 
 ```swift
-@MainActor func testAsyncOperation() async throws {
+@MainActor func testTask() async throws {
     struct DummyView: View {
-        @State var result: String = ""
+        @State private var number = 0
         var body: some View {
             let _ = postBodyEvaluation()
-            Text(result).task {
-                // Simulate async operation
-                try? await Task.sleep(nanoseconds: 1_000_000_000)
-                result = "Completed"
-            }
+            Text(number.description).task { number = number + 1 }
+        }
+    }
+    
+    let view = try await DummyView.hostedView { DummyView() }
+    XCTAssertEqual(view.body.reflectionTree.texts[0].string, "0")
+    
+    try await DummyView.observeBodyEvaluation()
+    XCTAssertEqual(view.body.reflectionTree.texts[0].string, "1")
+}
+```
+
+### Testing Interactive Elements
+
+Test toggles and other interactive elements without hosting the view:
+
+```swift
+@MainActor func testToggle() {
+    struct DummyView: View {
+        @Binding var isOn: Bool
+        var body: some View {
+            Toggle(isOn: $isOn, label: EmptyView.init)
         }
     }
 
-    ViewHostingApp.hostView {
-        DummyView()
-    }
-
-    let initialView = try await DummyView.observeBodyEvaluation()
-    XCTAssertEqual(initialView.result, "")
-
-    // Wait for the async operation to complete
-    let updatedView = try await DummyView.observeBodyEvaluation()
-    XCTAssertEqual(updatedView.result, "Completed")
+    let view = DummyView(isOn: .variable(false))
+    XCTAssertEqual(view.isOn, false)
+    view.body.reflectionTree.toggles[0].toggle()
+    XCTAssertEqual(view.isOn, true)
 }
 ```
+
+Note: Views without internal state (like the `DummyView` in this example) do not need to be hosted for testing.
+
+## Advanced Features
+
+- **Body Evaluation Observation**: Use `postBodyEvaluation()` and `observeBodyEvaluation()` to track view updates.
+- **Reflection Tree**: Access the `reflectionTree` of your views to inspect their structure and properties.
+- **Hosted View Testing**: Utilize `hostedView` for testing views with internal state in a controlled environment.
 
 ## Contributing
 
-We welcome contributions! To contribute:
+We welcome contributions! Please follow these steps:
 
 1. Fork the repository and create your branch from `main`.
 2. Ensure your code follows the existing style and architecture.
