@@ -1,9 +1,9 @@
 import SwiftUI
 import XCTest
 
-final class InteractiveUIElementsTests: XCTestCase {}
+final class InteractiveViewElementsTests: XCTestCase {}
 
-@MainActor extension InteractiveUIElementsTests {
+@MainActor extension InteractiveViewElementsTests {
     func testToggle() {
         struct DummyView: View {
             @Binding var isOn: Bool

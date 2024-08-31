@@ -16,7 +16,6 @@ final class PropertyWrappersTests: XCTestCase {}
     
     func testState() {
         struct Dummy: View {
-            @Environment(\.locale) var locale
             @State var x = 0
             let body = EmptyView()
         }

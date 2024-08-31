@@ -1,20 +1,21 @@
 import SwiftUI
 
-enum Elements {
-    enum UI {
+enum TestElement {
+    enum View {
         typealias _Text = TypeDerivedElement<Text>
         typealias _Image = TypeDerivedElement<Image>
         typealias _Button = TypeDerivedElement<Button<AnyView>>
         typealias _Toggle = TypeDerivedElement<Toggle<AnyView>>
     }
 
-    enum Modifiers {
+    enum Modifier {
         struct _Refreshable: ReflectionElement { let node: ReflectionNode }
         struct _Task: ReflectionElement { let node: ReflectionNode }
         struct _OnAppear: ReflectionElement { let node: ReflectionNode }
+        struct _OnTap: ReflectionElement { let node: ReflectionNode }
     }
 
-    enum PropertyWrappers {
+    enum PropertyWrapper {
         final class DummyObservableObject: ObservableObject {}
         typealias _State = TypeDerivedElement<State<Any>>
         typealias _Binding = TypeDerivedElement<Binding<Any>>
@@ -22,51 +23,58 @@ enum Elements {
         typealias _EnvironmentObject = TypeDerivedElement<EnvironmentObject<DummyObservableObject>>
     }
 
-    enum Native {
+    enum Value {
         typealias _Bool = TypeDerivedElement<Bool>
         typealias _String = TypeDerivedElement<String>
         typealias _closure = TypeDerivedElement<() -> Void>
+        typealias _voidParamClosure = TypeDerivedElement<(()) -> Void>
         typealias _asyncClosure = TypeDerivedElement<() async -> Void>
     }
 }
 
-extension Elements.Modifiers._Refreshable {
+extension TestElement.Modifier._Refreshable {
     func doRefresh() async {
         await node.asyncActions[0].castValue()
     }
 }
 
-extension Elements.Modifiers._Task {
+extension TestElement.Modifier._Task {
     func doTask() async {
         await node.asyncActions[0].castValue()
     }
 }
 
-extension Elements.Modifiers._OnAppear {
+extension TestElement.Modifier._OnAppear {
     func doOnAppear() {
         node.actions[0].castValue()
     }
 }
 
-extension Elements.UI._Text {
+extension TestElement.Modifier._OnTap {
+    func doTap() {
+        node.voidParamActions[0].castValue(())
+    }
+}
+
+extension TestElement.View._Text {
     var string: String {
         node.strings[0].castValue
     }
 }
 
-extension Elements.UI._Image {
+extension TestElement.View._Image {
     var name: String {
         node.strings[0].castValue
     }
 }
 
-extension Elements.UI._Button {
+extension TestElement.View._Button {
     func tap() {
         node.actions[0].castValue()
     }
 }
 
-extension Elements.UI._Toggle {
+extension TestElement.View._Toggle {
     private enum DummyEnum {
         case case0
         case case1

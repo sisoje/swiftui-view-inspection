@@ -1,8 +1,8 @@
 import SwiftUI
 
 extension Binding {
-    @MainActor static func variable<T>(_ initial: T) -> Binding<T> {
-        var temp = initial
+    static func variable<T>(_ initial: T) -> Binding<T> {
+        nonisolated(unsafe) var temp = initial
         return Binding<T> {
             temp
         } set: {

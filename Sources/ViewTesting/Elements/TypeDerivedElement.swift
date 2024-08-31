@@ -3,7 +3,7 @@ struct TypeDerivedElement<T>: ReflectionElement {
 }
 
 extension TypeDerivedElement {
-    static var typeInfo: TypeInfo { TypeInfo(T.self) }
+    static var typeInfo: TypeInfo { TypeInfo(type: T.self) }
     
     static func isSameType(_ node: ReflectionNode) -> Bool {
         node.object is T

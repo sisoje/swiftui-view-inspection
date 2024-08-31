@@ -22,7 +22,7 @@ final class ReflectionNode: @unchecked Sendable {
 
 // MARK: - Utilities
 
-extension ReflectionNode {    
+extension ReflectionNode {
     var allNodes: [ReflectionNode] {
         children.reduce([self]) { $0 + $1.allNodes }
     }
@@ -39,43 +39,52 @@ extension ReflectionNode {
         allNodes.filter(TypeDerivedElement<T>.isSameClosure).toElements()
     }
     
-    var toggles: [Elements.UI._Toggle] { basetypeElements() }
+    var toggles: [TestElement.View._Toggle] { basetypeElements() }
 
-    var buttons: [Elements.UI._Button] { basetypeElements()  }
+    var buttons: [TestElement.View._Button] { basetypeElements() }
     
-    var environments: [Elements.PropertyWrappers._Environment] { basetypeElements() }
+    var environments: [TestElement.PropertyWrapper._Environment] { basetypeElements() }
     
-    var states: [Elements.PropertyWrappers._State] { basetypeElements() }
+    var states: [TestElement.PropertyWrapper._State] { basetypeElements() }
     
-    var bindings: [Elements.PropertyWrappers._Binding] { basetypeElements() }
+    var bindings: [TestElement.PropertyWrapper._Binding] { basetypeElements() }
     
-    var texts: [Elements.UI._Text] { typeElements() }
+    var texts: [TestElement.View._Text] { typeElements() }
     
-    var strings: [Elements.Native._String] { typeElements() }
+    var strings: [TestElement.Value._String] { typeElements() }
     
-    var images: [Elements.UI._Image] { typeElements() }
+    var images: [TestElement.View._Image] { typeElements() }
     
-    var actions: [Elements.Native._closure] { closureElements() }
+    var voidParamActions: [TestElement.Value._voidParamClosure] { closureElements() }
     
-    var asyncActions: [Elements.Native._asyncClosure] { closureElements() }
+    var actions: [TestElement.Value._closure] { closureElements() }
     
-    var refreshableModifiers: [Elements.Modifiers._Refreshable] {
+    var asyncActions: [TestElement.Value._asyncClosure] { closureElements() }
+    
+    var refreshableModifiers: [TestElement.Modifier._Refreshable] {
         func isModifier(_ ref: ReflectionNode) -> Bool {
             ref.typeInfo.baseTypename.hasPrefix("SwiftUI.") && ref.typeInfo.baseTypename.hasSuffix(".RefreshableModifier")
         }
         return allNodes.filter(isModifier).toElements()
     }
 
-    var taskModifiers: [Elements.Modifiers._Task] {
+    var taskModifiers: [TestElement.Modifier._Task] {
         func isModifier(_ ref: ReflectionNode) -> Bool {
             ref.typeInfo.baseTypename.hasPrefix("SwiftUI.") && ref.typeInfo.baseTypename.hasSuffix("._TaskModifier")
         }
         return allNodes.filter(isModifier).toElements()
     }
 
-    var onAppearModifiers: [Elements.Modifiers._OnAppear] {
+    var onAppearModifiers: [TestElement.Modifier._OnAppear] {
         func isModifier(_ ref: ReflectionNode) -> Bool {
             ref.typeInfo.baseTypename.hasPrefix("SwiftUI.") && ref.typeInfo.baseTypename.hasSuffix("._AppearanceActionModifier")
+        }
+        return allNodes.filter(isModifier).toElements()
+    }
+    
+    var onTapModifiers: [TestElement.Modifier._OnTap] {
+        func isModifier(_ ref: ReflectionNode) -> Bool {
+            ref.typeInfo.typename == "SwiftUI._EndedGesture<SwiftUI.TapGesture>"
         }
         return allNodes.filter(isModifier).toElements()
     }

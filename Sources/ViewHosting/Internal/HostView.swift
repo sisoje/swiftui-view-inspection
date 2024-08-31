@@ -1,5 +1,5 @@
 import SwiftUI
 
 extension ViewHostingApp {
-    static var hostView: ((() -> any View) -> Void)!
+    nonisolated(unsafe) static var hostView: ((() -> any View) -> Void)!
 }
