@@ -30,6 +30,11 @@ jobs:
       run: sh generate_project.sh
       working-directory: ./HostApp
 
+    - uses: actions/upload-artifact@v4
+      with:
+        name: testrun.zip
+        path: ./
+
     - name: Test macOS
       run: sh test_project.sh 'platform=macOS,name=Any Mac'
       working-directory: ./HostApp
