@@ -4,7 +4,8 @@ import XCTest
 final class ViewLifecycleTests: XCTestCase {}
 
 @MainActor extension ViewLifecycleTests {
-    @available(iOS 16, *) func testNavigation() async throws {
+    @available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
+    func testNavigation() async throws {
         struct One: View {
             @State private var numbers: [Int] = []
             var body: some View {
