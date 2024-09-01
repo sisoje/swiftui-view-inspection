@@ -41,8 +41,7 @@ import ViewTesting
 Here's an example of how to test navigation using NavigationStack:
 
 ```swift
-@available(iOS 16, *)
-@MainActor func testNavigation() async throws {
+func testNavigation() async throws {
     struct One: View {
         @State private var numbers: [Int] = []
         var body: some View {
