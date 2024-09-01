@@ -32,8 +32,10 @@ jobs:
 
     - uses: actions/upload-artifact@v4
       with:
-        name: testrun.zip
-        path: ./
+        name: testrun
+        path: |
+          ./
+          !./.git
 
     - name: Test macOS
       run: sh test_project.sh 'platform=macOS,name=Any Mac'
