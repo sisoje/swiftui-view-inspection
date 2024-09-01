@@ -21,12 +21,12 @@ final class TypeInfoTests: XCTestCase {
         XCTAssertEqual(t1.baseTypename, "Swift.Int")
         XCTAssert(t1.generics.isEmpty)
     }
-    
+
     func testGenerics() {
         XCTAssert(TypeInfo(typename: "Gen<").generics.isEmpty)
         XCTAssert(TypeInfo(typename: "Gen>").generics.isEmpty)
         XCTAssertEqual(TypeInfo(typename: "Gen<1>").generics.map(\.typename), ["1"])
-        XCTAssertEqual(TypeInfo(typename: "Gen<1,2>").generics.map(\.typename), ["1","2"])
-        XCTAssertEqual(TypeInfo(typename: "Gen<1<2<5>>,2<3,4>>").generics.map(\.typename), ["1<2<5>>","2<3,4>"])
+        XCTAssertEqual(TypeInfo(typename: "Gen<1,2>").generics.map(\.typename), ["1", "2"])
+        XCTAssertEqual(TypeInfo(typename: "Gen<1<2<5>>,2<3,4>>").generics.map(\.typename), ["1<2<5>>", "2<3,4>"])
     }
 }

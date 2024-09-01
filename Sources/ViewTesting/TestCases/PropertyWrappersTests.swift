@@ -13,7 +13,7 @@ final class PropertyWrappersTests: XCTestCase {}
         XCTAssertEqual(t.count, 2)
         XCTAssert(t[1].node.parent === t[0].node)
     }
-    
+
     func testState() {
         struct Dummy: View {
             @State private var x = 0
@@ -21,7 +21,7 @@ final class PropertyWrappersTests: XCTestCase {}
         }
         XCTAssertEqual(Dummy().reflectionSnapshot.states.count, 1)
     }
-    
+
     func testBinding() {
         struct Dummy: View {
             @Binding var x: Int

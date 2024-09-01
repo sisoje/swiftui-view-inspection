@@ -35,7 +35,7 @@ public extension View {
     @discardableResult @MainActor static func observeBodyEvaluation(timeout: TimeInterval = 1) async throws -> Self {
         try await NotificationCenter.default.observeBodyEvaluation(timeout: timeout)
     }
-    
+
     @MainActor static func hostedView(timeout: TimeInterval = 1, content: () -> any View) async throws -> Self {
         guard let hostView = ViewHostingApp.hostView else {
             throw XCTSkip("view needs hosting")
