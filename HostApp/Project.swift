@@ -11,10 +11,11 @@ let project = Project(
             product: .app,
             bundleId: "io.tuist.HostApp",
             infoPlist: .default,
-            sources: ["App.swift"],
+            sources: ["HostAppMain.swift"],
             resources: [],
             dependencies: [
-                 .package(product: "ViewHosting"),
+                // ViewHosting goes to the app target
+                 .package(product: "ViewHosting")
             ],
             additionalFiles: [
                 .folderReference(path: "..")
@@ -26,10 +27,11 @@ let project = Project(
             product: .unitTests,
             bundleId: "io.tuist.HostAppTests",
             infoPlist: .default,
-            sources: ["dummy.swift"],
+            sources: ["HostAppTests.swift"],
             resources: [],
             dependencies: [
                 .target(name: "HostApp"),
+                // ViewTesting goes to the unit test target
                 .package(product: "ViewTesting")
             ]
         ),
