@@ -9,6 +9,7 @@ final class TypeInfoTests: XCTestCase {
         XCTAssertEqual(t1.typename, t2.typename)
         XCTAssertEqual(t1.typename, "SwiftUI.Binding<Swift.Int>")
         XCTAssertEqual(t1.baseTypename, "SwiftUI.Binding")
+        XCTAssertEqual(t1.generics.map(\.typename), ["Swift.Int"])
     }
 
     func testTypeInfoInt() {
@@ -18,6 +19,7 @@ final class TypeInfoTests: XCTestCase {
         XCTAssertEqual(t1.typename, t2.typename)
         XCTAssertEqual(t1.typename, "Swift.Int")
         XCTAssertEqual(t1.baseTypename, "Swift.Int")
+        XCTAssert(t1.generics.isEmpty)
     }
     
     func testGenerics() {

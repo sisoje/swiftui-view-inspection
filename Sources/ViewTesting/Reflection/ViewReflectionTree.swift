@@ -1,7 +1,7 @@
 import SwiftUI
 
 extension View {   
-    var reflectionTree: ReflectionNode {
+    var reflectionSnapshot: ReflectionNode {
         ReflectionNode(object: self)
     }
 }

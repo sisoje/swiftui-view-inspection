@@ -5,10 +5,10 @@ final class StaticViewElementsTests: XCTestCase {}
 
 @MainActor extension StaticViewElementsTests {
     func testText() {
-        XCTAssertEqual(Text("a").reflectionTree.texts[0].string, "a")
+        XCTAssertEqual(Text("a").reflectionSnapshot.texts[0].string, "a")
     }
     
     func testImage() {
-        XCTAssertEqual(Image(systemName: "circle").reflectionTree.images[0].name, "circle")
+        XCTAssertEqual(Image(systemName: "circle").reflectionSnapshot.images[0].name, "circle")
     }
 }

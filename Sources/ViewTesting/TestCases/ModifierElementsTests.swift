@@ -6,7 +6,7 @@ final class ModifierElementsTests: XCTestCase {}
 @MainActor extension ModifierElementsTests {
     func testRefreshable() async {
         var x = 0
-        let viewSnapshot = EmptyView().refreshable { x = 1 }.reflectionTree
+        let viewSnapshot = EmptyView().refreshable { x = 1 }.reflectionSnapshot
         let modifiers = viewSnapshot.refreshableModifiers
         XCTAssertEqual(modifiers.count, 1)
         await modifiers[0].doRefresh()
@@ -15,7 +15,7 @@ final class ModifierElementsTests: XCTestCase {}
 
     func testTask() async {
         var x = 0
-        let viewSnapshot = EmptyView().task { x = 1 }.reflectionTree
+        let viewSnapshot = EmptyView().task { x = 1 }.reflectionSnapshot
         let modifiers = viewSnapshot.taskModifiers
         XCTAssertEqual(modifiers.count, 1)
         await modifiers[0].doTask()
@@ -24,7 +24,7 @@ final class ModifierElementsTests: XCTestCase {}
 
     func testOnAppear() {
         var x = 0
-        let viewSnapshot = EmptyView().onAppear { x = 1 }.reflectionTree
+        let viewSnapshot = EmptyView().onAppear { x = 1 }.reflectionSnapshot
         let modifiers = viewSnapshot.onAppearModifiers
         XCTAssertEqual(modifiers.count, 1)
         modifiers[0].doOnAppear()
@@ -33,7 +33,7 @@ final class ModifierElementsTests: XCTestCase {}
 
     func testOnTap() async {
         var x = 0
-        let viewSnapshot = EmptyView().onTapGesture { x = 1 }.reflectionTree
+        let viewSnapshot = EmptyView().onTapGesture { x = 1 }.reflectionSnapshot
         let modifiers = viewSnapshot.onTapModifiers
         XCTAssertEqual(modifiers.count, 1)
         modifiers[0].doTap()

@@ -29,10 +29,10 @@ final class ViewLifecycleTests: XCTestCase {}
         }
         
         let one = try await One.hostedView { One() }
-        one.body.reflectionTree.buttons[0].tap()
+        one.body.reflectionSnapshot.buttons[0].tap()
         
         let two = try await Two.observeBodyEvaluation()
-        XCTAssertEqual(two.body.reflectionTree.texts[0].string, "1")
+        XCTAssertEqual(two.body.reflectionSnapshot.texts[0].string, "1")
     }
     
     func testOnAppear() async throws {
@@ -45,7 +45,7 @@ final class ViewLifecycleTests: XCTestCase {}
         }
         
         let view = try await DummyView.hostedView { DummyView() }
-        XCTAssertEqual(view.body.reflectionTree.texts[0].string, "1")
+        XCTAssertEqual(view.body.reflectionSnapshot.texts[0].string, "1")
     }
     
     func testTask() async throws {
@@ -58,10 +58,10 @@ final class ViewLifecycleTests: XCTestCase {}
         }
         
         let view = try await DummyView.hostedView { DummyView() }
-        XCTAssertEqual(view.body.reflectionTree.texts[0].string, "0")
+        XCTAssertEqual(view.body.reflectionSnapshot.texts[0].string, "0")
         
         try await DummyView.observeBodyEvaluation()
-        XCTAssertEqual(view.body.reflectionTree.texts[0].string, "1")
+        XCTAssertEqual(view.body.reflectionSnapshot.texts[0].string, "1")
     }
     
     func testObserveBodyEvaluation() async throws {
