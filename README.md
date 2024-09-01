@@ -15,6 +15,17 @@ This framework provides a powerful solution for testing SwiftUI views, with a pa
 - **Navigation Testing**: Capabilities to test NavigationStack and navigation flow.
 - **Interactive Element Testing**: Test buttons, toggles, and other interactive SwiftUI components.
 
+## Project Structure
+
+The project is structured as follows:
+
+- `HostApp/`: Contains the host application for testing
+  - `HostAppMain.swift`: Defines the main app entry point as an extension of ViewHostingApp
+  - `HostAppTests.swift`: Empty file needed for the test target (all test cases are implemented in the ViewTesting framework)
+- `Sources/`: Contains the main source code for the framework
+  - `ViewHosting/`: Core hosting functionality
+  - `ViewTesting/`: Testing utilities and extensions
+
 ## Installation
 
 Add the following to your `Package.swift` file:
@@ -65,10 +76,10 @@ func testNavigation() async throws {
     }
     
     let one = try await One.hostedView { One() }
-    one.body.reflectionTree.buttons[0].tap()
+    one.body.reflectionSnapshot.buttons[0].tap()
     
     let two = try await Two.observeBodyEvaluation()
-    XCTAssertEqual(two.body.reflectionTree.texts[0].string, "1")
+    XCTAssertEqual(two.body.reflectionSnapshot.texts[0].string, "1")
 }
 ```
 
@@ -87,10 +98,10 @@ Test asynchronous operations using the `task` modifier:
     }
     
     let view = try await DummyView.hostedView { DummyView() }
-    XCTAssertEqual(view.body.reflectionTree.texts[0].string, "0")
+    XCTAssertEqual(view.body.reflectionSnapshot.texts[0].string, "0")
     
     try await DummyView.observeBodyEvaluation()
-    XCTAssertEqual(view.body.reflectionTree.texts[0].string, "1")
+    XCTAssertEqual(view.body.reflectionSnapshot.texts[0].string, "1")
 }
 ```
 
@@ -109,7 +120,7 @@ Test toggles and other interactive elements without hosting the view:
 
     let view = DummyView(isOn: .variable(false))
     XCTAssertEqual(view.isOn, false)
-    view.body.reflectionTree.toggles[0].toggle()
+    view.body.reflectionSnapshot.toggles[0].toggle()
     XCTAssertEqual(view.isOn, true)
 }
 ```
@@ -119,7 +130,7 @@ Note: Views without internal state (like the `DummyView` in this example) do not
 ## Advanced Features
 
 - **Body Evaluation Observation**: Use `postBodyEvaluation()` and `observeBodyEvaluation()` to track view updates.
-- **Reflection Tree**: Access the `reflectionTree` of your views to inspect their structure and properties.
+- **Reflection Snapshot**: Access the `reflectionSnapshot` of your views to inspect their structure and properties.
 - **Hosted View Testing**: Utilize `hostedView` for testing views with internal state in a controlled environment.
 
 ## Contributing
