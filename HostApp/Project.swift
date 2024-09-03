@@ -15,7 +15,7 @@ let project = Project(
             resources: [],
             dependencies: [
                 // ViewHosting goes to the app target
-                .package(product: "ViewHosting")
+                .package(product: "ViewHostingApp")
             ],
             additionalFiles: [
                 .folderReference(path: "..")
@@ -32,7 +32,8 @@ let project = Project(
             dependencies: [
                 .target(name: "HostApp"),
                 // ViewTesting goes to the unit test target
-                .package(product: "ViewTesting")
+                .package(product: "ViewHostingTests"),
+                .package(product: "ViewInspection")
             ]
         )
     ]

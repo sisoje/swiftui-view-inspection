@@ -7,11 +7,11 @@ final class ViewLifecycleTests: XCTestCase {}
     @available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
     func testNavigation() async throws {
         struct One: View {
-            @State private var numbers: [Int] = []
+            @State var numbers: [Int] = []
             var body: some View {
                 let _ = postBodyEvaluation()
                 NavigationStack(path: $numbers) {
-                    Button("One") { numbers.append(1) }
+                    Text("One")
                         .navigationDestination(
                             for: Int.self,
                             destination: Two.init
@@ -29,15 +29,13 @@ final class ViewLifecycleTests: XCTestCase {}
         }
         
         let one = try await One.hostedView { One() }
-        one.body.reflectionSnapshot.buttons[0].tap()
-        
-        let two = try await Two.observeBodyEvaluation()
-        XCTAssertEqual(two.body.reflectionSnapshot.texts[0].string, "1")
+        one.numbers.append(1)
+        try await Two.onBodyEvaluation()
     }
     
     func testOnAppear() async throws {
         struct DummyView: View {
-            @State private var number = 0
+            @State var number = 0
             var body: some View {
                 let _ = postBodyEvaluation()
                 Text(number.description).onAppear { number += 1 }
@@ -45,12 +43,12 @@ final class ViewLifecycleTests: XCTestCase {}
         }
         
         let view = try await DummyView.hostedView { DummyView() }
-        XCTAssertEqual(view.body.reflectionSnapshot.texts[0].string, "1")
+        XCTAssertEqual(view.number, 1)
     }
     
     func testTask() async throws {
         struct DummyView: View {
-            @State private var number = 0
+            @State var number = 0
             var body: some View {
                 let _ = postBodyEvaluation()
                 Text(number.description).task { number = number + 1 }
@@ -58,10 +56,9 @@ final class ViewLifecycleTests: XCTestCase {}
         }
         
         let view = try await DummyView.hostedView { DummyView() }
-        XCTAssertEqual(view.body.reflectionSnapshot.texts[0].string, "0")
-        
-        try await DummyView.observeBodyEvaluation()
-        XCTAssertEqual(view.body.reflectionSnapshot.texts[0].string, "1")
+        XCTAssertEqual(view.number, 0)
+        try await DummyView.onBodyEvaluation()
+        XCTAssertEqual(view.number, 1)
     }
     
     func testObserveBodyEvaluation() async throws {
@@ -75,7 +72,7 @@ final class ViewLifecycleTests: XCTestCase {}
         _ = try await DummyView.hostedView { DummyView() }
         
         do {
-            try await DummyView.observeBodyEvaluation()
+            try await DummyView.onBodyEvaluation()
             XCTFail("we expected this to fail")
         } catch {}
     }

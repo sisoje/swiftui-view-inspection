@@ -1,5 +1,5 @@
 import SwiftUI
-@testable import ViewHosting
+@testable import ViewHostingApp
 import XCTest
 
 // this silences the "notification is not sendable" warning
@@ -9,7 +9,7 @@ extension Notification: @unchecked @retroactive Sendable {}
 extension Notification: @unchecked Sendable {}
 #endif
 
-private extension NotificationCenter {
+extension NotificationCenter {
     @MainActor func observeBodyEvaluation<T: View>(timeout: TimeInterval) async throws -> T {
         // normally we get notification immediately but if there is any problem we dont want to wait forever
         let timeoutTask = Task {
@@ -20,7 +20,7 @@ private extension NotificationCenter {
         defer { timeoutTask.cancel() }
         for await notification in notifications(named: .bodyEvaluation) {
             guard let view = notification.object else {
-                throw NSError(domain: "Add 'let _ = postBodyEvaluation()' and refer to the state inside the body", code: 0)
+                throw NSError(domain: "Add 'postBodyEvaluation()' in the body of view \(T.self)", code: 0)
             }
             guard let view = view as? T else {
                 continue
@@ -31,8 +31,8 @@ private extension NotificationCenter {
     }
 }
 
-public extension View {
-    @discardableResult @MainActor static func observeBodyEvaluation(timeout: TimeInterval = 1) async throws -> Self {
+extension View {
+    @discardableResult @MainActor static func onBodyEvaluation(timeout: TimeInterval = 1) async throws -> Self {
         try await NotificationCenter.default.observeBodyEvaluation(timeout: timeout)
     }
 
@@ -41,6 +41,6 @@ public extension View {
             throw XCTSkip("view needs hosting")
         }
         hostView(content)
-        return try await observeBodyEvaluation(timeout: timeout)
+        return try await onBodyEvaluation(timeout: timeout)
     }
 }

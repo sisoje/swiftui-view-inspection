@@ -88,4 +88,10 @@ extension ReflectionNode {
         }
         return allNodes.filter(isModifier).toElements()
     }
+    
+    var geometryReaders: [TestElement.View._GeometryReader] { basetypeElements() }
+    var forEachs: [TestElement.View._ForEach] { basetypeElements() }
+
+    @available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
+    var navigationStacks: [TestElement.View._NavigationStack] { basetypeElements() }
 }

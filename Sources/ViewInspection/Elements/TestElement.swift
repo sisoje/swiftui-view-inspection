@@ -6,6 +6,12 @@ enum TestElement {
         typealias _Image = TypeDerivedElement<Image>
         typealias _Button = TypeDerivedElement<Button<AnyView>>
         typealias _Toggle = TypeDerivedElement<Toggle<AnyView>>
+        typealias _GeometryReader = TypeDerivedElement<GeometryReader<AnyView>>
+        typealias _VStack = TypeDerivedElement<VStack<AnyView>>
+        typealias _HStack = TypeDerivedElement<HStack<AnyView>>
+        typealias _ForEach = TypeDerivedElement<ForEach<Data, Int, AnyView>>
+        @available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
+        typealias _NavigationStack = TypeDerivedElement<NavigationStack<Data, AnyView>>
     }
 
     enum Modifier {
