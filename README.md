@@ -1,30 +1,32 @@
-# SwiftUI View Testing Framework
+# SwiftUI View Hosting Framework
 
 [![Swift](https://github.com/sisoje/swiftui-native/actions/workflows/swift.yml/badge.svg)](https://github.com/sisoje/swiftui-native/actions/workflows/swift.yml)
 
 ## Introduction
 
-This framework provides a powerful solution for testing SwiftUI views, with a particular focus on testing views with changing state. It offers tools for introspection, reflection, and interaction with SwiftUI components, enabling developers to verify the correctness and behavior of their user interfaces throughout the view lifecycle.
+This framework provides a powerful solution for hosting and testing SwiftUI views, focusing on testing views with mutable state and interaction within their natural lifecycle. The framework offers utilities to host views, observe lifecycle changes, and interact with SwiftUI components in a seamless manner during tests.
 
-## Key Features
+## Key Features (ViewHostingApp)
 
 - **State Change Testing**: Easily test views with changing state, including `@State`, `@Binding`, and other property wrappers.
 - **Lifecycle Event Testing**: Verify the behavior of views during different lifecycle events such as `task`.
 - **Asynchronous Testing**: Support for testing asynchronous operations in SwiftUI views.
 - **View Hosting**: APIs for hosting views during tests, ensuring controlled testing environments.
-- **Navigation Testing**: Capabilities to test NavigationStack and navigation flow.
+- **Navigation Testing**: Capabilities to test `NavigationStack` and navigation flows.
 - **Interactive Element Testing**: Test buttons, toggles, and other interactive SwiftUI components.
 
 ## Project Structure
 
 The project is structured as follows:
 
-- `HostApp/`: Contains the host application for testing
-  - `HostAppMain.swift`: Defines the main app entry point as an extension of ViewHostingApp
-  - `HostAppTests.swift`: Empty file needed for the test target (all test cases are implemented in the ViewTesting framework)
-- `Sources/`: Contains the main source code for the framework
-  - `ViewHosting/`: Core hosting functionality
-  - `ViewTesting/`: Testing utilities and extensions
+- `HostApp/`: Contains the host application generated via Tuist for performing tests.
+  - `HostAppMain.swift`: Defines the main app entry point as an extension of `ViewHostingApp`.
+  - `HostAppTests.swift`: Empty file for the test target (most test cases are implemented in the `ViewHostingApp`).
+- `Sources/`: Contains the main source code for the framework.
+  - `ViewHostingApp/`: Core hosting functionality.
+  - `ViewHostingTests/`: Testing utilities and extensions.
+
+**Note**: Some elements related to view inspection are still under development and will be covered in future updates.
 
 ## Installation
 
@@ -41,15 +43,15 @@ Then, import the frameworks in your test files:
 ```swift
 import SwiftUI
 import XCTest
-@testable import ViewHosting
-import ViewTesting
+@testable import ViewHostingApp
+import ViewHostingTests
 ```
 
-## Usage Guide
+## Usage Guide (ViewHostingApp)
 
 ### Testing Navigation
 
-Here's an example of how to test navigation using NavigationStack:
+Here's an example of how to test navigation using `NavigationStack`:
 
 ```swift
 func testNavigation() async throws {
@@ -74,10 +76,10 @@ func testNavigation() async throws {
             Text(number.description)
         }
     }
-    
+
     let one = try await One.hostedView { One() }
     one.body.reflectionSnapshot.buttons[0].tap()
-    
+
     let two = try await Two.observeBodyEvaluation()
     XCTAssertEqual(two.body.reflectionSnapshot.texts[0].string, "1")
 }
@@ -96,10 +98,10 @@ Test asynchronous operations using the `task` modifier:
             Text(number.description).task { number = number + 1 }
         }
     }
-    
+
     let view = try await DummyView.hostedView { DummyView() }
     XCTAssertEqual(view.body.reflectionSnapshot.texts[0].string, "0")
-    
+
     try await DummyView.observeBodyEvaluation()
     XCTAssertEqual(view.body.reflectionSnapshot.texts[0].string, "1")
 }
@@ -107,7 +109,7 @@ Test asynchronous operations using the `task` modifier:
 
 ### Testing Interactive Elements
 
-Test toggles and other interactive elements without hosting the view:
+Test toggles and other interactive elements effectively:
 
 ```swift
 @MainActor func testToggle() {
@@ -125,13 +127,18 @@ Test toggles and other interactive elements without hosting the view:
 }
 ```
 
-Note: Views without internal state (like the `DummyView` in this example) do not need to be hosted for testing.
+## TODO (ViewInspection)
 
-## Advanced Features
+The `ViewInspection` framework is currently marked as future work, with planned features including:
 
-- **Body Evaluation Observation**: Use `postBodyEvaluation()` and `observeBodyEvaluation()` to track view updates.
-- **Reflection Snapshot**: Access the `reflectionSnapshot` of your views to inspect their structure and properties.
-- **Hosted View Testing**: Utilize `hostedView` for testing views with internal state in a controlled environment.
+- **Reflection & Introspection**: Deeper introspection into SwiftUI view hierarchy.
+- **Element Testing**: Functions targeting static and dynamic elements within a view.
+- **Modifier Testing**: Tools to inspect and interact with SwiftUI modifiers.
+- **Enhanced Property Wrapper Support**: Richer abstraction for `@State`, `@Binding`, `@Environment`, and custom property wrappers.
+
+These features will be addressed in upcoming releases.
+
+---
 
 ## Contributing
 
