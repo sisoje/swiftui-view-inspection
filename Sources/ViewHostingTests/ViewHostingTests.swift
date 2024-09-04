@@ -13,33 +13,31 @@ final class ViewHostingTests: XCTestCase {}
     
     @available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
     func testNavigation() async throws {
-        enum NavViews {
-            struct One: View {
-                @State var numbers: [Int] = []
-                var body: some View {
-                    let _ = postBodyEvaluation()
-                    NavigationStack(path: $numbers) {
-                        ProgressView()
-                            .navigationDestination(
-                                for: Int.self,
-                                destination: Two.init
-                            )
-                    }
-                }
-            }
-            
-            struct Two: View {
-                let number: Int
-                var body: some View {
-                    let _ = postBodyEvaluation()
-                    Text(number.description)
+        struct One: View {
+            @State var numbers: [Int] = []
+            var body: some View {
+                let _ = postBodyEvaluation()
+                NavigationStack(path: $numbers) {
+                    ProgressView()
+                        .navigationDestination(
+                            for: Int.self,
+                            destination: Two.init
+                        )
                 }
             }
         }
+            
+        struct Two: View {
+            let number: Int
+            var body: some View {
+                let _ = postBodyEvaluation()
+                Text(number.description)
+            }
+        }
         
-        let one = try await NavViews.One.host { NavViews.One() }
+        let one = try await One.host { One() }
         one.numbers.append(1)
-        try await NavViews.Two.onBodyEvaluation()
+        try await Two.onBodyEvaluation()
     }
     
     func testOnAppear() async throws {
