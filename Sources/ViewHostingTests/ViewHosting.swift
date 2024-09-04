@@ -11,7 +11,7 @@ extension View {
         content().host()
         return try await onBodyEvaluation(timeout: timeout)
     }
-    
+
     func appear(timeout: TimeInterval = 1) async throws {
         let waitOnAppear = Task {
             do {
@@ -24,7 +24,7 @@ extension View {
         onAppear(perform: waitOnAppear.cancel).host()
         try await waitOnAppear.value
     }
-    
+
     func host() {
         ViewHostingApp.shared.view = self
     }

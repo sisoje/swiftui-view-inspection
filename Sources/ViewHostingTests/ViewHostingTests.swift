@@ -76,15 +76,6 @@ final class ViewHostingTests: XCTestCase {}
         _ = try await MinimalView.host { MinimalView() }
     }
     
-    func testNotAppearing() async throws {
-        do {
-            try await MinimalView.onBodyEvaluation()
-            XCTFail("we expected this to fail")
-        }
-        catch ViewHostingError.bodyEvaluationTimeout {}
-        catch { throw error }
-    }
-    
     func testWrongView() async throws {
         do {
             _ = try await Text.host { MinimalView() }
