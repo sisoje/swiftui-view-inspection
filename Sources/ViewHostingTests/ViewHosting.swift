@@ -1,7 +1,7 @@
 import SwiftUI
 @testable import ViewHostingApp
 
-extension View {
+@MainActor extension View {
     @discardableResult static func onBodyEvaluation(timeout: TimeInterval = 1) async throws -> Self {
         try await NotificationCenter.default.observeBodyEvaluation(timeout: timeout)
     }
