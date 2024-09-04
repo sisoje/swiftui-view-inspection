@@ -3,26 +3,22 @@
 import PackageDescription
 
 let package = Package(
-    name: "ViewHosting",
+    name: "ViewInspection",
     platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8)] + [.visionOS(.v1)],
     products: [
         .library(
-            name: "ViewHostingApp",
-            targets: ["ViewHostingApp"]
-        ),
-        .library(
-            name: "ViewHostingTests",
-            targets: ["ViewHostingTests"]
+            name: "ViewInspection",
+            targets: ["ViewInspection"]
         ),
     ],
     targets: [
         .target(
-            name: "ViewHostingApp",
+            name: "ViewInspection",
             swiftSettings: [.enableExperimentalFeature("StrictConcurrency")]
         ),
-        .target(
-            name: "ViewHostingTests",
-            dependencies: ["ViewHostingApp"],
+        .testTarget(
+            name: "ViewInspectionTests",
+            dependencies: ["ViewInspection"],
             swiftSettings: [.enableExperimentalFeature("StrictConcurrency")]
         ),
     ]
