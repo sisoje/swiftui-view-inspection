@@ -11,7 +11,7 @@ let project = Project(
             product: .app,
             bundleId: "io.tuist.HostApp",
             infoPlist: .default,
-            sources: ["HostAppMain.swift"],
+            sources: ["HostApp.swift"],
             resources: [],
             dependencies: [
                 // ViewHosting goes to the app target
@@ -32,8 +32,7 @@ let project = Project(
             dependencies: [
                 .target(name: "HostApp"),
                 // ViewTesting goes to the unit test target
-                .package(product: "ViewHostingTests"),
-                .package(product: "ViewInspection")
+                .package(product: "ViewHostingTests")
             ]
         )
     ]

@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "ViewTesting",
+    name: "ViewHosting",
     platforms: [.iOS(.v15), .macOS(.v12), .tvOS(.v15), .watchOS(.v8)] + [.visionOS(.v1)],
     products: [
         .library(
@@ -14,10 +14,6 @@ let package = Package(
             name: "ViewHostingTests",
             targets: ["ViewHostingTests"]
         ),
-        .library(
-            name: "ViewInspection",
-            targets: ["ViewInspection"]
-        ),
     ],
     targets: [
         .target(
@@ -27,10 +23,6 @@ let package = Package(
         .target(
             name: "ViewHostingTests",
             dependencies: ["ViewHostingApp"],
-            swiftSettings: [.enableExperimentalFeature("StrictConcurrency")]
-        ),
-        .target(
-            name: "ViewInspection",
             swiftSettings: [.enableExperimentalFeature("StrictConcurrency")]
         ),
     ]
