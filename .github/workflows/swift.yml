@@ -10,12 +10,23 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  test_on_simulators:
     strategy:
       matrix:
-        xcode-version: [
-          '15'
-        ]
+        platform: [iOS, tvOS, watchOS, visionOS]
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: xcodebuild Test ${{ matrix.platform }}
+      run: xcodebuild test -scheme ViewInspection -destination 'platform=${{ matrix.platform }}'
+      
+  test_on_macos:
+    strategy:
+      matrix:
+        xcode-version: ['latest-stable', 'latest']
 
     runs-on: macos-latest
 
@@ -25,5 +36,5 @@ jobs:
       with:
         xcode-version: ${{ matrix.xcode-version }}
 
-    - name: Run Swift Tests
+    - name: Swift Test macOS
       run: swift test

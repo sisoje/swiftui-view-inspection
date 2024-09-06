@@ -1,19 +1,4 @@
 import SwiftUI
-import Combine
-
-struct IdentifiableValue: Identifiable {
-    let id: Int
-}
-
-struct EquatableViewContent: View, Equatable {
-    var body: some View {
-        EmptyView()
-    }
-    
-    static func == (lhs: EquatableViewContent, rhs: EquatableViewContent) -> Bool {
-        true
-    }
-}
 
 enum TestElement {
     enum View {
@@ -110,7 +95,7 @@ enum TestElement {
         typealias _EmptyView = SameTypeElement<EmptyView>
         
         @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
-        typealias _EquatableView = SameBaseElement<EquatableView<EquatableViewContent>>
+        typealias _EquatableView = SameBaseElement<EquatableView<Never>>
         
         @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _FillStyle = SameBaseElement<FillStyle>
@@ -351,7 +336,7 @@ enum TestElement {
         typealias _Stepper = SameBaseElement<Stepper<AnyView>>
         
         @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
-        typealias _SubscriptionView = SameBaseElement<SubscriptionView<AnyPublisher<Any, Never>, AnyView>>
+        typealias _SubscriptionView = SameBaseElement<SubscriptionView<NotificationCenter.Publisher, AnyView>>
         
         @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 7.0, *)
         typealias _TabView = SameBaseElement<TabView<Int, AnyView>>
@@ -359,7 +344,7 @@ enum TestElement {
         @available(iOS 16.0, macOS 12.0, *)
         @available(tvOS, unavailable)
         @available(watchOS, unavailable)
-        typealias _Table = SameBaseElement<Table<IdentifiableValue, TableRow<IdentifiableValue>, TableColumn<IdentifiableValue, Never, AnyView, Text>>>
+        typealias _Table = SameBaseElement<Table<Never, TableRow<Never>, TableColumn<Never, Never, AnyView, Text>>>
         
         @available(iOS 16.0, macOS 12.0, *)
         @available(tvOS, unavailable)
