@@ -10,7 +10,7 @@ final class PropertyWrappersTests: XCTestCase {}
             @Environment(\.dismiss) private var dismiss
             let body = EmptyView()
         }
-        let t = Dummy().reflectionSnapshot.environments
+        let t = Dummy().reflectionSnapshot.allElements(TestElement.PropertyWrapper._Environment.self)
         XCTAssertEqual(t.count, 2)
         XCTAssert(t[1].node.parent === t[0].node)
     }
@@ -20,7 +20,7 @@ final class PropertyWrappersTests: XCTestCase {}
             @State private var x = 0
             let body = EmptyView()
         }
-        XCTAssertEqual(Dummy().reflectionSnapshot.states.count, 1)
+        XCTAssertEqual(Dummy().reflectionSnapshot.allElements(TestElement.PropertyWrapper._State.self).count, 1)
     }
 
     func testBinding() {
@@ -28,6 +28,6 @@ final class PropertyWrappersTests: XCTestCase {}
             @Binding var x: Int
             let body = EmptyView()
         }
-        XCTAssertEqual(Dummy(x: .constant(1)).reflectionSnapshot.bindings.count, 1)
+        XCTAssertEqual(Dummy(x: .constant(1)).reflectionSnapshot.allElements(TestElement.PropertyWrapper._Binding.self).count, 1)
     }
 }
