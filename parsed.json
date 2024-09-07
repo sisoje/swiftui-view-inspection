@@ -7784,13 +7784,17 @@
     },
     {
         "struct": "public struct _ViewInputs {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_ViewInputs",
         "conformances": []
     },
     {
         "struct": "@frozen public struct EventModifiers : Swift.OptionSet {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "EventModifiers",
         "conformances": [
             "OptionSet "
@@ -7809,7 +7813,9 @@
     },
     {
         "struct": "public struct _ScrollLayout : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_ScrollLayout",
         "conformances": [
             "Equatable "
@@ -7817,7 +7823,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct ZStack<Content> : SwiftUICore.View where Content : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "ZStack",
         "generics": [
             "Content"
@@ -7834,7 +7842,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _ZStackLayout : SwiftUICore._VariadicView.UnaryViewRoot, SwiftUICore.Animatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_ZStackLayout",
         "conformances": [
             "_VariadicView",
@@ -7843,7 +7853,9 @@
     },
     {
         "struct": "@frozen public struct ZStackLayout : SwiftUICore.Layout {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "ZStackLayout",
         "conformances": [
             "Layout "
@@ -7851,7 +7863,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct LinearGradient : SwiftUICore.ShapeStyle, SwiftUICore.View, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "LinearGradient",
         "conformances": [
             "ShapeStyle",
@@ -7861,7 +7875,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct RadialGradient : SwiftUICore.ShapeStyle, SwiftUICore.View, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "RadialGradient",
         "conformances": [
             "ShapeStyle",
@@ -7871,7 +7887,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct EllipticalGradient : SwiftUICore.ShapeStyle, SwiftUICore.View, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "EllipticalGradient",
         "conformances": [
             "ShapeStyle",
@@ -7881,7 +7899,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct AngularGradient : SwiftUICore.ShapeStyle, SwiftUICore.View, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "AngularGradient",
         "conformances": [
             "ShapeStyle",
@@ -7891,7 +7911,9 @@
     },
     {
         "struct": "public struct ScrollPosition : Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)"
+        ],
         "name": "ScrollPosition",
         "conformances": [
             "Sendable "
@@ -7899,13 +7921,17 @@
     },
     {
         "struct": "public struct ScrollTarget {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "ScrollTarget",
         "conformances": []
     },
     {
         "struct": "@frozen public struct _OffsetEffect : SwiftUICore.GeometryEffect, Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_OffsetEffect",
         "conformances": [
             "GeometryEffect",
@@ -7914,7 +7940,9 @@
     },
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct OffsetTransition : SwiftUICore.Transition {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "OffsetTransition",
         "conformances": [
             "Transition "
@@ -7922,7 +7950,9 @@
     },
     {
         "struct": "@frozen public struct _AnyAnimatableData : SwiftUICore.VectorArithmetic {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "_AnyAnimatableData",
         "conformances": [
             "VectorArithmetic "
@@ -7930,7 +7960,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _ColorMonochromeEffect : SwiftUICore.EnvironmentalModifier {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "_ColorMonochromeEffect",
         "conformances": [
             "EnvironmentalModifier "
@@ -7938,7 +7970,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct SimultaneousGesture<First, Second> : SwiftUICore.Gesture where First : SwiftUICore.Gesture, Second : SwiftUICore.Gesture {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "SimultaneousGesture",
         "generics": [
             "First",
@@ -7958,7 +7992,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct VStack<Content> : SwiftUICore.View where Content : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "VStack",
         "generics": [
             "Content"
@@ -7975,13 +8011,17 @@
     },
     {
         "struct": "@frozen public struct _VStackLayout {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_VStackLayout",
         "conformances": []
     },
     {
         "struct": "@frozen public struct VStackLayout : SwiftUICore.Layout {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "VStackLayout",
         "conformances": [
             "Layout "
@@ -7989,13 +8029,17 @@
     },
     {
         "struct": "public struct ViewDimensions {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "ViewDimensions",
         "conformances": []
     },
     {
         "struct": "@frozen public struct _FixedSizeLayout {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_FixedSizeLayout",
         "conformances": []
     },
@@ -8014,6 +8058,7 @@
     {
         "struct": "public struct _CustomHoverEffectInputs {",
         "availabilities": [
+            "@available(iOS 18.0, tvOS 18.0, visionOS 2.0, *)",
             "@available(macOS, unavailable)",
             "@available(watchOS, unavailable)"
         ],
@@ -8023,6 +8068,7 @@
     {
         "struct": "public struct _CustomHoverEffectOutputs {",
         "availabilities": [
+            "@available(iOS 18.0, tvOS 18.0, visionOS 2.0, *)",
             "@available(macOS, unavailable)",
             "@available(watchOS, unavailable)"
         ],
@@ -8031,7 +8077,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct ExclusiveGesture<First, Second> : SwiftUICore.Gesture where First : SwiftUICore.Gesture, Second : SwiftUICore.Gesture {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "ExclusiveGesture",
         "generics": [
             "First",
@@ -8051,7 +8099,9 @@
     },
     {
         "struct": "@frozen public struct _RotationEffect : SwiftUICore.GeometryEffect, Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_RotationEffect",
         "conformances": [
             "GeometryEffect",
@@ -8060,7 +8110,9 @@
     },
     {
         "struct": "@frozen public struct AnyGradient : Swift.Hashable, SwiftUICore.ShapeStyle, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "AnyGradient",
         "conformances": [
             "Hashable",
@@ -8070,7 +8122,9 @@
     },
     {
         "struct": "@frozen public struct _AnyLinearGradient : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "_AnyLinearGradient",
         "conformances": [
             "ShapeStyle "
@@ -8078,7 +8132,9 @@
     },
     {
         "struct": "@frozen public struct _AnyRadialGradient : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "_AnyRadialGradient",
         "conformances": [
             "ShapeStyle "
@@ -8086,7 +8142,9 @@
     },
     {
         "struct": "@frozen public struct _AnyEllipticalGradient : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "_AnyEllipticalGradient",
         "conformances": [
             "ShapeStyle "
@@ -8094,7 +8152,9 @@
     },
     {
         "struct": "@frozen public struct _AnyAngularGradient : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "_AnyAngularGradient",
         "conformances": [
             "ShapeStyle "
@@ -8102,7 +8162,9 @@
     },
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct _ViewModifier_Content<Modifier> : SwiftUICore.View where Modifier : SwiftUICore.ViewModifier {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_ViewModifier_Content",
         "generics": [
             "Modifier"
@@ -8119,7 +8181,9 @@
     },
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct PlaceholderContentView<Value> : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "PlaceholderContentView",
         "generics": [
             "Value"
@@ -8130,7 +8194,9 @@
     },
     {
         "struct": "public struct KeyframeTrack<Root, Value, Content> : SwiftUICore.Keyframes where Value == Content.Value, Content : SwiftUICore.KeyframeTrackContent {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "KeyframeTrack",
         "generics": [
             "Root",
@@ -8150,6 +8216,7 @@
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _ForegroundColorModifier {",
         "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)",
             "@available(*, deprecated, message: \"will be removed\")"
         ],
         "name": "_ForegroundColorModifier",
@@ -8157,7 +8224,9 @@
     },
     {
         "struct": "@frozen @propertyWrapper public struct Namespace : SwiftUICore.DynamicProperty, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "Namespace",
         "conformances": [
             "DynamicProperty",
@@ -8166,7 +8235,9 @@
     },
     {
         "struct": "@frozen public struct ImagePaint : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "ImagePaint",
         "conformances": [
             "ShapeStyle "
@@ -8174,7 +8245,9 @@
     },
     {
         "struct": "public struct PeriodicTimelineSchedule : SwiftUICore.TimelineSchedule, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "PeriodicTimelineSchedule",
         "conformances": [
             "TimelineSchedule",
@@ -8183,7 +8256,9 @@
     },
     {
         "struct": "public struct EveryMinuteTimelineSchedule : SwiftUICore.TimelineSchedule, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "EveryMinuteTimelineSchedule",
         "conformances": [
             "TimelineSchedule",
@@ -8192,7 +8267,9 @@
     },
     {
         "struct": "public struct ExplicitTimelineSchedule<Entries> : SwiftUICore.TimelineSchedule where Entries : Swift.Sequence, Entries.Element == Foundation.Date {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "ExplicitTimelineSchedule",
         "generics": [
             "Entries"
@@ -8209,7 +8286,9 @@
     },
     {
         "struct": "@frozen public struct Gradient : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "Gradient",
         "conformances": [
             "Equatable "
@@ -8217,7 +8296,9 @@
     },
     {
         "struct": "public struct _TextVariantPreference<Preference> : Swift.Sendable where Preference : SwiftUICore.TextVariantPreference {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)"
+        ],
         "name": "_TextVariantPreference",
         "generics": [
             "Preference"
@@ -8234,7 +8315,9 @@
     },
     {
         "struct": "public struct FixedTextVariant : SwiftUICore.TextVariantPreference, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)"
+        ],
         "name": "FixedTextVariant",
         "conformances": [
             "TextVariantPreference",
@@ -8243,7 +8326,9 @@
     },
     {
         "struct": "public struct SizeDependentTextVariant : SwiftUICore.TextVariantPreference, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)"
+        ],
         "name": "SizeDependentTextVariant",
         "conformances": [
             "TextVariantPreference",
@@ -8252,7 +8337,9 @@
     },
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct KeyframeAnimator<Value, KeyframePath, Content> : SwiftUICore.View where Value == KeyframePath.Value, KeyframePath : SwiftUICore.Keyframes, Content : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "KeyframeAnimator",
         "generics": [
             "Value",
@@ -8273,13 +8360,17 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _PaddingLayout {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_PaddingLayout",
         "conformances": []
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct TupleView<T> : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "TupleView",
         "generics": [
             "T"
@@ -8290,7 +8381,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _BlendModeEffect : Swift.Equatable, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_BlendModeEffect",
         "conformances": [
             "Equatable",
@@ -8299,7 +8392,9 @@
     },
     {
         "struct": "public struct _Placement : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_Placement",
         "conformances": [
             "Equatable "
@@ -8307,13 +8402,17 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _ColorMatrixEffect {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "_ColorMatrixEffect",
         "conformances": []
     },
     {
         "struct": "@frozen public struct Group<Content> {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "Group",
         "generics": [
             "Content"
@@ -8322,7 +8421,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _ContrastEffect : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_ContrastEffect",
         "conformances": [
             "Equatable "
@@ -8330,13 +8431,17 @@
     },
     {
         "struct": "public struct UnitCurve {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "UnitCurve",
         "conformances": []
     },
     {
         "struct": "@frozen public struct MatchedGeometryProperties : Swift.OptionSet {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "MatchedGeometryProperties",
         "conformances": [
             "OptionSet "
@@ -8344,7 +8449,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _MatchedGeometryEffect<ID> where ID : Swift.Hashable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "_MatchedGeometryEffect",
         "generics": [
             "ID"
@@ -8359,7 +8466,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _EnvironmentKeyWritingModifier<Value> : SwiftUICore.ViewModifier, SwiftUICore._GraphInputsModifier {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_EnvironmentKeyWritingModifier",
         "generics": [
             "Value"
@@ -8371,13 +8480,17 @@
     },
     {
         "struct": "@preconcurrency @_Concurrency.MainActor public struct OpenURLAction {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "OpenURLAction",
         "conformances": []
     },
     {
         "struct": "public struct Spring : Swift.Hashable, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "Spring",
         "conformances": [
             "Hashable",
@@ -8386,7 +8499,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _OverlayModifier<Overlay> : SwiftUICore.ViewModifier where Overlay : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_OverlayModifier",
         "generics": [
             "Overlay"
@@ -8403,7 +8518,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _OverlayStyleModifier<Style> : SwiftUICore.ViewModifier where Style : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "_OverlayStyleModifier",
         "generics": [
             "Style"
@@ -8420,7 +8537,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _OverlayShapeModifier<Style, Bounds> : SwiftUICore.ViewModifier where Style : SwiftUICore.ShapeStyle, Bounds : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "_OverlayShapeModifier",
         "generics": [
             "Style",
@@ -8440,7 +8559,9 @@
     },
     {
         "struct": "@frozen public struct Font : Swift.Hashable, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "Font",
         "conformances": [
             "Hashable",
@@ -8449,37 +8570,49 @@
     },
     {
         "struct": "public struct _ProposedSize {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_ProposedSize",
         "conformances": []
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct Spacer {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "Spacer",
         "conformances": []
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _TextBaselineRelativeSpacer {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "_TextBaselineRelativeSpacer",
         "conformances": []
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _HSpacer {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_HSpacer",
         "conformances": []
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _VSpacer {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_VSpacer",
         "conformances": []
     },
     {
         "struct": "@_functionBuilder public struct KeyframesBuilder<Value> {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "KeyframesBuilder",
         "generics": [
             "Value"
@@ -8488,7 +8621,9 @@
     },
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct MoveTransition : SwiftUICore.Transition {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "MoveTransition",
         "conformances": [
             "Transition "
@@ -8496,13 +8631,17 @@
     },
     {
         "struct": "public struct _StackLayoutCache {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "_StackLayoutCache",
         "conformances": []
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _BlurEffect : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_BlurEffect",
         "conformances": [
             "Equatable "
@@ -8510,7 +8649,9 @@
     },
     {
         "struct": "public struct AccessibilityTextContentType : Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "AccessibilityTextContentType",
         "conformances": [
             "Sendable "
@@ -8518,7 +8659,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _ColorInvertEffect : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_ColorInvertEffect",
         "conformances": [
             "Equatable "
@@ -8526,7 +8669,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _TraitWritingModifier<Trait> where Trait : SwiftUICore._ViewTraitKey {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_TraitWritingModifier",
         "generics": [
             "Trait"
@@ -8541,7 +8686,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _ConditionalTraitWritingModifier<Trait> where Trait : SwiftUICore._ViewTraitKey {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)"
+        ],
         "name": "_ConditionalTraitWritingModifier",
         "generics": [
             "Trait"
@@ -8556,19 +8703,25 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _ForegroundLayerViewModifier {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "_ForegroundLayerViewModifier",
         "conformances": []
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _ForegroundLayerColorMatrixEffect {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "_ForegroundLayerColorMatrixEffect",
         "conformances": []
     },
     {
         "struct": "public struct ContentShapeKinds : Swift.OptionSet, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "ContentShapeKinds",
         "conformances": [
             "OptionSet",
@@ -8577,7 +8730,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _GrayscaleEffect : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_GrayscaleEffect",
         "conformances": [
             "Equatable "
@@ -8585,7 +8740,9 @@
     },
     {
         "struct": "@frozen public struct Anchor<Value> {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "Anchor",
         "generics": [
             "Value"
@@ -8594,7 +8751,9 @@
     },
     {
         "struct": "@frozen public struct _Rotation3DEffect : SwiftUICore.GeometryEffect, Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_Rotation3DEffect",
         "conformances": [
             "GeometryEffect",
@@ -8641,7 +8800,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _OpacityEffect : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_OpacityEffect",
         "conformances": [
             "Equatable "
@@ -8649,7 +8810,9 @@
     },
     {
         "struct": "@frozen public struct _OpacityShapeStyle<Style> : SwiftUICore.ShapeStyle where Style : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "_OpacityShapeStyle",
         "generics": [
             "Style"
@@ -8666,7 +8829,9 @@
     },
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct OpacityTransition : SwiftUICore.Transition {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "OpacityTransition",
         "conformances": [
             "Transition "
@@ -8674,7 +8839,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _ShadowEffect : SwiftUICore.EnvironmentalModifier, Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_ShadowEffect",
         "conformances": [
             "EnvironmentalModifier",
@@ -8683,7 +8850,9 @@
     },
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct _DrawingGroupEffect : SwiftUICore.ViewModifier, Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_DrawingGroupEffect",
         "conformances": [
             "ViewModifier",
@@ -8692,7 +8861,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _BrightnessEffect : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_BrightnessEffect",
         "conformances": [
             "Equatable "
@@ -8700,7 +8871,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _GeometryGroupEffect : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "_GeometryGroupEffect",
         "conformances": [
             "Equatable "
@@ -8708,7 +8881,9 @@
     },
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct AsymmetricTransition<Insertion, Removal> : SwiftUICore.Transition where Insertion : SwiftUICore.Transition, Removal : SwiftUICore.Transition {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "AsymmetricTransition",
         "generics": [
             "Insertion",
@@ -8728,13 +8903,17 @@
     },
     {
         "struct": "@_functionBuilder public struct ViewBuilder {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "ViewBuilder",
         "conformances": []
     },
     {
         "struct": "@frozen @propertyWrapper @preconcurrency @_Concurrency.MainActor public struct EnvironmentObject<ObjectType> : SwiftUICore.DynamicProperty where ObjectType : Combine.ObservableObject {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "EnvironmentObject",
         "generics": [
             "ObjectType"
@@ -8751,7 +8930,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _MaskAlignmentEffect<Mask> : SwiftUICore.ViewModifier where Mask : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "_MaskAlignmentEffect",
         "generics": [
             "Mask"
@@ -8768,7 +8949,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _MaskEffect<Mask> : SwiftUICore.ViewModifier where Mask : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_MaskEffect",
         "generics": [
             "Mask"
@@ -8785,7 +8968,9 @@
     },
     {
         "struct": "public struct AccessibilityTraits : Swift.SetAlgebra, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "AccessibilityTraits",
         "conformances": [
             "SetAlgebra",
@@ -8794,7 +8979,9 @@
     },
     {
         "struct": "@frozen public struct LocalizedStringKey : Swift.Equatable, Swift.ExpressibleByStringInterpolation {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "LocalizedStringKey",
         "conformances": [
             "Equatable",
@@ -8804,6 +8991,7 @@
     {
         "struct": "public struct EnabledTextSelectability : SwiftUICore.TextSelectability {",
         "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, *)",
             "@available(tvOS, unavailable)",
             "@available(watchOS, unavailable)"
         ],
@@ -8815,6 +9003,7 @@
     {
         "struct": "public struct DisabledTextSelectability : SwiftUICore.TextSelectability {",
         "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, *)",
             "@available(tvOS, unavailable)",
             "@available(watchOS, unavailable)"
         ],
@@ -8825,7 +9014,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct HStack<Content> : SwiftUICore.View where Content : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "HStack",
         "generics": [
             "Content"
@@ -8842,13 +9033,17 @@
     },
     {
         "struct": "@frozen public struct _HStackLayout {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_HStackLayout",
         "conformances": []
     },
     {
         "struct": "@frozen public struct HStackLayout : SwiftUICore.Layout {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "HStackLayout",
         "conformances": [
             "Layout "
@@ -8856,7 +9051,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _CompositingGroupEffect : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_CompositingGroupEffect",
         "conformances": [
             "Equatable "
@@ -8864,7 +9061,9 @@
     },
     {
         "struct": "public struct _ResolvedKeyframes<Value> {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "_ResolvedKeyframes",
         "generics": [
             "Value"
@@ -8873,7 +9072,9 @@
     },
     {
         "struct": "@frozen public struct AnyShapeStyle : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "AnyShapeStyle",
         "conformances": [
             "ShapeStyle "
@@ -8881,7 +9082,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _PreferenceReadingView<Key, Content> : SwiftUICore.View where Key : SwiftUICore.PreferenceKey, Content : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_PreferenceReadingView",
         "generics": [
             "Key",
@@ -8901,13 +9104,17 @@
     },
     {
         "struct": "public struct AccessibilityCustomContentKey {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "AccessibilityCustomContentKey",
         "conformances": []
     },
     {
         "struct": "@frozen public struct _TrimmedShape<S> : SwiftUICore.Shape where S : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_TrimmedShape",
         "generics": [
             "S"
@@ -8924,7 +9131,9 @@
     },
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct _EndedGesture<Content> where Content : SwiftUICore.Gesture {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_EndedGesture",
         "generics": [
             "Content"
@@ -8939,7 +9148,9 @@
     },
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct _ChangedGesture<Content> where Content : SwiftUICore.Gesture, Content.Value : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_ChangedGesture",
         "generics": [
             "Content"
@@ -8956,19 +9167,25 @@
     },
     {
         "struct": "public struct _DynamicPropertyBuffer {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_DynamicPropertyBuffer",
         "conformances": []
     },
     {
         "struct": "public struct _Graph {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_Graph",
         "conformances": []
     },
     {
         "struct": "public struct _GraphValue<Value> : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_GraphValue",
         "generics": [
             "Value"
@@ -8979,13 +9196,17 @@
     },
     {
         "struct": "@frozen public struct Transaction {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "Transaction",
         "conformances": []
     },
     {
         "struct": "public struct RedactionReasons : Swift.OptionSet, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "RedactionReasons",
         "conformances": [
             "OptionSet",
@@ -8994,7 +9215,9 @@
     },
     {
         "struct": "@frozen public struct FillStyle : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "FillStyle",
         "conformances": [
             "Equatable "
@@ -9002,7 +9225,9 @@
     },
     {
         "struct": "@frozen public struct _BlendModeShapeStyle<Style> : SwiftUICore.ShapeStyle where Style : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "_BlendModeShapeStyle",
         "generics": [
             "Style"
@@ -9019,7 +9244,9 @@
     },
     {
         "struct": "public struct Material : Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "Material",
         "conformances": [
             "Sendable "
@@ -9027,7 +9254,9 @@
     },
     {
         "struct": "public struct MaterialActiveAppearance : Swift.Sendable, Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)"
+        ],
         "name": "MaterialActiveAppearance",
         "conformances": [
             "Sendable",
@@ -9036,13 +9265,17 @@
     },
     {
         "struct": "public struct _VariadicView_Children {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_VariadicView_Children",
         "conformances": []
     },
     {
         "struct": "@frozen public struct HierarchicalShapeStyle : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "HierarchicalShapeStyle",
         "conformances": [
             "ShapeStyle "
@@ -9050,7 +9283,9 @@
     },
     {
         "struct": "@frozen public struct HierarchicalShapeStyleModifier<Base> : SwiftUICore.ShapeStyle where Base : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "HierarchicalShapeStyleModifier",
         "generics": [
             "Base"
@@ -9067,7 +9302,9 @@
     },
     {
         "struct": "public struct SymbolRenderingMode : Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "SymbolRenderingMode",
         "conformances": [
             "Sendable "
@@ -9076,6 +9313,7 @@
     {
         "struct": "@dynamicMemberLookup public struct ShaderLibrary : Swift.Equatable, @unchecked Swift.Sendable {",
         "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, *)",
             "@available(watchOS, unavailable)"
         ],
         "name": "ShaderLibrary",
@@ -9087,6 +9325,7 @@
     {
         "struct": "@dynamicCallable public struct ShaderFunction : Swift.Equatable, Swift.Sendable {",
         "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, *)",
             "@available(watchOS, unavailable)"
         ],
         "name": "ShaderFunction",
@@ -9098,6 +9337,7 @@
     {
         "struct": "public struct Shader : Swift.Equatable, Swift.Sendable {",
         "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, *)",
             "@available(watchOS, unavailable)"
         ],
         "name": "Shader",
@@ -9109,6 +9349,7 @@
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct _ShaderFilterEffect : Swift.Sendable {",
         "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, *)",
             "@available(watchOS, unavailable)"
         ],
         "name": "_ShaderFilterEffect",
@@ -9118,19 +9359,25 @@
     },
     {
         "struct": "@frozen public struct GraphicsContext {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "GraphicsContext",
         "conformances": []
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _AspectRatioLayout {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_AspectRatioLayout",
         "conformances": []
     },
     {
         "struct": "public struct SeparatorShapeStyle : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 10.15, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "SeparatorShapeStyle",
         "conformances": [
             "ShapeStyle "
@@ -9138,7 +9385,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct GeometryReader<Content> : SwiftUICore.View where Content : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "GeometryReader",
         "generics": [
             "Content"
@@ -9155,13 +9404,17 @@
     },
     {
         "struct": "public struct GeometryProxy {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "GeometryProxy",
         "conformances": []
     },
     {
         "struct": "@propertyWrapper @preconcurrency @_Concurrency.MainActor @frozen public struct ObservedObject<ObjectType> : SwiftUICore.DynamicProperty where ObjectType : Combine.ObservableObject {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "ObservedObject",
         "generics": [
             "ObjectType"
@@ -9178,7 +9431,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _OverlayPreferenceModifier<Key, Overlay> where Key : SwiftUICore.PreferenceKey, Overlay : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "_OverlayPreferenceModifier",
         "generics": [
             "Key",
@@ -9196,7 +9451,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _BackgroundPreferenceModifier<Key, Overlay> where Key : SwiftUICore.PreferenceKey, Overlay : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "_BackgroundPreferenceModifier",
         "generics": [
             "Key",
@@ -9214,7 +9471,9 @@
     },
     {
         "struct": "@frozen public struct AnyLayout : SwiftUICore.Layout {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "AnyLayout",
         "conformances": [
             "Layout "
@@ -9222,7 +9481,9 @@
     },
     {
         "struct": "public struct LayoutProperties : Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "LayoutProperties",
         "conformances": [
             "Sendable "
@@ -9230,7 +9491,9 @@
     },
     {
         "struct": "@frozen public struct ProposedViewSize : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "ProposedViewSize",
         "conformances": [
             "Equatable "
@@ -9238,7 +9501,9 @@
     },
     {
         "struct": "public struct ViewSpacing : Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "ViewSpacing",
         "conformances": [
             "Sendable "
@@ -9246,7 +9511,9 @@
     },
     {
         "struct": "public struct LayoutSubviews : Swift.Equatable, Swift.RandomAccessCollection, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "LayoutSubviews",
         "conformances": [
             "Equatable",
@@ -9256,7 +9523,9 @@
     },
     {
         "struct": "public struct LayoutSubview : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "LayoutSubview",
         "conformances": [
             "Equatable "
@@ -9264,7 +9533,9 @@
     },
     {
         "struct": "public struct _LayoutTrait<K> : SwiftUICore._ViewTraitKey where K : SwiftUICore.LayoutValueKey {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "_LayoutTrait",
         "generics": [
             "K"
@@ -9281,7 +9552,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _LayoutRoot<L> : SwiftUICore._VariadicView.UnaryViewRoot where L : SwiftUICore.Layout {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "_LayoutRoot",
         "generics": [
             "L"
@@ -9298,13 +9571,17 @@
     },
     {
         "struct": "public struct _IdentifiedViewProxy {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_IdentifiedViewProxy",
         "conformances": []
     },
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct SlideTransition : SwiftUICore.Transition {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "SlideTransition",
         "conformances": [
             "Transition "
@@ -9312,7 +9589,9 @@
     },
     {
         "struct": "public struct ShadowStyle : Swift.Equatable, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "ShadowStyle",
         "conformances": [
             "Equatable",
@@ -9321,7 +9600,9 @@
     },
     {
         "struct": "@frozen public struct _ShadowShapeStyle<Style> : SwiftUICore.ShapeStyle where Style : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "_ShadowShapeStyle",
         "generics": [
             "Style"
@@ -9338,7 +9619,9 @@
     },
     {
         "struct": "@frozen public struct _AnchoredShapeStyle<S> : SwiftUICore.ShapeStyle where S : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_AnchoredShapeStyle",
         "generics": [
             "S"
@@ -9355,7 +9638,9 @@
     },
     {
         "struct": "@frozen public struct StrokeStyle : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "StrokeStyle",
         "conformances": [
             "Equatable "
@@ -9363,7 +9648,9 @@
     },
     {
         "struct": "public struct TypesettingLanguage : Swift.Sendable, Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "TypesettingLanguage",
         "conformances": [
             "Sendable",
@@ -9372,7 +9659,9 @@
     },
     {
         "struct": "public struct BackgroundProminence : Swift.Hashable, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "BackgroundProminence",
         "conformances": [
             "Hashable",
@@ -9381,25 +9670,33 @@
     },
     {
         "struct": "public struct _ViewListInputs {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_ViewListInputs",
         "conformances": []
     },
     {
         "struct": "public struct _ViewListCountInputs {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "_ViewListCountInputs",
         "conformances": []
     },
     {
         "struct": "public struct _ViewListOutputs {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_ViewListOutputs",
         "conformances": []
     },
     {
         "struct": "@frozen public struct BackgroundStyle : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "BackgroundStyle",
         "conformances": [
             "ShapeStyle "
@@ -9407,7 +9704,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _EnvironmentBackgroundStyleModifier<S> where S : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "_EnvironmentBackgroundStyleModifier",
         "generics": [
             "S"
@@ -9422,7 +9721,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _ForegroundStyleModifier<Style> where Style : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "_ForegroundStyleModifier",
         "generics": [
             "Style"
@@ -9437,7 +9738,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _ForegroundStyleModifier2<S1, S2> where S1 : SwiftUICore.ShapeStyle, S2 : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "_ForegroundStyleModifier2",
         "generics": [
             "S1",
@@ -9455,7 +9758,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _ForegroundStyleModifier3<S1, S2, S3> where S1 : SwiftUICore.ShapeStyle, S2 : SwiftUICore.ShapeStyle, S3 : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "_ForegroundStyleModifier3",
         "generics": [
             "S1",
@@ -9476,7 +9781,9 @@
     },
     {
         "struct": "@frozen public struct ForegroundStyle : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "ForegroundStyle",
         "conformances": [
             "ShapeStyle "
@@ -9484,7 +9791,9 @@
     },
     {
         "struct": "@frozen public struct _ImplicitShapeStyle : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "_ImplicitShapeStyle",
         "conformances": [
             "ShapeStyle "
@@ -9492,19 +9801,25 @@
     },
     {
         "struct": "public struct _ShapeStyle_Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "_ShapeStyle_Shape",
         "conformances": []
     },
     {
         "struct": "public struct _ShapeStyle_ShapeType {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "_ShapeStyle_ShapeType",
         "conformances": []
     },
     {
         "struct": "@frozen public struct _StrokedShape<S> : SwiftUICore.Shape where S : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_StrokedShape",
         "generics": [
             "S"
@@ -9521,7 +9836,9 @@
     },
     {
         "struct": "@frozen public struct UnitPoint : Swift.Hashable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "UnitPoint",
         "conformances": [
             "Hashable "
@@ -9529,7 +9846,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _PreferenceTransformModifier<Key> : SwiftUICore.ViewModifier where Key : SwiftUICore.PreferenceKey {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_PreferenceTransformModifier",
         "generics": [
             "Key"
@@ -9546,13 +9865,17 @@
     },
     {
         "struct": "public struct _ViewOutputs {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_ViewOutputs",
         "conformances": []
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _PreferenceWritingModifier<Key> : SwiftUICore.ViewModifier where Key : SwiftUICore.PreferenceKey {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_PreferenceWritingModifier",
         "generics": [
             "Key"
@@ -9569,7 +9892,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _LuminanceToAlphaEffect : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_LuminanceToAlphaEffect",
         "conformances": [
             "Equatable "
@@ -9577,7 +9902,9 @@
     },
     {
         "struct": "@frozen public struct AnyShape : SwiftUICore.Shape, @unchecked Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "AnyShape",
         "conformances": [
             "Shape",
@@ -9586,7 +9913,9 @@
     },
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct _MapGesture<Content, Value> where Content : SwiftUICore.Gesture {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_MapGesture",
         "generics": [
             "Content",
@@ -9602,7 +9931,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct AnyGesture<Value> : SwiftUICore.Gesture {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "AnyGesture",
         "generics": [
             "Value"
@@ -9613,7 +9944,9 @@
     },
     {
         "struct": "@frozen public struct Path : Swift.Equatable, Swift.LosslessStringConvertible, @unchecked Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "Path",
         "conformances": [
             "Equatable",
@@ -9623,7 +9956,9 @@
     },
     {
         "struct": "@frozen public struct Rectangle : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "Rectangle",
         "conformances": [
             "Shape "
@@ -9631,7 +9966,9 @@
     },
     {
         "struct": "@frozen public struct RoundedRectangle : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "RoundedRectangle",
         "conformances": [
             "Shape "
@@ -9639,7 +9976,9 @@
     },
     {
         "struct": "@frozen public struct UnevenRoundedRectangle : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "UnevenRoundedRectangle",
         "conformances": [
             "Shape "
@@ -9647,7 +9986,9 @@
     },
     {
         "struct": "@frozen public struct Capsule : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "Capsule",
         "conformances": [
             "Shape "
@@ -9655,7 +9996,9 @@
     },
     {
         "struct": "@frozen public struct Ellipse : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "Ellipse",
         "conformances": [
             "Shape "
@@ -9663,7 +10006,9 @@
     },
     {
         "struct": "@frozen public struct Circle : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "Circle",
         "conformances": [
             "Shape "
@@ -9671,19 +10016,25 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _AlignmentLayout {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_AlignmentLayout",
         "conformances": []
     },
     {
         "struct": "@frozen public struct ProjectionTransform {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "ProjectionTransform",
         "conformances": []
     },
     {
         "struct": "@frozen public struct EdgeInsets : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "EdgeInsets",
         "conformances": [
             "Equatable "
@@ -9691,7 +10042,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _AppearanceActionModifier : SwiftUICore.ViewModifier {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_AppearanceActionModifier",
         "conformances": [
             "ViewModifier "
@@ -9699,7 +10052,9 @@
     },
     {
         "struct": "public struct _PreferenceValue<Key> where Key : SwiftUICore.PreferenceKey {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_PreferenceValue",
         "generics": [
             "Key"
@@ -9714,7 +10069,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _DelayedPreferenceView<Key, Content> : SwiftUICore.View where Key : SwiftUICore.PreferenceKey, Content : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_DelayedPreferenceView",
         "generics": [
             "Key",
@@ -9734,7 +10091,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _EnvironmentKeyTransformModifier<Value> : SwiftUICore.ViewModifier, SwiftUICore._GraphInputsModifier {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_EnvironmentKeyTransformModifier",
         "generics": [
             "Value"
@@ -9746,7 +10105,9 @@
     },
     {
         "struct": "public struct _DetachableProperties : Swift.OptionSet {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_DetachableProperties",
         "conformances": [
             "OptionSet "
@@ -9754,7 +10115,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _DetachedView<Detached, Content, Child> : SwiftUICore.View where Detached : SwiftUICore._Detachable, Content : SwiftUICore.View, Child : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_DetachedView",
         "generics": [
             "Detached",
@@ -9777,7 +10140,9 @@
     },
     {
         "struct": "public struct _DetachedKey<Key> : SwiftUICore._Detachable where Key : SwiftUICore.PreferenceKey {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_DetachedKey",
         "generics": [
             "Key"
@@ -9794,7 +10159,9 @@
     },
     {
         "struct": "public struct _EmptyDetached : SwiftUICore._Detachable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_EmptyDetached",
         "conformances": [
             "_Detachable "
@@ -9802,7 +10169,9 @@
     },
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct _DetachedPlaceholder<Detached> : SwiftUICore.View where Detached : SwiftUICore._Detachable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_DetachedPlaceholder",
         "generics": [
             "Detached"
@@ -9819,7 +10188,9 @@
     },
     {
         "struct": "@frozen public struct HorizontalAlignment : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "HorizontalAlignment",
         "conformances": [
             "Equatable "
@@ -9827,7 +10198,9 @@
     },
     {
         "struct": "@frozen public struct VerticalAlignment : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "VerticalAlignment",
         "conformances": [
             "Equatable "
@@ -9835,7 +10208,9 @@
     },
     {
         "struct": "@frozen public struct Alignment : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "Alignment",
         "conformances": [
             "Equatable "
@@ -9843,7 +10218,9 @@
     },
     {
         "struct": "@_documentation(visibility: private) @frozen public struct AlignmentKey : Swift.Hashable, Swift.Comparable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "AlignmentKey",
         "conformances": [
             "Hashable",
@@ -9852,7 +10229,9 @@
     },
     {
         "struct": "@frozen @propertyWrapper public struct Environment<Value> : SwiftUICore.DynamicProperty {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "Environment",
         "generics": [
             "Value"
@@ -9863,7 +10242,9 @@
     },
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct PushTransition : SwiftUICore.Transition {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "PushTransition",
         "conformances": [
             "Transition "
@@ -9871,7 +10252,9 @@
     },
     {
         "struct": "@frozen @propertyWrapper @dynamicMemberLookup public struct Binding<Value> {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "Binding",
         "generics": [
             "Value"
@@ -9880,7 +10263,9 @@
     },
     {
         "struct": "@frozen public struct _Velocity<Value> : Swift.Equatable where Value : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_Velocity",
         "generics": [
             "Value"
@@ -9897,7 +10282,9 @@
     },
     {
         "struct": "public struct EnvironmentValues : Swift.CustomStringConvertible {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "EnvironmentValues",
         "conformances": [
             "CustomStringConvertible "
@@ -9905,7 +10292,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _ScrollClipEffect<ClipShape> : SwiftUICore.ViewModifier, SwiftUICore.Animatable where ClipShape : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)"
+        ],
         "name": "_ScrollClipEffect",
         "generics": [
             "ClipShape"
@@ -9923,7 +10312,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _EnabledScrollClipEffect<ClipShape> : SwiftUICore.ViewModifier, SwiftUICore.Animatable where ClipShape : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)"
+        ],
         "name": "_EnabledScrollClipEffect",
         "generics": [
             "ClipShape"
@@ -9941,7 +10332,9 @@
     },
     {
         "struct": "@frozen public struct _ShapeIntersection<T, U> : SwiftUICore.Shape where T : SwiftUICore.Shape, U : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "_ShapeIntersection",
         "generics": [
             "T",
@@ -9961,7 +10354,9 @@
     },
     {
         "struct": "@frozen public struct _ShapeUnion<T, U> : SwiftUICore.Shape where T : SwiftUICore.Shape, U : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "_ShapeUnion",
         "generics": [
             "T",
@@ -9981,7 +10376,9 @@
     },
     {
         "struct": "@frozen public struct _ShapeSubtraction<T, U> : SwiftUICore.Shape where T : SwiftUICore.Shape, U : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "_ShapeSubtraction",
         "generics": [
             "T",
@@ -10001,7 +10398,9 @@
     },
     {
         "struct": "@frozen public struct _ShapeSymmetricDifference<T, U> : SwiftUICore.Shape where T : SwiftUICore.Shape, U : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "_ShapeSymmetricDifference",
         "generics": [
             "T",
@@ -10021,7 +10420,9 @@
     },
     {
         "struct": "@frozen public struct _ShapeLineIntersection<T, U> : SwiftUICore.Shape where T : SwiftUICore.Shape, U : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "_ShapeLineIntersection",
         "generics": [
             "T",
@@ -10041,7 +10442,9 @@
     },
     {
         "struct": "@frozen public struct _ShapeLineSubtraction<T, U> : SwiftUICore.Shape where T : SwiftUICore.Shape, U : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "_ShapeLineSubtraction",
         "generics": [
             "T",
@@ -10061,7 +10464,9 @@
     },
     {
         "struct": "@propertyWrapper public struct ScaledMetric<Value> : SwiftUICore.DynamicProperty where Value : Swift.BinaryFloatingPoint {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "ScaledMetric",
         "generics": [
             "Value"
@@ -10079,6 +10484,7 @@
     {
         "struct": "@propertyWrapper public struct _ScaledValue : SwiftUICore.DynamicProperty {",
         "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)",
             "@available(*, deprecated, message: \"Use @ScaledMetric\")"
         ],
         "name": "_ScaledValue",
@@ -10088,7 +10494,9 @@
     },
     {
         "struct": "@dynamicMemberLookup @propertyWrapper public struct Bindable<Value> {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "Bindable",
         "generics": [
             "Value"
@@ -10097,25 +10505,33 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _FrameLayout {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_FrameLayout",
         "conformances": []
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _FlexFrameLayout {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_FlexFrameLayout",
         "conformances": []
     },
     {
         "struct": "public struct TextProxy {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)"
+        ],
         "name": "TextProxy",
         "conformances": []
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _TextRendererViewModifier<Renderer> where Renderer : SwiftUICore.TextRenderer {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "_TextRendererViewModifier",
         "generics": [
             "Renderer"
@@ -10130,7 +10546,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _AnimationModifier<Value> : SwiftUICore.ViewModifier where Value : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_AnimationModifier",
         "generics": [
             "Value"
@@ -10147,7 +10565,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _AnimationView<Content> : SwiftUICore.View where Content : Swift.Equatable, Content : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "_AnimationView",
         "generics": [
             "Content"
@@ -10164,13 +10584,17 @@
     },
     {
         "struct": "public struct _GraphInputs {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_GraphInputs",
         "conformances": []
     },
     {
         "struct": "@frozen public struct Color : Swift.Hashable, Swift.CustomStringConvertible, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "Color",
         "conformances": [
             "Hashable",
@@ -10180,7 +10604,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _BindingActionModifier<Value> : SwiftUICore.ViewModifier where Value : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "_BindingActionModifier",
         "generics": [
             "Value"
@@ -10197,7 +10623,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _ValueActionModifier<Value> : SwiftUICore.ViewModifier where Value : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "_ValueActionModifier",
         "generics": [
             "Value"
@@ -10214,7 +10642,9 @@
     },
     {
         "struct": "public struct AnimationState<Value> where Value : SwiftUICore.VectorArithmetic {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "AnimationState",
         "generics": [
             "Value"
@@ -10229,7 +10659,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _UnaryViewAdaptor<Content> : SwiftUICore.View where Content : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_UnaryViewAdaptor",
         "generics": [
             "Content"
@@ -10246,7 +10678,9 @@
     },
     {
         "struct": "@frozen public struct AnimatablePair<First, Second> : SwiftUICore.VectorArithmetic where First : SwiftUICore.VectorArithmetic, Second : SwiftUICore.VectorArithmetic {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "AnimatablePair",
         "generics": [
             "First",
@@ -10266,13 +10700,17 @@
     },
     {
         "struct": "public struct _GestureInputs {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_GestureInputs",
         "conformances": []
     },
     {
         "struct": "public struct _GestureOutputs<Value> {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_GestureOutputs",
         "generics": [
             "Value"
@@ -10281,7 +10719,9 @@
     },
     {
         "struct": "public struct _LayoutTraits : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_LayoutTraits",
         "conformances": [
             "Equatable "
@@ -10289,7 +10729,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct EmptyView : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "EmptyView",
         "conformances": [
             "View "
@@ -10308,7 +10750,9 @@
     },
     {
         "struct": "@frozen public struct ContainerRelativeShape : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "ContainerRelativeShape",
         "conformances": [
             "Shape "
@@ -10316,7 +10760,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _ContainerShapeModifier<Shape> where Shape : SwiftUICore.InsettableShape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "_ContainerShapeModifier",
         "generics": [
             "Shape"
@@ -10331,7 +10777,9 @@
     },
     {
         "struct": "public struct _ResolvedKeyframeTrackContent<Value> where Value : SwiftUICore.Animatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "_ResolvedKeyframeTrackContent",
         "generics": [
             "Value"
@@ -10346,7 +10794,9 @@
     },
     {
         "struct": "public struct CubicKeyframe<Value> : SwiftUICore.KeyframeTrackContent where Value : SwiftUICore.Animatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "CubicKeyframe",
         "generics": [
             "Value"
@@ -10363,7 +10813,9 @@
     },
     {
         "struct": "public struct SpringKeyframe<Value> : SwiftUICore.KeyframeTrackContent where Value : SwiftUICore.Animatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "SpringKeyframe",
         "generics": [
             "Value"
@@ -10380,7 +10832,9 @@
     },
     {
         "struct": "public struct LinearKeyframe<Value> : SwiftUICore.KeyframeTrackContent where Value : SwiftUICore.Animatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "LinearKeyframe",
         "generics": [
             "Value"
@@ -10397,7 +10851,9 @@
     },
     {
         "struct": "public struct MoveKeyframe<Value> : SwiftUICore.KeyframeTrackContent where Value : SwiftUICore.Animatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "MoveKeyframe",
         "generics": [
             "Value"
@@ -10414,7 +10870,9 @@
     },
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct PhaseAnimator<Phase, Content> : SwiftUICore.View where Phase : Swift.Equatable, Content : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "PhaseAnimator",
         "generics": [
             "Phase",
@@ -10434,13 +10892,17 @@
     },
     {
         "struct": "public struct _RendererConfiguration {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "_RendererConfiguration",
         "conformances": []
     },
     {
         "struct": "public struct KeyframeTimeline<Value> {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "KeyframeTimeline",
         "generics": [
             "Value"
@@ -10449,7 +10911,9 @@
     },
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct TapGesture : SwiftUICore.Gesture {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 16.0, watchOS 6.0, *)"
+        ],
         "name": "TapGesture",
         "conformances": [
             "Gesture "
@@ -10457,7 +10921,9 @@
     },
     {
         "struct": "@_functionBuilder public struct KeyframeTrackContentBuilder<Value> where Value : SwiftUICore.Animatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "KeyframeTrackContentBuilder",
         "generics": [
             "Value"
@@ -10472,7 +10938,9 @@
     },
     {
         "struct": "@frozen @propertyWrapper @preconcurrency @_Concurrency.MainActor public struct StateObject<ObjectType> : SwiftUICore.DynamicProperty where ObjectType : Combine.ObservableObject {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "StateObject",
         "generics": [
             "ObjectType"
@@ -10489,7 +10957,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct AnyView : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "AnyView",
         "conformances": [
             "View "
@@ -10497,7 +10967,9 @@
     },
     {
         "struct": "public struct _EventDebugTriggers : Swift.OptionSet {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_EventDebugTriggers",
         "conformances": [
             "OptionSet "
@@ -10505,7 +10977,9 @@
     },
     {
         "struct": "@frozen public struct ColorMatrix : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "ColorMatrix",
         "conformances": [
             "Equatable "
@@ -10513,7 +10987,9 @@
     },
     {
         "struct": "@frozen public struct _ColorMatrix : Swift.Equatable, Swift.Codable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "_ColorMatrix",
         "conformances": [
             "Equatable",
@@ -10522,7 +10998,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _BackdropEffect<Backdrop> where Backdrop : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "_BackdropEffect",
         "generics": [
             "Backdrop"
@@ -10537,13 +11015,17 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _BackdropEffectPlaceholder {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "_BackdropEffectPlaceholder",
         "conformances": []
     },
     {
         "struct": "@frozen public struct EmptyAnimatableData : SwiftUICore.VectorArithmetic {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "EmptyAnimatableData",
         "conformances": [
             "VectorArithmetic "
@@ -10551,7 +11033,9 @@
     },
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct MeshGradient : SwiftUICore.ShapeStyle, Swift.Equatable, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 18.0, macOS 15.0, watchOS 11.0, tvOS 18.0, visionOS 2.0, *)"
+        ],
         "name": "MeshGradient",
         "conformances": [
             "ShapeStyle",
@@ -10561,7 +11045,9 @@
     },
     {
         "struct": "public struct PinnedScrollableViews : Swift.OptionSet, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "PinnedScrollableViews",
         "conformances": [
             "OptionSet",
@@ -10570,7 +11056,9 @@
     },
     {
         "struct": "@frozen public struct _SizedShape<S> : SwiftUICore.Shape where S : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_SizedShape",
         "generics": [
             "S"
@@ -10587,7 +11075,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct EmptyModifier : SwiftUICore.ViewModifier {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "EmptyModifier",
         "conformances": [
             "ViewModifier "
@@ -10595,7 +11085,9 @@
     },
     {
         "struct": "@frozen public struct ModifiedContent<Content, Modifier> {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "ModifiedContent",
         "generics": [
             "Content",
@@ -10605,7 +11097,9 @@
     },
     {
         "struct": "public struct SymbolVariants : Swift.Hashable, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "SymbolVariants",
         "conformances": [
             "Hashable",
@@ -10614,7 +11108,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _BackgroundModifier<Background> : SwiftUICore.ViewModifier where Background : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_BackgroundModifier",
         "generics": [
             "Background"
@@ -10631,7 +11127,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _BackgroundStyleModifier<Style> : SwiftUICore.ViewModifier where Style : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "_BackgroundStyleModifier",
         "generics": [
             "Style"
@@ -10648,7 +11146,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _BackgroundShapeModifier<Style, Bounds> : SwiftUICore.ViewModifier where Style : SwiftUICore.ShapeStyle, Bounds : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "_BackgroundShapeModifier",
         "generics": [
             "Style",
@@ -10668,7 +11168,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _InsettableBackgroundShapeModifier<Style, Bounds> : SwiftUICore.ViewModifier where Style : SwiftUICore.ShapeStyle, Bounds : SwiftUICore.InsettableShape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "_InsettableBackgroundShapeModifier",
         "generics": [
             "Style",
@@ -10688,7 +11190,9 @@
     },
     {
         "struct": "@frozen @propertyWrapper public struct State<Value> : SwiftUICore.DynamicProperty {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "State",
         "generics": [
             "Value"
@@ -10699,7 +11203,9 @@
     },
     {
         "struct": "public struct AnimationContext<Value> where Value : SwiftUICore.VectorArithmetic {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "AnimationContext",
         "generics": [
             "Value"
@@ -10714,19 +11220,25 @@
     },
     {
         "struct": "public struct _TestApp {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_TestApp",
         "conformances": []
     },
     {
         "struct": "@frozen public struct AnyTransition {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "AnyTransition",
         "conformances": []
     },
     {
         "struct": "public struct ContentTransition : Swift.Equatable, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "ContentTransition",
         "conformances": [
             "Equatable",
@@ -10735,13 +11247,17 @@
     },
     {
         "struct": "public struct _Transition_ContentTransition {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "_Transition_ContentTransition",
         "conformances": []
     },
     {
         "struct": "public struct TransitionProperties : Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "TransitionProperties",
         "conformances": [
             "Sendable "
@@ -10749,7 +11265,9 @@
     },
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct IdentityTransition : SwiftUICore.Transition {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "IdentityTransition",
         "conformances": [
             "Transition "
@@ -10757,7 +11275,9 @@
     },
     {
         "struct": "public struct EmptyVisualEffect : SwiftUICore.VisualEffect {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "EmptyVisualEffect",
         "conformances": [
             "VisualEffect "
@@ -10765,7 +11285,9 @@
     },
     {
         "struct": "public struct NamedCoordinateSpace : SwiftUICore.CoordinateSpaceProtocol, Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "NamedCoordinateSpace",
         "conformances": [
             "CoordinateSpaceProtocol",
@@ -10774,7 +11296,9 @@
     },
     {
         "struct": "public struct LocalCoordinateSpace : SwiftUICore.CoordinateSpaceProtocol {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "LocalCoordinateSpace",
         "conformances": [
             "CoordinateSpaceProtocol "
@@ -10782,7 +11306,9 @@
     },
     {
         "struct": "public struct GlobalCoordinateSpace : SwiftUICore.CoordinateSpaceProtocol {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "GlobalCoordinateSpace",
         "conformances": [
             "CoordinateSpaceProtocol "
@@ -10790,7 +11316,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _SaturationEffect : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_SaturationEffect",
         "conformances": [
             "Equatable "
@@ -10798,25 +11326,33 @@
     },
     {
         "struct": "@frozen public struct Angle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "Angle",
         "conformances": []
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _SafeAreaIgnoringLayout {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_SafeAreaIgnoringLayout",
         "conformances": []
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _SafeAreaRegionsIgnoringLayout {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "_SafeAreaRegionsIgnoringLayout",
         "conformances": []
     },
     {
         "struct": "@frozen public struct _ConditionalContent<TrueContent, FalseContent> {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_ConditionalContent",
         "generics": [
             "TrueContent",
@@ -10826,7 +11362,9 @@
     },
     {
         "struct": "public struct ForEach<Data, ID, Content> where Data : Swift.RandomAccessCollection, ID : Swift.Hashable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "ForEach",
         "generics": [
             "Data",
@@ -10845,7 +11383,9 @@
     },
     {
         "struct": "@frozen public struct OffsetShape<Content> : SwiftUICore.Shape where Content : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "OffsetShape",
         "generics": [
             "Content"
@@ -10862,7 +11402,9 @@
     },
     {
         "struct": "@frozen public struct ScaledShape<Content> : SwiftUICore.Shape where Content : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "ScaledShape",
         "generics": [
             "Content"
@@ -10879,7 +11421,9 @@
     },
     {
         "struct": "@frozen public struct RotatedShape<Content> : SwiftUICore.Shape where Content : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "RotatedShape",
         "generics": [
             "Content"
@@ -10896,7 +11440,9 @@
     },
     {
         "struct": "@frozen public struct TransformedShape<Content> : SwiftUICore.Shape where Content : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "TransformedShape",
         "generics": [
             "Content"
@@ -10913,7 +11459,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _ColorMultiplyEffect : SwiftUICore.EnvironmentalModifier, Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_ColorMultiplyEffect",
         "conformances": [
             "EnvironmentalModifier",
@@ -10922,7 +11470,9 @@
     },
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct Canvas<Symbols> where Symbols : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "Canvas",
         "generics": [
             "Symbols"
@@ -10937,7 +11487,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _ClipEffect<ClipShape> where ClipShape : SwiftUICore.Shape {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_ClipEffect",
         "generics": [
             "ClipShape"
@@ -10952,7 +11504,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _TransactionModifier : SwiftUICore.ViewModifier, SwiftUICore._GraphInputsModifier {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_TransactionModifier",
         "conformances": [
             "ViewModifier",
@@ -10961,7 +11515,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _ValueTransactionModifier<Value> : SwiftUICore.ViewModifier, SwiftUICore._GraphInputsModifier where Value : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "_ValueTransactionModifier",
         "generics": [
             "Value"
@@ -10979,7 +11535,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _PushPopTransactionModifier<Content> : SwiftUICore.ViewModifier where Content : SwiftUICore.ViewModifier {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_PushPopTransactionModifier",
         "generics": [
             "Content"
@@ -10996,7 +11554,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _ShapeView<Content, Style> : SwiftUICore.View where Content : SwiftUICore.Shape, Style : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_ShapeView",
         "generics": [
             "Content",
@@ -11016,7 +11576,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct FillShapeView<Content, Style, Background> : SwiftUICore.ShapeView where Content : SwiftUICore.Shape, Style : SwiftUICore.ShapeStyle, Background : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "FillShapeView",
         "generics": [
             "Content",
@@ -11039,7 +11601,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct StrokeShapeView<Content, Style, Background> : SwiftUICore.ShapeView where Content : SwiftUICore.Shape, Style : SwiftUICore.ShapeStyle, Background : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "StrokeShapeView",
         "generics": [
             "Content",
@@ -11062,7 +11626,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct StrokeBorderShapeView<Content, Style, Background> : SwiftUICore.ShapeView where Content : SwiftUICore.InsettableShape, Style : SwiftUICore.ShapeStyle, Background : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "StrokeBorderShapeView",
         "generics": [
             "Content",
@@ -11085,7 +11651,9 @@
     },
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct BlurReplaceTransition : SwiftUICore.Transition {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "BlurReplaceTransition",
         "conformances": [
             "Transition "
@@ -11093,7 +11661,9 @@
     },
     {
         "struct": "@frozen public struct Text : Swift.Equatable, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "Text",
         "conformances": [
             "Equatable",
@@ -11102,7 +11672,9 @@
     },
     {
         "struct": "@frozen public struct SafeAreaRegions : Swift.OptionSet {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)"
+        ],
         "name": "SafeAreaRegions",
         "conformances": [
             "OptionSet "
@@ -11110,7 +11682,9 @@
     },
     {
         "struct": "public struct PreferredColorSchemeKey : SwiftUICore.PreferenceKey {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 11.0, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "PreferredColorSchemeKey",
         "conformances": [
             "PreferenceKey "
@@ -11118,7 +11692,9 @@
     },
     {
         "struct": "@frozen public struct Image : Swift.Equatable, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "Image",
         "conformances": [
             "Equatable",
@@ -11127,7 +11703,9 @@
     },
     {
         "struct": "@frozen public struct GestureMask : Swift.OptionSet {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "GestureMask",
         "conformances": [
             "OptionSet "
@@ -11135,7 +11713,9 @@
     },
     {
         "struct": "@frozen public struct _ScaleEffect : SwiftUICore.GeometryEffect, Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_ScaleEffect",
         "conformances": [
             "GeometryEffect",
@@ -11144,7 +11724,9 @@
     },
     {
         "struct": "@_Concurrency.MainActor @preconcurrency public struct ScaleTransition : SwiftUICore.Transition {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)"
+        ],
         "name": "ScaleTransition",
         "conformances": [
             "Transition "
@@ -11152,7 +11734,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _InsetViewModifier<Content> : SwiftUICore.ViewModifier where Content : SwiftUICore.View {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "_InsetViewModifier",
         "generics": [
             "Content"
@@ -11169,7 +11753,9 @@
     },
     {
         "struct": "@frozen public struct RectangleCornerRadii : Swift.Equatable, SwiftUICore.Animatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)"
+        ],
         "name": "RectangleCornerRadii",
         "conformances": [
             "Equatable",
@@ -11178,7 +11764,9 @@
     },
     {
         "struct": "@frozen public struct Animation : Swift.Equatable, Swift.Sendable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "Animation",
         "conformances": [
             "Equatable",
@@ -11187,7 +11775,9 @@
     },
     {
         "struct": "public struct TintShapeStyle : SwiftUICore.ShapeStyle {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)"
+        ],
         "name": "TintShapeStyle",
         "conformances": [
             "ShapeStyle "
@@ -11195,7 +11785,9 @@
     },
     {
         "struct": "@frozen @_Concurrency.MainActor @preconcurrency public struct _HueRotationEffect : Swift.Equatable {",
-        "availabilities": [],
+        "availabilities": [
+            "@available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)"
+        ],
         "name": "_HueRotationEffect",
         "conformances": [
             "Equatable "

@@ -11,8 +11,9 @@ def parse_file(input_file):
 				if not line.startswith(" ") and "public struct" in line:
 					linije = []
 					i = idx - 1
-					while lines[i].startswith('@available'):
-						linije.insert(0, lines[i])
+					while lines[i].startswith('@'):
+						if lines[i].startswith('@available'):
+							linije.insert(0, lines[i])
 						i -= 1
 
 					output.append({
