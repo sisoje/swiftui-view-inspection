@@ -100,9 +100,6 @@ for result in results:
 	parsed_struct = parse_non_generic_struct(line)
 	if parsed_struct is None:
 		parsed_struct = parse_generic_struct(line)
-		if parsed_struct is None:
-			print(line)
-			# exit(0)
 		parsed_conditions = parse_swift_generic_conditions(line)
 		parsed_results.append({
 			'result': result,
