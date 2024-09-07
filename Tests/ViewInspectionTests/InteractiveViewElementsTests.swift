@@ -5,15 +5,15 @@ import XCTest
 final class InteractiveViewElementsTests: XCTestCase {}
 
 @MainActor extension InteractiveViewElementsTests {
-    func testToggle() {
+    func test_Toggle() {
         let b = Binding<Bool>.variable(false)
-        Toggle("", isOn: b).reflectionSnapshot.oneElement(TestElement.View._Toggle.self).toggle()
+        Toggle("", isOn: b).snapshot.oneElement(TestElement.View._Toggle.self).toggle()
         XCTAssertEqual(b.wrappedValue, true)
     }
 
-    func testButton() {
+    func test_Button() {
         var b = false
-        Button("") { b = true }.reflectionSnapshot.oneElement(TestElement.View._Button.self).tap()
+        Button("") { b = true }.snapshot.oneElement(TestElement.View._Button.self).tap()
         XCTAssertEqual(b, true)
     }
 }

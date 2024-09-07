@@ -458,11 +458,13 @@ enum TestElement {
     }
     
     enum Modifier {
+        @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
         struct _Refreshable: ModifierDerivedElement {
             let node: ReflectionNode
             static func makeModifiedContent() -> Any { EmptyView().refreshable {} }
         }
         
+        @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
         struct _Task: ModifierDerivedElement {
             let node: ReflectionNode
             static func makeModifiedContent() -> Any { EmptyView().task {} }
@@ -478,6 +480,7 @@ enum TestElement {
             static func makeModifiedContent() -> Any { EmptyView().onDisappear {} }
         }
         
+        @available(iOS 13.0, macOS 10.15, tvOS 16.0, watchOS 6.0, *)
         struct _OnTap: ModifierDerivedElement {
             let node: ReflectionNode
             static func makeModifiedContent() -> Any { EmptyView().onTapGesture {} }
@@ -501,12 +504,14 @@ enum TestElement {
     }
 }
 
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
 extension TestElement.Modifier._Refreshable {
     func doRefresh() async {
         await node.oneElement(TestElement.Value._asyncClosure.self).castValue()
     }
 }
 
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
 extension TestElement.Modifier._Task {
     func doTask() async {
         await node.oneElement(TestElement.Value._asyncClosure.self).castValue()
@@ -519,6 +524,7 @@ extension TestElement.Modifier._OnAppear {
     }
 }
 
+@available(iOS 13.0, macOS 10.15, tvOS 16.0, watchOS 6.0, *)
 extension TestElement.Modifier._OnTap {
     func doTap() {
         node.oneElement(TestElement.Value._voidParamClosure.self).castValue(())

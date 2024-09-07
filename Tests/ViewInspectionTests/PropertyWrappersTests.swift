@@ -7,10 +7,10 @@ final class PropertyWrappersTests: XCTestCase {}
 @MainActor extension PropertyWrappersTests {
     func testEnvironment() {
         struct Dummy: View {
-            @Environment(\.dismiss) private var dismiss
+            @Environment(\.colorScheme) private var colorScheme
             let body = EmptyView()
         }
-        let t = Dummy().reflectionSnapshot.allElements(TestElement.PropertyWrapper._Environment.self)
+        let t = Dummy().snapshot.allElements(TestElement.PropertyWrapper._Environment.self)
         XCTAssertEqual(t.count, 2)
         XCTAssert(t[1].node.parent === t[0].node)
     }
@@ -20,7 +20,7 @@ final class PropertyWrappersTests: XCTestCase {}
             @State private var x = 0
             let body = EmptyView()
         }
-        XCTAssertEqual(Dummy().reflectionSnapshot.allElements(TestElement.PropertyWrapper._State.self).count, 1)
+        XCTAssertEqual(Dummy().snapshot.allElements(TestElement.PropertyWrapper._State.self).count, 1)
     }
 
     func testBinding() {
@@ -28,6 +28,6 @@ final class PropertyWrappersTests: XCTestCase {}
             @Binding var x: Int
             let body = EmptyView()
         }
-        XCTAssertEqual(Dummy(x: .constant(1)).reflectionSnapshot.allElements(TestElement.PropertyWrapper._Binding.self).count, 1)
+        XCTAssertEqual(Dummy(x: .constant(1)).snapshot.allElements(TestElement.PropertyWrapper._Binding.self).count, 1)
     }
 }

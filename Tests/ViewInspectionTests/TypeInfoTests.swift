@@ -3,7 +3,7 @@ import XCTest
 @testable import ViewInspection
 
 final class TypeInfoTests: XCTestCase {
-    func testTypeInfoBinding() {
+    func test_TypeInfo_Binding() {
         let t1 = TypeInfo(type: Binding<Int>.self)
         let b: Binding<Int> = .constant(1)
         let t2 = TypeInfo(object: b)
@@ -13,7 +13,7 @@ final class TypeInfoTests: XCTestCase {
         XCTAssertEqual(t1.generics, ["Swift.Int"])
     }
 
-    func testTypeInfoInt() {
+    func test_TypeInfo_Int() {
         let t1 = TypeInfo(type: Int.self)
         let int = 0
         let t2 = TypeInfo(object: int)
@@ -23,7 +23,7 @@ final class TypeInfoTests: XCTestCase {
         XCTAssert(t1.generics.isEmpty)
     }
 
-    func testGenerics() {
+    func test_TypeInfo_Generics() {
         XCTAssert(TypeInfo(typename: "Gen").generics.isEmpty)
         XCTAssert(TypeInfo(typename: "Gen<>").generics.isEmpty)
         XCTAssert(TypeInfo(typename: "Gen<,>").generics.isEmpty)
