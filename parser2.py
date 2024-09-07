@@ -27,7 +27,7 @@ def parse_generic_struct(line):
     # Regex to capture generic structs with conformances
     generic_struct_pattern = r'public struct (\w+)<([^>]+)>\s+(?:\s*:\s*([^{]+))?'
     
-    match = re.match(generic_struct_pattern, line)
+    match = re.search(generic_struct_pattern, line)
     if match:
         struct_name = match.group(1)
         generics = match.group(2)
@@ -39,7 +39,7 @@ def parse_non_generic_struct(line):
     # Regex to capture non-generic structs with conformances
     non_generic_struct_pattern = r'public struct (\w+)\s+(?:\s*:\s*([^{]+))?'
     
-    match = re.match(non_generic_struct_pattern, line)
+    match = re.search(non_generic_struct_pattern, line)
     if match:
         struct_name = match.group(1)
         conformances = match.group(2).split(', ') if match.group(2) else []
