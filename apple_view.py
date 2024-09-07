@@ -9,11 +9,18 @@ def isnewswift(availabilities):
                 return True
     return False
 
-url = 'https://developer.apple.com/tutorials/data/documentation/swiftui/view.json'
-response = requests.get(url)
-doc = response.json()
-identifiers = doc['relationshipsSections'][1]['identifiers']
-views = [x.split("/")[-1] for x in identifiers]
+def get_names(entity):
+    url = f'https://developer.apple.com/tutorials/data/documentation/swiftui/{entity}.json'
+    response = requests.get(url)
+    doc = response.json()
+    sections = doc['relationshipsSections']
+    for sec in sections:
+        if sec['title'] == 'Conforming Types':
+            conf = sec
+            break
+    identifiers = conf['identifiers']
+    names = [x.split("/")[-1] for x in identifiers]
+    return names
 
 with open('parsed.json', 'r') as file:
     structs = json.load(file)
@@ -28,39 +35,41 @@ preferedTypes = {
     'TimelineSchedule': 'AnimationTimelineSchedule',
 }
 
-output = []
-for struct in structs:
-    name = struct['name']
+for entity in ['view', 'gesture']:
+    names = get_names(entity)
+    output = []
+    for struct in structs:
+        name = struct['name']
 
-    if not name in views:
-        continue
+        if not name in names:
+            continue
 
-    availabilities = struct.get('availabilities', [])
-    lines = availabilities
-    generics = struct.get('generics')
-    if generics is None:
-        t = f'typealias _{name} = SameTypeElement<{name}>'
-    else:
-        conditions = struct.get('conditions', {})
-        arr = [conditions.get(gen, ['Never'])[-1] for gen in generics]
-        arr = [preferedTypes.get(x, 'Never') for x in arr]
-        gen = ",".join(arr)
-        t = f"typealias _{name} = SameBaseElement<{name}<{gen}>>"       
+        availabilities = struct.get('availabilities', [])
+        lines = availabilities
+        generics = struct.get('generics')
+        if generics is None:
+            t = f'typealias _{name} = SameTypeElement<{name}>'
+        else:
+            conditions = struct.get('conditions', {})
+            arr = [conditions.get(gen, ['Never'])[-1] for gen in generics]
+            arr = [preferedTypes.get(x, 'Never') for x in arr]
+            gen = ",".join(arr)
+            t = f"typealias _{name} = SameBaseElement<{name}<{gen}>>"       
 
-    lines.append(t)
-    
-    if isnewswift(availabilities):
-        lines.insert(0, "#if swift(>=6.0)")
-        lines.append("#endif")
+        lines.append(t)
+        
+        if isnewswift(availabilities):
+            lines.insert(0, "#if swift(>=6.0)")
+            lines.append("#endif")
 
-    output.append(lines)
+        output.append(lines)
 
-strings = ["\n".join(lines) for lines in output]
+    strings = ["\n".join(lines) for lines in output]
 
-content = "\n\n".join(strings)
+    content = "\n\n".join(strings)
 
-with open('view.swift', 'w', encoding='utf-8') as f:
-    f.write(content)
+    with open(f'{entity}.swift', 'w', encoding='utf-8') as f:
+        f.write(content)
 
 
 

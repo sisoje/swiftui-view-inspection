@@ -44,9 +44,11 @@ typealias _SequenceGesture = SameBaseElement<SequenceGesture<Never,Never>>
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 typealias _SimultaneousGesture = SameBaseElement<SimultaneousGesture<Never,Never>>
 
+#if swift(>=6.0)
 @available(visionOS 1.0, iOS 18.0, macOS 15.0, watchOS 11.0, *)
 @available(tvOS, unavailable)
 typealias _SpatialEventGesture = SameTypeElement<SpatialEventGesture>
+#endif
 
 @available(iOS 16.0, macOS 13.0, watchOS 9.0, visionOS 1.0, *)
 @available(tvOS, unavailable)
@@ -55,9 +57,11 @@ typealias _SpatialTapGesture = SameTypeElement<SpatialTapGesture>
 @available(iOS 13.0, macOS 10.15, tvOS 16.0, watchOS 6.0, *)
 typealias _TapGesture = SameTypeElement<TapGesture>
 
+#if swift(>=6.0)
 @available(macOS 15.0, *)
 @available(iOS, unavailable)
 @available(watchOS, unavailable)
 @available(tvOS, unavailable)
 @available(visionOS, unavailable)
 typealias _WindowDragGesture = SameTypeElement<WindowDragGesture>
+#endif
