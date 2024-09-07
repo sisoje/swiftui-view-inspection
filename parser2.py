@@ -32,7 +32,7 @@ def parse_generic_struct(line):
         struct_name = match.group(1)
         generics = match.group(2)
         conformances = match.group(3).split(', ') if match.group(3) else []
-        return { 'name': struct_name, 'generics': generics, 'conformances': conformances }
+        return { 'name': struct_name, 'generics': generics.split(', '), 'conformances': conformances }
     return None
 
 def parse_non_generic_struct(line):
@@ -57,34 +57,16 @@ def parse_swift_generic_conditions(declaration):
     # Split conditions by comma
     condition_list = [c.strip() for c in conditions.split(',')]
     
-    parsed_conditions = []
+    parsed_conditions = {}
+    parsed_types = {}
     for condition in condition_list:
         if ':' in condition:
             # Protocol conformance or class inheritance
             left, right = condition.split(':', 1)
-            parsed_conditions.append({
-                'type': left.strip(),
-                'constraint': 'conforms_to' if ':' in right else 'inherits_from',
-                'value': right.strip()
-            })
-        elif '==' in condition:
-            # Type equality
-            left, right = condition.split('==')
-            parsed_conditions.append({
-                'type': left.strip(),
-                'constraint': 'equals',
-                'value': right.strip()
-            })
-        else:
-            # Unknown constraint type
-            parsed_conditions.append({
-                'type': 'unknown',
-                'constraint': 'unknown',
-                'value': condition.strip()
-            })
+            parsed_conditions[left.strip()] = right.strip()
+            parsed_types[left.strip()] = '==' if '==' in condition else ':'
     
-    return parsed_conditions
-
+    return [parsed_conditions, parsed_types]
 
 interface0 = '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/SwiftUI.framework/Modules/SwiftUI.swiftmodule/arm64-apple-ios.swiftinterface'
 interface1 = '/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/SwiftUI.framework/Modules/SwiftUI.swiftmodule/arm64-apple-ios.swiftinterface'
@@ -96,21 +78,22 @@ parsed_results = []
 
 for result in results:
 	line = result['struct']
-	parsed_conditions = None
-	parsed_struct = parse_non_generic_struct(line)
+	levo = line.split('where', 1)[0]
+	parsed_struct = parse_non_generic_struct(levo)
 	if parsed_struct is None:
-		parsed_struct = parse_generic_struct(line)
-		parsed_conditions = parse_swift_generic_conditions(line)
-		parsed_results.append({
-			'result': result,
-			'parsed_struct': parsed_struct,
-			'parsed_conditions':  parsed_conditions
-		})
-	else:
-		parsed_results.append({
-			'result': result,
-			'parsed_struct': parsed_struct,
-		})
+		parsed_struct = parse_generic_struct(levo)
+
+	dic = {
+		'result': result,
+		'parsed_struct': parsed_struct,
+	}
+	
+	parsed_conditions = parse_swift_generic_conditions(line)
+	if len(parsed_conditions) > 0:
+		dic['conditions'] = parsed_conditions[0]
+		dic['condition_relations'] = parsed_conditions[1]
+
+	parsed_results.append(dic)
 
 with open(parsed, 'w', encoding='utf-8') as f:
 	json.dump(parsed_results, f, ensure_ascii=False, indent=4)
