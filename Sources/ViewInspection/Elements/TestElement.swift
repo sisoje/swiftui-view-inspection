@@ -3,19 +3,16 @@ import Combine
 
 enum TestElement {
     enum View {
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _AngularGradient = SameTypeElement<AngularGradient>
 
         @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
         typealias _AnyShape = SameTypeElement<AnyShape>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _AnyView = SameTypeElement<AnyView>
 
         @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
         typealias _AsyncImage = SameBaseElement<AsyncImage<Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _Button = SameBaseElement<Button<Never>>
 
         @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
@@ -24,13 +21,10 @@ enum TestElement {
         @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
         typealias _Canvas = SameBaseElement<Canvas<Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _Capsule = SameTypeElement<Capsule>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _Circle = SameTypeElement<Circle>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _Color = SameTypeElement<Color>
 
         @available(iOS 14.0, macOS 11.0, *)
@@ -42,13 +36,13 @@ enum TestElement {
         typealias _ContainerRelativeShape = SameTypeElement<ContainerRelativeShape>
 
         @available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
-        typealias _ContentUnavailableView = SameBaseElement<ContentUnavailableView<Never,Never,Never>>
+        typealias _ContentUnavailableView = SameBaseElement<ContentUnavailableView<Never, Never, Never>>
 
         @available(iOS 15.0, macOS 12.0, tvOS 17.0, *)
         @available(watchOS, unavailable)
         typealias _ControlGroup = SameBaseElement<ControlGroup<Never>>
 
-        @available(iOS 13.0, macOS 10.15, watchOS 10.0, *)
+        @available(watchOS 10.0, *)
         @available(tvOS, unavailable)
         typealias _DatePicker = SameBaseElement<DatePicker<Never>>
 
@@ -90,9 +84,8 @@ enum TestElement {
         @available(iOS 14.0, macOS 11.0, *)
         @available(tvOS, unavailable)
         @available(watchOS, unavailable)
-        typealias _DisclosureGroup = SameBaseElement<DisclosureGroup<Never,Never>>
+        typealias _DisclosureGroup = SameBaseElement<DisclosureGroup<Never, Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _Divider = SameTypeElement<Divider>
 
         #if swift(>=6.0)
@@ -103,44 +96,37 @@ enum TestElement {
         @available(macCatalyst, unavailable)
         @available(visionOS, unavailable)
         @available(macCatalyst, unavailable)
-        typealias _DocumentLaunchView = SameBaseElement<DocumentLaunchView<Never,Never>>
+        typealias _DocumentLaunchView = SameBaseElement<DocumentLaunchView<Never, Never>>
         #endif
 
         @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
-        typealias _EditableCollectionContent = SameBaseElement<EditableCollectionContent<Never,Never>>
+        typealias _EditableCollectionContent = SameBaseElement<EditableCollectionContent<Never, Never>>
 
-        @available(iOS 13.0, *)
         @available(macOS, unavailable)
         @available(tvOS, unavailable)
         @available(watchOS, unavailable)
         typealias _EditButton = SameTypeElement<EditButton>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _Ellipse = SameTypeElement<Ellipse>
 
         @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
         typealias _EllipticalGradient = SameTypeElement<EllipticalGradient>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _EmptyView = SameTypeElement<EmptyView>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _EquatableView = SameBaseElement<EquatableView<Never>>
 
         @available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
-        typealias _FillShapeView = SameBaseElement<FillShapeView<Circle,Never,Never>>
+        typealias _FillShapeView = SameBaseElement<FillShapeView<Circle, Never, Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
-        typealias _ForEach = SameBaseElement<ForEach<Array<Never>,Int,Never>>
+        typealias _ForEach = SameBaseElement<ForEach<[Never], Int, Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _Form = SameBaseElement<Form<Never>>
 
         @available(iOS 16.0, macOS 13.0, watchOS 7.0, *)
         @available(tvOS, unavailable)
-        typealias _Gauge = SameBaseElement<Gauge<Never,Never,Never,Never>>
+        typealias _Gauge = SameBaseElement<Gauge<Never, Never, Never, Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _GeometryReader = SameBaseElement<GeometryReader<Never>>
 
         @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
@@ -149,22 +135,21 @@ enum TestElement {
         @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
         typealias _GridRow = SameBaseElement<GridRow<Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _Group = SameBaseElement<Group<Never>>
 
-        @available(iOS 14.0, macOS 10.15, *)
+        @available(iOS 14.0, *)
         @available(tvOS, unavailable)
         @available(watchOS, unavailable)
-        typealias _GroupBox = SameBaseElement<GroupBox<Never,Never>>
+        typealias _GroupBox = SameBaseElement<GroupBox<Never, Never>>
 
         #if swift(>=6.0)
         @available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
-        typealias _GroupElementsOfContent = SameBaseElement<GroupElementsOfContent<Never,Never>>
+        typealias _GroupElementsOfContent = SameBaseElement<GroupElementsOfContent<Never, Never>>
         #endif
 
         #if swift(>=6.0)
         @available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
-        typealias _GroupSectionsOfContent = SameBaseElement<GroupSectionsOfContent<Never,Never>>
+        typealias _GroupSectionsOfContent = SameBaseElement<GroupSectionsOfContent<Never, Never>>
         #endif
 
         @available(macOS 14.0, *)
@@ -173,34 +158,31 @@ enum TestElement {
         @available(watchOS, unavailable)
         typealias _HelpLink = SameTypeElement<HelpLink>
 
-        @available(macOS 10.15, *)
         @available(iOS, unavailable)
         @available(tvOS, unavailable)
         @available(watchOS, unavailable)
         @available(visionOS, unavailable)
         typealias _HSplitView = SameBaseElement<HSplitView<Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _HStack = SameBaseElement<HStack<Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _Image = SameTypeElement<Image>
 
         @available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
-        typealias _KeyframeAnimator = SameBaseElement<KeyframeAnimator<Never,Never,Never>>
+        typealias _KeyframeAnimator = SameBaseElement<KeyframeAnimator<Never, Never, Never>>
 
         @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
-        typealias _Label = SameBaseElement<Label<Never,Never>>
+        typealias _Label = SameBaseElement<Label<Never, Never>>
 
         @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
-        typealias _LabeledContent = SameBaseElement<LabeledContent<Never,Never>>
+        typealias _LabeledContent = SameBaseElement<LabeledContent<Never, Never>>
 
         @available(iOS 16.0, macOS 13.0, tvOS 17.0, *)
         @available(watchOS, unavailable)
-        typealias _LabeledControlGroupContent = SameBaseElement<LabeledControlGroupContent<Never,Never>>
+        typealias _LabeledControlGroupContent = SameBaseElement<LabeledControlGroupContent<Never, Never>>
 
         @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
-        typealias _LabeledToolbarItemGroupContent = SameBaseElement<LabeledToolbarItemGroupContent<Never,Never>>
+        typealias _LabeledToolbarItemGroupContent = SameBaseElement<LabeledToolbarItemGroupContent<Never, Never>>
 
         @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
         typealias _LazyHGrid = SameBaseElement<LazyHGrid<Never>>
@@ -214,33 +196,30 @@ enum TestElement {
         @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
         typealias _LazyVStack = SameBaseElement<LazyVStack<Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _LinearGradient = SameTypeElement<LinearGradient>
 
         @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
         typealias _Link = SameBaseElement<Link<Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
-        typealias _List = SameBaseElement<List<Int,Never>>
+        typealias _List = SameBaseElement<List<Int, Never>>
 
         @available(iOS 14.0, macOS 11.0, tvOS 17.0, *)
         @available(watchOS, unavailable)
-        typealias _Menu = SameBaseElement<Menu<Never,Never>>
+        typealias _Menu = SameBaseElement<Menu<Never, Never>>
 
         @available(iOS, unavailable)
         @available(macOS, introduced: 10.15, deprecated: 100000.0, message: "Use `Menu` instead.")
         @available(tvOS, unavailable)
         @available(watchOS, unavailable)
         @available(visionOS, unavailable)
-        typealias _MenuButton = SameBaseElement<MenuButton<Never,Never>>
+        typealias _MenuButton = SameBaseElement<MenuButton<Never, Never>>
 
         #if swift(>=6.0)
         @available(iOS 18.0, macOS 15.0, watchOS 11.0, tvOS 18.0, visionOS 2.0, *)
         typealias _MeshGradient = SameTypeElement<MeshGradient>
         #endif
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
-        typealias _ModifiedContent = SameBaseElement<ModifiedContent<Never,Never>>
+        typealias _ModifiedContent = SameBaseElement<ModifiedContent<Never, Never>>
 
         @available(iOS 16.0, *)
         @available(macOS, unavailable)
@@ -248,14 +227,13 @@ enum TestElement {
         @available(watchOS, unavailable)
         typealias _MultiDatePicker = SameBaseElement<MultiDatePicker<Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
-        typealias _NavigationLink = SameBaseElement<NavigationLink<Never,Never>>
+        typealias _NavigationLink = SameBaseElement<NavigationLink<Never, Never>>
 
         @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
-        typealias _NavigationSplitView = SameBaseElement<NavigationSplitView<Never,Never,Never>>
+        typealias _NavigationSplitView = SameBaseElement<NavigationSplitView<Never, Never, Never>>
 
         @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
-        typealias _NavigationStack = SameBaseElement<NavigationStack<Never,Never>>
+        typealias _NavigationStack = SameBaseElement<NavigationStack<Never, Never>>
 
         @available(iOS, introduced: 13.0, deprecated: 100000.0, message: "use NavigationStack or NavigationSplitView instead")
         @available(macOS, introduced: 10.15, deprecated: 100000.0, message: "use NavigationStack or NavigationSplitView instead")
@@ -271,32 +249,29 @@ enum TestElement {
         typealias _NewDocumentButton = SameBaseElement<NewDocumentButton<Never>>
         #endif
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _OffsetShape = SameBaseElement<OffsetShape<Circle>>
 
         @available(iOS 14.0, macOS 11.0, *)
         @available(tvOS, unavailable)
         @available(watchOS, unavailable)
-        typealias _OutlineGroup = SameBaseElement<OutlineGroup<Array<Never>,Int,Never,Never,Never>>
+        typealias _OutlineGroup = SameBaseElement<OutlineGroup<[Never], Int, Never, Never, Never>>
 
         @available(iOS 14.0, macOS 11.0, *)
         @available(tvOS, unavailable)
         @available(watchOS, unavailable)
         typealias _OutlineSubgroupChildren = SameTypeElement<OutlineSubgroupChildren>
 
-        @available(iOS 16.0, macOS 10.15, *)
+        @available(iOS 16.0, *)
         @available(tvOS, unavailable)
         @available(watchOS, unavailable)
         typealias _PasteButton = SameTypeElement<PasteButton>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _Path = SameTypeElement<Path>
 
         @available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
-        typealias _PhaseAnimator = SameBaseElement<PhaseAnimator<Never,Never>>
+        typealias _PhaseAnimator = SameBaseElement<PhaseAnimator<Never, Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
-        typealias _Picker = SameBaseElement<Picker<Never,Int,Never>>
+        typealias _Picker = SameBaseElement<Picker<Never, Int, Never>>
 
         @available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
         typealias _PlaceholderContentView = SameBaseElement<PlaceholderContentView<Never>>
@@ -304,7 +279,7 @@ enum TestElement {
         @available(iOS 16.0, macOS 13.0, *)
         @available(tvOS, unavailable)
         @available(watchOS, unavailable)
-        typealias _PresentedWindowContent = SameBaseElement<PresentedWindowContent<Int,Never>>
+        typealias _PresentedWindowContent = SameBaseElement<PresentedWindowContent<Int, Never>>
 
         #if swift(>=6.0)
         @available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
@@ -312,36 +287,28 @@ enum TestElement {
         #endif
 
         @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
-        typealias _ProgressView = SameBaseElement<ProgressView<Never,Never>>
+        typealias _ProgressView = SameBaseElement<ProgressView<Never, Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _RadialGradient = SameTypeElement<RadialGradient>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _Rectangle = SameTypeElement<Rectangle>
 
         @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
         typealias _RenameButton = SameBaseElement<RenameButton<Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _RotatedShape = SameBaseElement<RotatedShape<Circle>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _RoundedRectangle = SameTypeElement<RoundedRectangle>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _ScaledShape = SameBaseElement<ScaledShape<Circle>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _ScrollView = SameBaseElement<ScrollView<Never>>
 
         @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
         typealias _ScrollViewReader = SameBaseElement<ScrollViewReader<Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
-        typealias _Section = SameBaseElement<Section<Never,Never,Never>>
+        typealias _Section = SameBaseElement<Section<Never, Never, Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _SecureField = SameBaseElement<SecureField<Never>>
 
         @available(macOS 14.0, *)
@@ -353,27 +320,24 @@ enum TestElement {
 
         @available(iOS 16.0, macOS 13.0, watchOS 9.0, *)
         @available(tvOS, unavailable)
-        typealias _ShareLink = SameBaseElement<ShareLink<Array<Never>,Never,Never,Never>>
+        typealias _ShareLink = SameBaseElement<ShareLink<[Never], Never, Never, Never>>
 
-        @available(iOS 13.0, macOS 10.15, watchOS 6.0, *)
         @available(tvOS, unavailable)
-        typealias _Slider = SameBaseElement<Slider<Never,Never>>
+        typealias _Slider = SameBaseElement<Slider<Never, Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _Spacer = SameTypeElement<Spacer>
 
-        @available(iOS 13.0, macOS 10.15, watchOS 9.0, *)
+        @available(watchOS 9.0, *)
         @available(tvOS, unavailable)
         typealias _Stepper = SameBaseElement<Stepper<Never>>
 
         @available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
-        typealias _StrokeBorderShapeView = SameBaseElement<StrokeBorderShapeView<Circle,Never,Never>>
+        typealias _StrokeBorderShapeView = SameBaseElement<StrokeBorderShapeView<Circle, Never, Never>>
 
         @available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
-        typealias _StrokeShapeView = SameBaseElement<StrokeShapeView<Circle,Never,Never>>
+        typealias _StrokeShapeView = SameBaseElement<StrokeShapeView<Circle, Never, Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
-        typealias _SubscriptionView = SameBaseElement<SubscriptionView<AnyPublisher<Void,Never>,Never>>
+        typealias _SubscriptionView = SameBaseElement<SubscriptionView<AnyPublisher<Void, Never>, Never>>
 
         #if swift(>=6.0)
         @available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
@@ -393,12 +357,11 @@ enum TestElement {
         @available(iOS 16.0, macOS 12.0, *)
         @available(tvOS, unavailable)
         @available(watchOS, unavailable)
-        typealias _Table = SameBaseElement<Table<Never,Never,Never>>
+        typealias _Table = SameBaseElement<Table<Never, Never, Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 7.0, *)
-        typealias _TabView = SameBaseElement<TabView<Int,Never>>
+        @available(watchOS 7.0, *)
+        typealias _TabView = SameBaseElement<TabView<Int, Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _Text = SameTypeElement<Text>
 
         @available(iOS 14.0, macOS 11.0, *)
@@ -406,7 +369,6 @@ enum TestElement {
         @available(watchOS, unavailable)
         typealias _TextEditor = SameTypeElement<TextEditor>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _TextField = SameBaseElement<TextField<Never>>
 
         @available(watchOS 9.0, *)
@@ -417,15 +379,12 @@ enum TestElement {
         typealias _TextFieldLink = SameBaseElement<TextFieldLink<Never>>
 
         @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
-        typealias _TimelineView = SameBaseElement<TimelineView<AnimationTimelineSchedule,Never>>
+        typealias _TimelineView = SameBaseElement<TimelineView<AnimationTimelineSchedule, Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _Toggle = SameBaseElement<Toggle<Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _TransformedShape = SameBaseElement<TransformedShape<Circle>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _TupleView = SameBaseElement<TupleView<Never>>
 
         @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
@@ -434,14 +393,12 @@ enum TestElement {
         @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
         typealias _ViewThatFits = SameBaseElement<ViewThatFits<Never>>
 
-        @available(macOS 10.15, *)
         @available(iOS, unavailable)
         @available(tvOS, unavailable)
         @available(watchOS, unavailable)
         @available(visionOS, unavailable)
         typealias _VSplitView = SameBaseElement<VSplitView<Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _VStack = SameBaseElement<VStack<Never>>
 
         #if swift(>=6.0)
@@ -453,25 +410,20 @@ enum TestElement {
         typealias _WindowVisibilityToggle = SameBaseElement<WindowVisibilityToggle<Never>>
         #endif
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _ZStack = SameBaseElement<ZStack<Never>>
     }
-    
+
     enum Gesture {
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
         typealias _AnyGesture = SameBaseElement<AnyGesture<Never>>
 
-        @available(iOS 13.0, macOS 10.15, watchOS 6.0, *)
         @available(tvOS, unavailable)
         typealias _DragGesture = SameTypeElement<DragGesture>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
-        typealias _ExclusiveGesture = SameBaseElement<ExclusiveGesture<Never,Never>>
+        typealias _ExclusiveGesture = SameBaseElement<ExclusiveGesture<Never, Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
-        typealias _GestureStateGesture = SameBaseElement<GestureStateGesture<Never,Never>>
+        typealias _GestureStateGesture = SameBaseElement<GestureStateGesture<Never, Never>>
 
-        @available(iOS 13.0, macOS 10.15, watchOS 6.0, tvOS 14.0, *)
+        @available(tvOS 14.0, *)
         typealias _LongPressGesture = SameTypeElement<LongPressGesture>
 
         @available(iOS, introduced: 13.0, deprecated: 100000.0, renamed: "MagnifyGesture")
@@ -498,23 +450,21 @@ enum TestElement {
         @available(visionOS, introduced: 1.0, deprecated: 100000.0, renamed: "RotateGesture")
         typealias _RotationGesture = SameTypeElement<RotationGesture>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
-        typealias _SequenceGesture = SameBaseElement<SequenceGesture<Never,Never>>
+        typealias _SequenceGesture = SameBaseElement<SequenceGesture<Never, Never>>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
-        typealias _SimultaneousGesture = SameBaseElement<SimultaneousGesture<Never,Never>>
+        typealias _SimultaneousGesture = SameBaseElement<SimultaneousGesture<Never, Never>>
 
         #if swift(>=6.0)
-        @available(visionOS 1.0, iOS 18.0, macOS 15.0, watchOS 11.0, *)
+        @available(iOS 18.0, macOS 15.0, watchOS 11.0, *)
         @available(tvOS, unavailable)
         typealias _SpatialEventGesture = SameTypeElement<SpatialEventGesture>
         #endif
 
-        @available(iOS 16.0, macOS 13.0, watchOS 9.0, visionOS 1.0, *)
+        @available(iOS 16.0, macOS 13.0, watchOS 9.0, *)
         @available(tvOS, unavailable)
         typealias _SpatialTapGesture = SameTypeElement<SpatialTapGesture>
 
-        @available(iOS 13.0, macOS 10.15, tvOS 16.0, watchOS 6.0, *)
+        @available(tvOS 16.0, *)
         typealias _TapGesture = SameTypeElement<TapGesture>
 
         #if swift(>=6.0)
@@ -526,37 +476,37 @@ enum TestElement {
         typealias _WindowDragGesture = SameTypeElement<WindowDragGesture>
         #endif
     }
-    
+
     enum Modifier {
         @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
         struct _Refreshable: ModifierDerivedElement {
             let node: ReflectionNode
             static func makeModifiedContent() -> Any { EmptyView().refreshable {} }
         }
-        
+
         @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
         struct _Task: ModifierDerivedElement {
             let node: ReflectionNode
             static func makeModifiedContent() -> Any { EmptyView().task {} }
         }
-        
+
         struct _OnAppear: ModifierDerivedElement {
             let node: ReflectionNode
             static func makeModifiedContent() -> Any { EmptyView().onAppear {} }
         }
-        
+
         struct _OnDisappear: ModifierDerivedElement {
             let node: ReflectionNode
             static func makeModifiedContent() -> Any { EmptyView().onDisappear {} }
         }
-        
+
         @available(iOS 13.0, macOS 10.15, tvOS 16.0, watchOS 6.0, *)
         struct _OnTap: ModifierDerivedElement {
             let node: ReflectionNode
             static func makeModifiedContent() -> Any { EmptyView().onTapGesture {} }
         }
     }
-    
+
     enum PropertyWrapper {
         final class DummyObservableObject: ObservableObject {}
         typealias _State = SameBaseElement<State<Any>>
@@ -564,7 +514,7 @@ enum TestElement {
         typealias _Environment = SameBaseElement<Environment<Any>>
         typealias _EnvironmentObject = SameBaseElement<EnvironmentObject<DummyObservableObject>>
     }
-    
+
     enum Value {
         typealias _Bool = SameTypeElement<Bool>
         typealias _String = SameTypeElement<String>
@@ -630,7 +580,7 @@ extension TestElement.View._Toggle {
         case case0
         case case1
     }
-    
+
     var isOn: Binding<Bool> {
         let binding = node.oneElement(TestElement.PropertyWrapper._Binding.self)
         if let boolBinding = binding.node.object as? Binding<Bool> {
@@ -643,7 +593,7 @@ extension TestElement.View._Toggle {
             dummyBinding.wrappedValue = $0 ? .case0 : .case1
         }
     }
-    
+
     func toggle() {
         isOn.wrappedValue.toggle()
     }

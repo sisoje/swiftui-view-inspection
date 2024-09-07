@@ -1,7 +1,6 @@
 import re
 import json
 
-
 def parse_file(input_file):
     try:
         output = []

@@ -1,8 +1,16 @@
 import requests
 import json
 
+defoltna = ['iOS 13.0', 'macOS 10.15', 'tvOS 13.0', 'watchOS 6.0', 'visionOS 1.0']
+newswift = ['iOS 18.0', 'macOS 15.0', 'tvOS 18.0', 'watchOS 11.0', 'visionOS 2.0']
+
+
+def clean_availability_string(availability):
+    for default in defoltna:
+        availability = availability.replace(f"{default}, ", "")
+    return availability
+
 def isnewswift(availabilities):
-    newswift = ['iOS 18.0', 'macOS 15.0', 'tvOS 18.0', 'watchOS 11.0', 'visionOS 2.0']
     for n in newswift:
         for a in availabilities:
             if n in a:
@@ -45,6 +53,9 @@ for entity in ['view', 'gesture']:
             continue
 
         availabilities = struct.get('availabilities', [])
+        availabilities = [clean_availability_string(x) for x in availabilities]
+        if '@available(*)' in availabilities:
+            availabilities.remove('@available(*)')
         lines = availabilities
         generics = struct.get('generics')
         if generics is None:
