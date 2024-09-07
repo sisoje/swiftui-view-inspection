@@ -44,3 +44,15 @@ struct ClosureElement<T>: CastableTypeDerivedElement {
     typealias RelatedType = T
     static func isValid(_ node: ReflectionNode) -> Bool { node.typeInfo.typename.hasSuffix(typeInfo.typename) }
 }
+
+
+struct SomeClosureElement: ReflectionElement {
+    let node: ReflectionNode
+    static func isValid(_ node: ReflectionNode) -> Bool {
+        node.typeInfo.typename.contains("->")
+    }
+    
+    func cast<T>(_ t: T.Type = T.self) -> T {
+        CastingUtils.memoryCast(node.object, T.self)
+    }
+}
