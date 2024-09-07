@@ -113,8 +113,21 @@
         },
         "parsed_struct": {
             "name": "_ListValue",
+            "generics": "Style, SelectionValue",
             "conformances": []
-        }
+        },
+        "parsed_conditions": [
+            {
+                "type": "Style",
+                "constraint": "inherits_from",
+                "value": "SwiftUI.ListStyle"
+            },
+            {
+                "type": "SelectionValue",
+                "constraint": "inherits_from",
+                "value": "Swift.Hashable"
+            }
+        ]
     },
     {
         "result": {
@@ -869,8 +882,16 @@
         },
         "parsed_struct": {
             "name": "TouchBar",
+            "generics": "Content",
             "conformances": []
-        }
+        },
+        "parsed_conditions": [
+            {
+                "type": "Content",
+                "constraint": "inherits_from",
+                "value": "SwiftUICore.View"
+            }
+        ]
     },
     {
         "result": {
@@ -1150,8 +1171,21 @@
         },
         "parsed_struct": {
             "name": "OutlineGroup",
+            "generics": "Data, ID, Parent, Leaf, Subgroup",
             "conformances": []
-        }
+        },
+        "parsed_conditions": [
+            {
+                "type": "Data",
+                "constraint": "inherits_from",
+                "value": "Swift.RandomAccessCollection"
+            },
+            {
+                "type": "ID",
+                "constraint": "inherits_from",
+                "value": "Swift.Hashable"
+            }
+        ]
     },
     {
         "result": {
@@ -1329,8 +1363,20 @@
         },
         "parsed_struct": {
             "name": "TableColumnCustomization",
-            "conformances": []
-        }
+            "generics": "RowValue",
+            "conformances": [
+                "Swift.Equatable",
+                "Swift.Sendable",
+                "Swift.Codable where RowValue : Swift.Identifiable "
+            ]
+        },
+        "parsed_conditions": [
+            {
+                "type": "RowValue",
+                "constraint": "inherits_from",
+                "value": "Swift.Identifiable"
+            }
+        ]
     },
     {
         "result": {
@@ -1384,8 +1430,10 @@
         },
         "parsed_struct": {
             "name": "LabeledContent",
+            "generics": "Label, Content",
             "conformances": []
-        }
+        },
+        "parsed_conditions": []
     },
     {
         "result": {
@@ -1487,8 +1535,21 @@
         },
         "parsed_struct": {
             "name": "_TabViewValue",
+            "generics": "Style, SelectionValue",
             "conformances": []
-        }
+        },
+        "parsed_conditions": [
+            {
+                "type": "Style",
+                "constraint": "inherits_from",
+                "value": "SwiftUI.TabViewStyle"
+            },
+            {
+                "type": "SelectionValue",
+                "constraint": "inherits_from",
+                "value": "Swift.Hashable"
+            }
+        ]
     },
     {
         "result": {
@@ -1970,8 +2031,13 @@
         },
         "parsed_struct": {
             "name": "EditActions",
-            "conformances": []
-        }
+            "generics": "Data",
+            "conformances": [
+                "Swift.OptionSet",
+                "Swift.Sendable "
+            ]
+        },
+        "parsed_conditions": []
     },
     {
         "result": {
@@ -1982,8 +2048,10 @@
         },
         "parsed_struct": {
             "name": "EditableCollectionContent",
+            "generics": "Content, Data",
             "conformances": []
-        }
+        },
+        "parsed_conditions": []
     },
     {
         "result": {
@@ -1994,8 +2062,24 @@
         },
         "parsed_struct": {
             "name": "IndexedIdentifierCollection",
-            "conformances": []
-        }
+            "generics": "Base, ID",
+            "conformances": [
+                "Swift.Collection where Base : Swift.Collection",
+                "ID : Swift.Hashable "
+            ]
+        },
+        "parsed_conditions": [
+            {
+                "type": "Base",
+                "constraint": "inherits_from",
+                "value": "Swift.Collection"
+            },
+            {
+                "type": "ID",
+                "constraint": "inherits_from",
+                "value": "Swift.Hashable"
+            }
+        ]
     },
     {
         "result": {
@@ -2066,8 +2150,18 @@
         },
         "parsed_struct": {
             "name": "ForEachSectionCollection",
-            "conformances": []
-        }
+            "generics": "Content",
+            "conformances": [
+                "Swift.RandomAccessCollection where Content : SwiftUICore.View "
+            ]
+        },
+        "parsed_conditions": [
+            {
+                "type": "Content",
+                "constraint": "inherits_from",
+                "value": "SwiftUICore.View"
+            }
+        ]
     },
     {
         "result": {
@@ -3347,8 +3441,16 @@
         },
         "parsed_struct": {
             "name": "ContextMenu",
+            "generics": "MenuItems",
             "conformances": []
-        }
+        },
+        "parsed_conditions": [
+            {
+                "type": "MenuItems",
+                "constraint": "inherits_from",
+                "value": "SwiftUICore.View"
+            }
+        ]
     },
     {
         "result": {
@@ -3600,8 +3702,24 @@
         },
         "parsed_struct": {
             "name": "UIHostingConfiguration",
-            "conformances": []
-        }
+            "generics": "Content, Background",
+            "conformances": [
+                "UIKit.UIContentConfiguration where Content : SwiftUICore.View",
+                "Background : SwiftUICore.View "
+            ]
+        },
+        "parsed_conditions": [
+            {
+                "type": "Content",
+                "constraint": "inherits_from",
+                "value": "SwiftUICore.View"
+            },
+            {
+                "type": "Background",
+                "constraint": "inherits_from",
+                "value": "SwiftUICore.View"
+            }
+        ]
     },
     {
         "result": {
@@ -3631,8 +3749,21 @@
         },
         "parsed_struct": {
             "name": "SharePreview",
+            "generics": "Image, Icon",
             "conformances": []
-        }
+        },
+        "parsed_conditions": [
+            {
+                "type": "Image",
+                "constraint": "inherits_from",
+                "value": "CoreTransferable.Transferable"
+            },
+            {
+                "type": "Icon",
+                "constraint": "inherits_from",
+                "value": "CoreTransferable.Transferable"
+            }
+        ]
     },
     {
         "result": {
@@ -3789,8 +3920,10 @@
         },
         "parsed_struct": {
             "name": "Section",
+            "generics": "Parent, Content, Footer",
             "conformances": []
-        }
+        },
+        "parsed_conditions": []
     },
     {
         "result": {
@@ -3924,8 +4057,18 @@
         },
         "parsed_struct": {
             "name": "_AligningContentProvider",
-            "conformances": []
-        }
+            "generics": "Content",
+            "conformances": [
+                "SwiftUI._ScrollableContentProvider where Content : SwiftUICore.View "
+            ]
+        },
+        "parsed_conditions": [
+            {
+                "type": "Content",
+                "constraint": "inherits_from",
+                "value": "SwiftUICore.View"
+            }
+        ]
     },
     {
         "result": {
@@ -4330,8 +4473,18 @@
         },
         "parsed_struct": {
             "name": "ForEachSubviewCollection",
-            "conformances": []
-        }
+            "generics": "Content",
+            "conformances": [
+                "Swift.RandomAccessCollection where Content : SwiftUICore.View "
+            ]
+        },
+        "parsed_conditions": [
+            {
+                "type": "Content",
+                "constraint": "inherits_from",
+                "value": "SwiftUICore.View"
+            }
+        ]
     },
     {
         "result": {
@@ -4342,8 +4495,21 @@
         },
         "parsed_struct": {
             "name": "_PickerValue",
+            "generics": "Style, SelectionValue",
             "conformances": []
-        }
+        },
+        "parsed_conditions": [
+            {
+                "type": "Style",
+                "constraint": "inherits_from",
+                "value": "SwiftUI.PickerStyle"
+            },
+            {
+                "type": "SelectionValue",
+                "constraint": "inherits_from",
+                "value": "Swift.Hashable"
+            }
+        ]
     },
     {
         "result": {
@@ -4938,8 +5104,10 @@
         },
         "parsed_struct": {
             "name": "Tab",
+            "generics": "Value, Content, Label",
             "conformances": []
-        }
+        },
+        "parsed_conditions": []
     },
     {
         "result": {
@@ -5135,8 +5303,16 @@
         },
         "parsed_struct": {
             "name": "AccessibilityRotorEntry",
+            "generics": "ID",
             "conformances": []
-        }
+        },
+        "parsed_conditions": [
+            {
+                "type": "ID",
+                "constraint": "inherits_from",
+                "value": "Swift.Hashable"
+            }
+        ]
     },
     {
         "result": {
@@ -5437,8 +5613,10 @@
         },
         "parsed_struct": {
             "name": "TabSection",
+            "generics": "Header, Content, Footer, SelectionValue",
             "conformances": []
-        }
+        },
+        "parsed_conditions": []
     },
     {
         "result": {
@@ -5625,8 +5803,16 @@
         },
         "parsed_struct": {
             "name": "_MenuBarExtraValue",
+            "generics": "Style",
             "conformances": []
-        }
+        },
+        "parsed_conditions": [
+            {
+                "type": "Style",
+                "constraint": "inherits_from",
+                "value": "SwiftUI.MenuBarExtraStyle"
+            }
+        ]
     },
     {
         "result": {
@@ -6031,8 +6217,16 @@
         },
         "parsed_struct": {
             "name": "FileDocumentConfiguration",
+            "generics": "Document",
             "conformances": []
-        }
+        },
+        "parsed_conditions": [
+            {
+                "type": "Document",
+                "constraint": "inherits_from",
+                "value": "SwiftUI.FileDocument"
+            }
+        ]
     },
     {
         "result": {
@@ -6139,8 +6333,12 @@
         },
         "parsed_struct": {
             "name": "BackgroundTask",
-            "conformances": []
-        }
+            "generics": "Request, Response",
+            "conformances": [
+                "Swift.Sendable "
+            ]
+        },
+        "parsed_conditions": []
     },
     {
         "result": {
@@ -7495,8 +7693,16 @@
         },
         "parsed_struct": {
             "name": "UIGestureRecognizerRepresentableContext",
+            "generics": "Representable",
             "conformances": []
-        }
+        },
+        "parsed_conditions": [
+            {
+                "type": "Representable",
+                "constraint": "inherits_from",
+                "value": "SwiftUI.UIGestureRecognizerRepresentable"
+            }
+        ]
     },
     {
         "result": {
@@ -7655,8 +7861,16 @@
         },
         "parsed_struct": {
             "name": "TimelineView",
+            "generics": "Schedule, Content",
             "conformances": []
-        }
+        },
+        "parsed_conditions": [
+            {
+                "type": "Schedule",
+                "constraint": "inherits_from",
+                "value": "SwiftUICore.TimelineSchedule"
+            }
+        ]
     },
     {
         "result": {
@@ -8851,8 +9065,24 @@
         },
         "parsed_struct": {
             "name": "KeyframeTrack",
-            "conformances": []
-        }
+            "generics": "Root, Value, Content",
+            "conformances": [
+                "SwiftUICore.Keyframes where Value == Content.Value",
+                "Content : SwiftUICore.KeyframeTrackContent "
+            ]
+        },
+        "parsed_conditions": [
+            {
+                "type": "Value",
+                "constraint": "equals",
+                "value": "Content.Value"
+            },
+            {
+                "type": "Content",
+                "constraint": "inherits_from",
+                "value": "SwiftUICore.KeyframeTrackContent"
+            }
+        ]
     },
     {
         "result": {
@@ -8913,8 +9143,24 @@
         },
         "parsed_struct": {
             "name": "ExplicitTimelineSchedule",
-            "conformances": []
-        }
+            "generics": "Entries",
+            "conformances": [
+                "SwiftUICore.TimelineSchedule where Entries : Swift.Sequence",
+                "Entries.Element == Foundation.Date "
+            ]
+        },
+        "parsed_conditions": [
+            {
+                "type": "Entries",
+                "constraint": "inherits_from",
+                "value": "Swift.Sequence"
+            },
+            {
+                "type": "Entries.Element",
+                "constraint": "equals",
+                "value": "Foundation.Date"
+            }
+        ]
     },
     {
         "result": {
@@ -8931,8 +9177,18 @@
         },
         "parsed_struct": {
             "name": "_TextVariantPreference",
-            "conformances": []
-        }
+            "generics": "Preference",
+            "conformances": [
+                "Swift.Sendable where Preference : SwiftUICore.TextVariantPreference "
+            ]
+        },
+        "parsed_conditions": [
+            {
+                "type": "Preference",
+                "constraint": "inherits_from",
+                "value": "SwiftUICore.TextVariantPreference"
+            }
+        ]
     },
     {
         "result": {
@@ -9614,8 +9870,10 @@
         },
         "parsed_struct": {
             "name": "_ResolvedKeyframes",
+            "generics": "Value",
             "conformances": []
-        }
+        },
+        "parsed_conditions": []
     },
     {
         "result": {
@@ -9728,8 +9986,12 @@
         },
         "parsed_struct": {
             "name": "_GraphValue",
-            "conformances": []
-        }
+            "generics": "Value",
+            "conformances": [
+                "Swift.Equatable "
+            ]
+        },
+        "parsed_conditions": []
     },
     {
         "result": {
@@ -10065,8 +10327,18 @@
         },
         "parsed_struct": {
             "name": "_LayoutTrait",
-            "conformances": []
-        }
+            "generics": "K",
+            "conformances": [
+                "SwiftUICore._ViewTraitKey where K : SwiftUICore.LayoutValueKey "
+            ]
+        },
+        "parsed_conditions": [
+            {
+                "type": "K",
+                "constraint": "inherits_from",
+                "value": "SwiftUICore.LayoutValueKey"
+            }
+        ]
     },
     {
         "result": {
@@ -10513,8 +10785,16 @@
         },
         "parsed_struct": {
             "name": "_PreferenceValue",
+            "generics": "Key",
             "conformances": []
-        }
+        },
+        "parsed_conditions": [
+            {
+                "type": "Key",
+                "constraint": "inherits_from",
+                "value": "SwiftUICore.PreferenceKey"
+            }
+        ]
     },
     {
         "result": {
@@ -10586,8 +10866,18 @@
         },
         "parsed_struct": {
             "name": "_DetachedKey",
-            "conformances": []
-        }
+            "generics": "Key",
+            "conformances": [
+                "SwiftUICore._Detachable where Key : SwiftUICore.PreferenceKey "
+            ]
+        },
+        "parsed_conditions": [
+            {
+                "type": "Key",
+                "constraint": "inherits_from",
+                "value": "SwiftUICore.PreferenceKey"
+            }
+        ]
     },
     {
         "result": {
@@ -10997,8 +11287,16 @@
         },
         "parsed_struct": {
             "name": "AnimationState",
+            "generics": "Value",
             "conformances": []
-        }
+        },
+        "parsed_conditions": [
+            {
+                "type": "Value",
+                "constraint": "inherits_from",
+                "value": "SwiftUICore.VectorArithmetic"
+            }
+        ]
     },
     {
         "result": {
@@ -11050,8 +11348,10 @@
         },
         "parsed_struct": {
             "name": "_GestureOutputs",
+            "generics": "Value",
             "conformances": []
-        }
+        },
+        "parsed_conditions": []
     },
     {
         "result": {
@@ -11082,8 +11382,10 @@
         },
         "parsed_struct": {
             "name": "TimeDataSource",
+            "generics": "Value",
             "conformances": []
-        }
+        },
+        "parsed_conditions": []
     },
     {
         "result": {
@@ -11114,8 +11416,16 @@
         },
         "parsed_struct": {
             "name": "_ResolvedKeyframeTrackContent",
+            "generics": "Value",
             "conformances": []
-        }
+        },
+        "parsed_conditions": [
+            {
+                "type": "Value",
+                "constraint": "inherits_from",
+                "value": "SwiftUICore.Animatable"
+            }
+        ]
     },
     {
         "result": {
@@ -11124,8 +11434,18 @@
         },
         "parsed_struct": {
             "name": "CubicKeyframe",
-            "conformances": []
-        }
+            "generics": "Value",
+            "conformances": [
+                "SwiftUICore.KeyframeTrackContent where Value : SwiftUICore.Animatable "
+            ]
+        },
+        "parsed_conditions": [
+            {
+                "type": "Value",
+                "constraint": "inherits_from",
+                "value": "SwiftUICore.Animatable"
+            }
+        ]
     },
     {
         "result": {
@@ -11134,8 +11454,18 @@
         },
         "parsed_struct": {
             "name": "SpringKeyframe",
-            "conformances": []
-        }
+            "generics": "Value",
+            "conformances": [
+                "SwiftUICore.KeyframeTrackContent where Value : SwiftUICore.Animatable "
+            ]
+        },
+        "parsed_conditions": [
+            {
+                "type": "Value",
+                "constraint": "inherits_from",
+                "value": "SwiftUICore.Animatable"
+            }
+        ]
     },
     {
         "result": {
@@ -11144,8 +11474,18 @@
         },
         "parsed_struct": {
             "name": "LinearKeyframe",
-            "conformances": []
-        }
+            "generics": "Value",
+            "conformances": [
+                "SwiftUICore.KeyframeTrackContent where Value : SwiftUICore.Animatable "
+            ]
+        },
+        "parsed_conditions": [
+            {
+                "type": "Value",
+                "constraint": "inherits_from",
+                "value": "SwiftUICore.Animatable"
+            }
+        ]
     },
     {
         "result": {
@@ -11154,8 +11494,18 @@
         },
         "parsed_struct": {
             "name": "MoveKeyframe",
-            "conformances": []
-        }
+            "generics": "Value",
+            "conformances": [
+                "SwiftUICore.KeyframeTrackContent where Value : SwiftUICore.Animatable "
+            ]
+        },
+        "parsed_conditions": [
+            {
+                "type": "Value",
+                "constraint": "inherits_from",
+                "value": "SwiftUICore.Animatable"
+            }
+        ]
     },
     {
         "result": {
@@ -11193,8 +11543,10 @@
         },
         "parsed_struct": {
             "name": "KeyframeTimeline",
+            "generics": "Value",
             "conformances": []
-        }
+        },
+        "parsed_conditions": []
     },
     {
         "result": {
@@ -11443,8 +11795,16 @@
         },
         "parsed_struct": {
             "name": "AnimationContext",
+            "generics": "Value",
             "conformances": []
-        }
+        },
+        "parsed_conditions": [
+            {
+                "type": "Value",
+                "constraint": "inherits_from",
+                "value": "SwiftUICore.VectorArithmetic"
+            }
+        ]
     },
     {
         "result": {
@@ -11603,8 +11963,21 @@
         },
         "parsed_struct": {
             "name": "ForEach",
+            "generics": "Data, ID, Content",
             "conformances": []
-        }
+        },
+        "parsed_conditions": [
+            {
+                "type": "Data",
+                "constraint": "inherits_from",
+                "value": "Swift.RandomAccessCollection"
+            },
+            {
+                "type": "ID",
+                "constraint": "inherits_from",
+                "value": "Swift.Hashable"
+            }
+        ]
     },
     {
         "result": {

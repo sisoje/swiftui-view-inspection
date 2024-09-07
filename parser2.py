@@ -25,7 +25,7 @@ def parse_file(input_file):
 
 def parse_generic_struct(line):
     # Regex to capture generic structs with conformances
-    generic_struct_pattern = r'public struct (\w+)<([^>]+)>(?:\s*:\s*([^{]+))?'
+    generic_struct_pattern = r'public struct (\w+)<([^>]+)>\s+(?:\s*:\s*([^{]+))?'
     
     match = re.match(generic_struct_pattern, line)
     if match:
@@ -37,7 +37,7 @@ def parse_generic_struct(line):
 
 def parse_non_generic_struct(line):
     # Regex to capture non-generic structs with conformances
-    non_generic_struct_pattern = r'public struct (\w+)(?:\s*:\s*([^{]+))?'
+    non_generic_struct_pattern = r'public struct (\w+)\s+(?:\s*:\s*([^{]+))?'
     
     match = re.match(non_generic_struct_pattern, line)
     if match:
@@ -100,6 +100,9 @@ for result in results:
 	parsed_struct = parse_non_generic_struct(line)
 	if parsed_struct is None:
 		parsed_struct = parse_generic_struct(line)
+		if parsed_struct is None:
+			print(line)
+			# exit(0)
 		parsed_conditions = parse_swift_generic_conditions(line)
 		parsed_results.append({
 			'result': result,
