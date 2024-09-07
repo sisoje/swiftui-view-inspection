@@ -46,7 +46,7 @@ strings = ["\n".join(lines) for lines in output]
 
 content = "\n\n".join(strings)
 
-with open('generics.swift', 'w', encoding='utf-8') as f:
+with open('view.swift', 'w', encoding='utf-8') as f:
     f.write(content)
 
 
