@@ -32,6 +32,7 @@ def parse_generic_struct(line):
         struct_name = match.group(1)
         generics = match.group(2)
         conformances = match.group(3).split(', ') if match.group(3) else []
+        conformances = [x.split(".")[1] for x in conformances]
         return { 'name': struct_name, 'generics': generics.split(', '), 'conformances': conformances }
     return None
 
@@ -43,6 +44,7 @@ def parse_non_generic_struct(line):
     if match:
         struct_name = match.group(1)
         conformances = match.group(2).split(', ') if match.group(2) else []
+        conformances = [x.split(".")[1] for x in conformances]
         return { 'name': struct_name, 'conformances': conformances }
     return None
 
@@ -63,8 +65,10 @@ def parse_swift_generic_conditions(declaration):
         if ':' in condition:
             # Protocol conformance or class inheritance
             left, right = condition.split(':', 1)
-            parsed_conditions[left.strip()] = right.strip()
-            parsed_types[left.strip()] = '==' if '==' in condition else ':'
+            right = right.strip().split('.')[1]
+            type = left.strip()
+            parsed_conditions[type] = right
+            parsed_types[type] = '==' if '==' in condition else ':'
     
     return {'conditions':parsed_conditions, 'condition_relations':parsed_types }
 

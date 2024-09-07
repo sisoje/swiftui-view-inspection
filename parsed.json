@@ -6,7 +6,7 @@
         ],
         "name": "SceneRestorationBehavior",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -20,7 +20,7 @@
         ],
         "name": "CarouselTabViewStyle",
         "conformances": [
-            "SwiftUI.TabViewStyle "
+            "TabViewStyle "
         ]
     },
     {
@@ -38,11 +38,11 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View",
-            "Content": "SwiftUICore.View"
+            "Label": "View",
+            "Content": "View"
         },
         "condition_relations": {
             "Label": ":",
@@ -57,8 +57,8 @@
         ],
         "name": "HandGestureShortcut",
         "conformances": [
-            "Swift.Sendable",
-            "Swift.Equatable "
+            "Sendable",
+            "Equatable "
         ]
     },
     {
@@ -75,10 +75,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUI.Scene "
+            "Scene "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -93,7 +93,7 @@
         ],
         "name": "WindowResizability",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -108,8 +108,8 @@
         ],
         "conformances": [],
         "conditions": {
-            "Style": "SwiftUI.ListStyle",
-            "SelectionValue": "Swift.Hashable"
+            "Style": "ListStyle",
+            "SelectionValue": "Hashable"
         },
         "condition_relations": {
             "Style": ":",
@@ -127,7 +127,7 @@
         ],
         "name": "EmptyControlWidgetConfiguration",
         "conformances": [
-            "SwiftUI.ControlWidgetConfiguration "
+            "ControlWidgetConfiguration "
         ]
     },
     {
@@ -141,8 +141,8 @@
         ],
         "name": "WindowLevel",
         "conformances": [
-            "Swift.Sendable",
-            "Swift.Hashable "
+            "Sendable",
+            "Hashable "
         ]
     },
     {
@@ -152,8 +152,8 @@
         ],
         "name": "AccessibilityActionCategory",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -176,8 +176,8 @@
         ],
         "name": "SensoryFeedback",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -191,7 +191,7 @@
         ],
         "name": "ColumnNavigationViewStyle",
         "conformances": [
-            "SwiftUI.NavigationViewStyle "
+            "NavigationViewStyle "
         ]
     },
     {
@@ -209,7 +209,7 @@
         ],
         "name": "DefaultButtonStyle",
         "conformances": [
-            "SwiftUI.PrimitiveButtonStyle "
+            "PrimitiveButtonStyle "
         ]
     },
     {
@@ -221,7 +221,7 @@
         ],
         "name": "WheelPickerStyle",
         "conformances": [
-            "SwiftUI.PickerStyle "
+            "PickerStyle "
         ]
     },
     {
@@ -244,7 +244,7 @@
         ],
         "name": "ButtonToggleStyle",
         "conformances": [
-            "SwiftUI.ToggleStyle "
+            "ToggleStyle "
         ]
     },
     {
@@ -261,11 +261,11 @@
             "Columns"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Rows": "SwiftUI.TableRowContent",
-            "Columns": "SwiftUI.TableColumnContent"
+            "Rows": "TableRowContent",
+            "Columns": "TableColumnContent"
         },
         "condition_relations": {
             "Rows": ":",
@@ -284,11 +284,11 @@
             "Data"
         ],
         "conformances": [
-            "SwiftUI.TableRowContent "
+            "TableRowContent "
         ],
         "conditions": {
-            "Data": "Swift.RandomAccessCollection",
-            "Data.Element": "Swift.Identifiable"
+            "Data": "RandomAccessCollection",
+            "Data.Element": "Identifiable"
         },
         "condition_relations": {
             "Data": ":",
@@ -307,11 +307,11 @@
             "Data"
         ],
         "conformances": [
-            "SwiftUI.TableRowContent "
+            "TableRowContent "
         ],
         "conditions": {
-            "Data": "Swift.RandomAccessCollection",
-            "Data.Element": "Swift.Identifiable"
+            "Data": "RandomAccessCollection",
+            "Data.Element": "Identifiable"
         },
         "condition_relations": {
             "Data": ":",
@@ -325,7 +325,7 @@
         ],
         "name": "DefaultDateProgressLabel",
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -335,7 +335,7 @@
         ],
         "name": "DefaultLabelStyle",
         "conformances": [
-            "SwiftUI.LabelStyle "
+            "LabelStyle "
         ]
     },
     {
@@ -349,8 +349,8 @@
         ],
         "name": "AlternatingRowBackgroundBehavior",
         "conformances": [
-            "Swift.Hashable",
-            "Swift.Sendable "
+            "Hashable",
+            "Sendable "
         ]
     },
     {
@@ -384,7 +384,7 @@
         ],
         "name": "BorderlessButtonStyle",
         "conformances": [
-            "SwiftUI.PrimitiveButtonStyle "
+            "PrimitiveButtonStyle "
         ]
     },
     {
@@ -406,8 +406,8 @@
         ],
         "name": "WritingToolsBehavior",
         "conformances": [
-            "Swift.Sendable",
-            "Swift.Hashable "
+            "Sendable",
+            "Hashable "
         ]
     },
     {
@@ -421,13 +421,13 @@
             "Layout"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Data": "Swift.RandomAccessCollection",
-            "Layout": "SwiftUI._ScrollableLayout",
-            "Data.Element": "SwiftUICore.View",
-            "Data.Index": "Swift.Hashable"
+            "Data": "RandomAccessCollection",
+            "Layout": "_ScrollableLayout",
+            "Data.Element": "View",
+            "Data.Index": "Hashable"
         },
         "condition_relations": {
             "Data": ":",
@@ -451,11 +451,11 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUI.Scene "
+            "Scene "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View",
-            "Content": "SwiftUICore.View"
+            "Label": "View",
+            "Content": "View"
         },
         "condition_relations": {
             "Label": ":",
@@ -469,7 +469,7 @@
         ],
         "name": "BalancedNavigationSplitViewStyle",
         "conformances": [
-            "SwiftUI.NavigationSplitViewStyle "
+            "NavigationSplitViewStyle "
         ]
     },
     {
@@ -479,7 +479,7 @@
         ],
         "name": "ColumnsFormStyle",
         "conformances": [
-            "SwiftUI.FormStyle "
+            "FormStyle "
         ]
     },
     {
@@ -489,7 +489,7 @@
         ],
         "name": "DefaultTextFieldStyle",
         "conformances": [
-            "SwiftUI.TextFieldStyle "
+            "TextFieldStyle "
         ]
     },
     {
@@ -502,10 +502,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUI.Scene "
+            "Scene "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -518,7 +518,7 @@
         ],
         "name": "FillShapeStyle",
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ]
     },
     {
@@ -540,7 +540,7 @@
         ],
         "name": "DropProposal",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -554,11 +554,11 @@
             "Second"
         ],
         "conformances": [
-            "SwiftUICore.Gesture "
+            "Gesture "
         ],
         "conditions": {
-            "First": "SwiftUICore.Gesture",
-            "Second": "SwiftUICore.Gesture"
+            "First": "Gesture",
+            "Second": "Gesture"
         },
         "condition_relations": {
             "First": ":",
@@ -572,7 +572,7 @@
         ],
         "name": "DefaultListStyle",
         "conformances": [
-            "SwiftUI.ListStyle "
+            "ListStyle "
         ]
     },
     {
@@ -584,7 +584,7 @@
         ],
         "name": "DismissBehavior",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -594,7 +594,7 @@
         ],
         "name": "PreviewModifierContent",
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -631,10 +631,10 @@
             "Label"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View"
+            "Label": "View"
         },
         "condition_relations": {
             "Label": ":"
@@ -651,7 +651,7 @@
         ],
         "name": "DefaultWindowVisibilityToggleLabel",
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -661,7 +661,7 @@
         ],
         "name": "_AlignmentWritingModifier",
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ]
     },
     {
@@ -683,11 +683,11 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "SelectionValue": "Swift.Hashable",
-            "Content": "SwiftUICore.View"
+            "SelectionValue": "Hashable",
+            "Content": "View"
         },
         "condition_relations": {
             "SelectionValue": ":",
@@ -701,8 +701,8 @@
         ],
         "name": "_SymbolEffectsRemovedModifier",
         "conformances": [
-            "SwiftUICore.ViewModifier",
-            "SwiftUICore._GraphInputsModifier "
+            "ViewModifier",
+            "_GraphInputsModifier "
         ]
     },
     {
@@ -715,8 +715,8 @@
         ],
         "name": "TextInputDictationBehavior",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -729,8 +729,8 @@
         ],
         "name": "TextInputDictationActivation",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -743,10 +743,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -761,7 +761,7 @@
         ],
         "name": "AutomaticDisclosureGroupStyle",
         "conformances": [
-            "SwiftUI.DisclosureGroupStyle "
+            "DisclosureGroupStyle "
         ]
     },
     {
@@ -779,7 +779,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -799,10 +799,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -817,7 +817,7 @@
         ],
         "name": "SidebarListStyle",
         "conformances": [
-            "SwiftUI.ListStyle "
+            "ListStyle "
         ]
     },
     {
@@ -831,11 +831,11 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "PublisherType": "Combine.Publisher",
-            "Content": "SwiftUICore.View"
+            "PublisherType": "Publisher",
+            "Content": "View"
         },
         "condition_relations": {
             "PublisherType": ":",
@@ -871,10 +871,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUI.ToolbarContent "
+            "ToolbarContent "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -891,11 +891,11 @@
             "Label"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View",
-            "Label": "SwiftUICore.View"
+            "Content": "View",
+            "Label": "View"
         },
         "condition_relations": {
             "Content": ":",
@@ -913,8 +913,8 @@
         ],
         "name": "WorldAlignmentBehavior",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -924,8 +924,8 @@
         ],
         "name": "_FlipForRTLEffect",
         "conformances": [
-            "SwiftUICore.ViewModifier",
-            "Swift.Equatable "
+            "ViewModifier",
+            "Equatable "
         ]
     },
     {
@@ -963,7 +963,7 @@
         ],
         "name": "TitleBarWindowStyle",
         "conformances": [
-            "SwiftUI.WindowStyle "
+            "WindowStyle "
         ]
     },
     {
@@ -985,7 +985,7 @@
         ],
         "name": "TextEditor",
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -1006,10 +1006,10 @@
             "P"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "P": "SwiftUI._ScrollableContentProvider"
+            "P": "_ScrollableContentProvider"
         },
         "condition_relations": {
             "P": ":"
@@ -1026,7 +1026,7 @@
         ],
         "name": "BorderedButtonMenuStyle",
         "conformances": [
-            "SwiftUI.MenuStyle "
+            "MenuStyle "
         ]
     },
     {
@@ -1046,8 +1046,8 @@
         ],
         "conformances": [],
         "conditions": {
-            "Data": "Swift.RandomAccessCollection",
-            "ID": "Swift.Hashable"
+            "Data": "RandomAccessCollection",
+            "ID": "Hashable"
         },
         "condition_relations": {
             "Data": ":",
@@ -1063,7 +1063,7 @@
         ],
         "name": "OutlineSubgroupChildren",
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -1081,13 +1081,13 @@
             "Label"
         ],
         "conformances": [
-            "SwiftUI.TableColumnContent "
+            "TableColumnContent "
         ],
         "conditions": {
-            "RowValue": "Swift.Identifiable",
-            "Sort": "Foundation.SortComparator",
-            "Content": "SwiftUICore.View",
-            "Label": "SwiftUICore.View"
+            "RowValue": "Identifiable",
+            "Sort": "SortComparator",
+            "Content": "View",
+            "Label": "View"
         },
         "condition_relations": {
             "RowValue": ":",
@@ -1113,7 +1113,7 @@
         ],
         "name": "ItemProviderTableRowModifier",
         "conformances": [
-            "SwiftUI._TableRowContentModifier "
+            "_TableRowContentModifier "
         ]
     },
     {
@@ -1125,7 +1125,7 @@
         ],
         "name": "OnInsertTableRowModifier",
         "conformances": [
-            "SwiftUI._TableRowContentModifier "
+            "_TableRowContentModifier "
         ]
     },
     {
@@ -1136,7 +1136,7 @@
         ],
         "name": "TextInputAutocapitalization",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -1147,7 +1147,7 @@
         ],
         "name": "DragGesture",
         "conformances": [
-            "SwiftUICore.Gesture "
+            "Gesture "
         ]
     },
     {
@@ -1160,7 +1160,7 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.DynamicProperty "
+            "DynamicProperty "
         ]
     },
     {
@@ -1174,10 +1174,10 @@
             "State"
         ],
         "conformances": [
-            "SwiftUICore.Gesture "
+            "Gesture "
         ],
         "conditions": {
-            "Base": "SwiftUICore.Gesture"
+            "Base": "Gesture"
         },
         "condition_relations": {
             "Base": ":"
@@ -1195,11 +1195,11 @@
             "ValueLabel"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View",
-            "ValueLabel": "SwiftUICore.View"
+            "Label": "View",
+            "ValueLabel": "View"
         },
         "condition_relations": {
             "Label": ":",
@@ -1213,7 +1213,7 @@
         ],
         "name": "_SymmetricallyScaledText",
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -1228,12 +1228,12 @@
             "RowValue"
         ],
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable",
-            "Swift.Codable "
+            "Equatable",
+            "Sendable",
+            "Codable "
         ],
         "conditions": {
-            "RowValue": "Swift.Identifiable"
+            "RowValue": "Identifiable"
         },
         "condition_relations": {
             "RowValue": ":"
@@ -1254,7 +1254,7 @@
         ],
         "name": "DefaultWindowToolbarStyle",
         "conformances": [
-            "SwiftUI.WindowToolbarStyle "
+            "WindowToolbarStyle "
         ]
     },
     {
@@ -1268,11 +1268,11 @@
             "CurrentValueLabel"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View",
-            "CurrentValueLabel": "SwiftUICore.View"
+            "Label": "View",
+            "CurrentValueLabel": "View"
         },
         "condition_relations": {
             "Label": ":",
@@ -1308,7 +1308,7 @@
         ],
         "name": "EmptyWidgetConfiguration",
         "conformances": [
-            "SwiftUI.WidgetConfiguration "
+            "WidgetConfiguration "
         ]
     },
     {
@@ -1324,7 +1324,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Value": "Swift.Identifiable"
+            "Value": "Identifiable"
         },
         "condition_relations": {
             "Value": ":"
@@ -1343,11 +1343,11 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUI.TableRowContent "
+            "TableRowContent "
         ],
         "conditions": {
-            "Value": "Swift.Identifiable",
-            "Content": "SwiftUICore.View"
+            "Value": "Identifiable",
+            "Content": "View"
         },
         "condition_relations": {
             "Value": ":",
@@ -1361,9 +1361,9 @@
         ],
         "name": "MenuOrder",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Hashable",
-            "Swift.Sendable "
+            "Equatable",
+            "Hashable",
+            "Sendable "
         ]
     },
     {
@@ -1373,7 +1373,7 @@
         ],
         "name": "PlaceholderTextShapeStyle",
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ]
     },
     {
@@ -1388,8 +1388,8 @@
         ],
         "conformances": [],
         "conditions": {
-            "Style": "SwiftUI.TabViewStyle",
-            "SelectionValue": "Swift.Hashable"
+            "Style": "TabViewStyle",
+            "SelectionValue": "Hashable"
         },
         "condition_relations": {
             "Style": ":",
@@ -1413,7 +1413,7 @@
         ],
         "name": "DefaultFocusEvaluationPriority",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -1427,7 +1427,7 @@
         ],
         "name": "WindowInteractionBehavior",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -1437,7 +1437,7 @@
         ],
         "name": "WindowManagerRole",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -1447,7 +1447,7 @@
         ],
         "name": "AutomaticLabeledContentStyle",
         "conformances": [
-            "SwiftUI.LabeledContentStyle "
+            "LabeledContentStyle "
         ]
     },
     {
@@ -1457,8 +1457,8 @@
         ],
         "name": "_IndefiniteSymbolEffectModifier",
         "conformances": [
-            "SwiftUICore.ViewModifier",
-            "SwiftUICore._GraphInputsModifier "
+            "ViewModifier",
+            "_GraphInputsModifier "
         ]
     },
     {
@@ -1471,11 +1471,11 @@
             "T"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier",
-            "SwiftUICore._GraphInputsModifier "
+            "ViewModifier",
+            "_GraphInputsModifier "
         ],
         "conditions": {
-            "T": "Swift.Equatable"
+            "T": "Equatable"
         },
         "condition_relations": {
             "T": ":"
@@ -1488,8 +1488,8 @@
         ],
         "name": "_ConditionalSymbolEffectModifier",
         "conformances": [
-            "SwiftUICore.ViewModifier",
-            "SwiftUICore._GraphInputsModifier "
+            "ViewModifier",
+            "_GraphInputsModifier "
         ]
     },
     {
@@ -1499,7 +1499,7 @@
         ],
         "name": "SymbolEffectTransition",
         "conformances": [
-            "SwiftUICore.Transition "
+            "Transition "
         ]
     },
     {
@@ -1510,7 +1510,7 @@
         ],
         "name": "SpatialEventCollection",
         "conformances": [
-            "Swift.Collection "
+            "Collection "
         ]
     },
     {
@@ -1524,7 +1524,7 @@
         ],
         "name": "WindowMenuBarExtraStyle",
         "conformances": [
-            "SwiftUI.MenuBarExtraStyle "
+            "MenuBarExtraStyle "
         ]
     },
     {
@@ -1534,7 +1534,7 @@
         ],
         "name": "LinearProgressViewStyle",
         "conformances": [
-            "SwiftUI.ProgressViewStyle "
+            "ProgressViewStyle "
         ]
     },
     {
@@ -1544,7 +1544,7 @@
         ],
         "name": "PagingScrollTargetBehavior",
         "conformances": [
-            "SwiftUI.ScrollTargetBehavior "
+            "ScrollTargetBehavior "
         ]
     },
     {
@@ -1554,7 +1554,7 @@
         ],
         "name": "ViewAlignedScrollTargetBehavior",
         "conformances": [
-            "SwiftUI.ScrollTargetBehavior "
+            "ScrollTargetBehavior "
         ]
     },
     {
@@ -1564,7 +1564,7 @@
         ],
         "name": "AnyScrollTargetBehavior",
         "conformances": [
-            "SwiftUI.ScrollTargetBehavior "
+            "ScrollTargetBehavior "
         ]
     },
     {
@@ -1574,7 +1574,7 @@
         ],
         "name": "TabCustomizationBehavior",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -1588,11 +1588,11 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Subviews": "SwiftUICore.View",
-            "Content": "SwiftUICore.View"
+            "Subviews": "View",
+            "Content": "View"
         },
         "condition_relations": {
             "Subviews": ":",
@@ -1606,7 +1606,7 @@
         ],
         "name": "SubviewsCollection",
         "conformances": [
-            "Swift.RandomAccessCollection "
+            "RandomAccessCollection "
         ]
     },
     {
@@ -1616,7 +1616,7 @@
         ],
         "name": "SubviewsCollectionSlice",
         "conformances": [
-            "Swift.RandomAccessCollection "
+            "RandomAccessCollection "
         ]
     },
     {
@@ -1626,7 +1626,7 @@
         ],
         "name": "_LayoutDirectionBehaviorEffect",
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ]
     },
     {
@@ -1636,7 +1636,7 @@
         ],
         "name": "CircularProgressViewStyle",
         "conformances": [
-            "SwiftUI.ProgressViewStyle "
+            "ProgressViewStyle "
         ]
     },
     {
@@ -1649,10 +1649,10 @@
             "Label"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View"
+            "Label": "View"
         },
         "condition_relations": {
             "Label": ":"
@@ -1665,7 +1665,7 @@
         ],
         "name": "_TaskModifier",
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ]
     },
     {
@@ -1678,10 +1678,10 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Value": "Swift.Equatable"
+            "Value": "Equatable"
         },
         "condition_relations": {
             "Value": ":"
@@ -1698,7 +1698,7 @@
         ],
         "name": "RotationGesture",
         "conformances": [
-            "SwiftUICore.Gesture "
+            "Gesture "
         ]
     },
     {
@@ -1710,7 +1710,7 @@
         ],
         "name": "RotateGesture",
         "conformances": [
-            "SwiftUICore.Gesture "
+            "Gesture "
         ]
     },
     {
@@ -1723,10 +1723,10 @@
             "Label"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View"
+            "Label": "View"
         },
         "condition_relations": {
             "Label": ":"
@@ -1751,8 +1751,8 @@
         ],
         "name": "SpringLoadingBehavior",
         "conformances": [
-            "Swift.Hashable",
-            "Swift.Sendable "
+            "Hashable",
+            "Sendable "
         ]
     },
     {
@@ -1762,7 +1762,7 @@
         ],
         "name": "__DesignTimeSelectionIdentifier",
         "conformances": [
-            "Swift.Hashable "
+            "Hashable "
         ]
     },
     {
@@ -1772,7 +1772,7 @@
         ],
         "name": "TabBarPlacement",
         "conformances": [
-            "Swift.Hashable "
+            "Hashable "
         ]
     },
     {
@@ -1786,7 +1786,7 @@
         ],
         "name": "RadioGroupPickerStyle",
         "conformances": [
-            "SwiftUI.PickerStyle "
+            "PickerStyle "
         ]
     },
     {
@@ -1798,7 +1798,7 @@
         ],
         "name": "InsetListStyle",
         "conformances": [
-            "SwiftUI.ListStyle "
+            "ListStyle "
         ]
     },
     {
@@ -1812,7 +1812,7 @@
         ],
         "name": "LinkButtonStyle",
         "conformances": [
-            "SwiftUI.PrimitiveButtonStyle "
+            "PrimitiveButtonStyle "
         ]
     },
     {
@@ -1825,8 +1825,8 @@
             "Data"
         ],
         "conformances": [
-            "Swift.OptionSet",
-            "Swift.Sendable "
+            "OptionSet",
+            "Sendable "
         ]
     },
     {
@@ -1852,11 +1852,11 @@
             "ID"
         ],
         "conformances": [
-            "Swift.Collection "
+            "Collection "
         ],
         "conditions": {
-            "Base": "Swift.Collection",
-            "ID": "Swift.Hashable"
+            "Base": "Collection",
+            "ID": "Hashable"
         },
         "condition_relations": {
             "Base": ":",
@@ -1874,7 +1874,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Value": "Swift.Equatable"
+            "Value": "Equatable"
         },
         "condition_relations": {
             "Value": ":"
@@ -1891,7 +1891,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Value": "Swift.Equatable"
+            "Value": "Equatable"
         },
         "condition_relations": {
             "Value": ":"
@@ -1927,10 +1927,10 @@
             "Content"
         ],
         "conformances": [
-            "Swift.RandomAccessCollection "
+            "RandomAccessCollection "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -1954,7 +1954,7 @@
         ],
         "name": "DefaultWindowStyle",
         "conformances": [
-            "SwiftUI.WindowStyle "
+            "WindowStyle "
         ]
     },
     {
@@ -1964,7 +1964,7 @@
         ],
         "name": "_AllowsHitTestingModifier",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -1974,7 +1974,7 @@
         ],
         "name": "LinkShapeStyle",
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ]
     },
     {
@@ -1987,10 +1987,10 @@
             "ContentShape"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "ContentShape": "SwiftUICore.Shape"
+            "ContentShape": "Shape"
         },
         "condition_relations": {
             "ContentShape": ":"
@@ -2011,8 +2011,8 @@
         ],
         "name": "AnimationCompletionCriteria",
         "conformances": [
-            "Swift.Hashable",
-            "Swift.Sendable "
+            "Hashable",
+            "Sendable "
         ]
     },
     {
@@ -2042,7 +2042,7 @@
         ],
         "name": "PullDownMenuBarExtraStyle",
         "conformances": [
-            "SwiftUI.MenuBarExtraStyle "
+            "MenuBarExtraStyle "
         ]
     },
     {
@@ -2056,7 +2056,7 @@
         ],
         "name": "_SystemShapeStyle",
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ]
     },
     {
@@ -2071,10 +2071,10 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUI.TableRowContent "
+            "TableRowContent "
         ],
         "conditions": {
-            "Value": "Swift.Identifiable"
+            "Value": "Identifiable"
         },
         "condition_relations": {
             "Value": ":"
@@ -2089,7 +2089,7 @@
         ],
         "name": "_TypeSelectEquivalentTableRowModifier",
         "conformances": [
-            "SwiftUI._TableRowContentModifier "
+            "_TableRowContentModifier "
         ]
     },
     {
@@ -2101,7 +2101,7 @@
         ],
         "name": "_HoverRegionModifier",
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ]
     },
     {
@@ -2115,11 +2115,11 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "SelectionValue": "Swift.Hashable",
-            "Content": "SwiftUICore.View"
+            "SelectionValue": "Hashable",
+            "Content": "View"
         },
         "condition_relations": {
             "SelectionValue": ":",
@@ -2136,11 +2136,11 @@
             "Key"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Key": "SwiftUICore.PreferenceKey",
-            "Key.Value": "Swift.Equatable"
+            "Key": "PreferenceKey",
+            "Key.Value": "Equatable"
         },
         "condition_relations": {
             "Key": ":",
@@ -2158,10 +2158,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUI.ToolbarContent "
+            "ToolbarContent "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -2176,7 +2176,7 @@
         ],
         "name": "GroupedListStyle",
         "conformances": [
-            "SwiftUI.ListStyle "
+            "ListStyle "
         ]
     },
     {
@@ -2199,7 +2199,7 @@
         ],
         "name": "FileDialogBrowserOptions",
         "conformances": [
-            "Swift.OptionSet "
+            "OptionSet "
         ]
     },
     {
@@ -2212,7 +2212,7 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.DynamicProperty "
+            "DynamicProperty "
         ]
     },
     {
@@ -2227,11 +2227,11 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View",
-            "Content": "SwiftUICore.View"
+            "Label": "View",
+            "Content": "View"
         },
         "condition_relations": {
             "Label": ":",
@@ -2245,7 +2245,7 @@
         ],
         "name": "InlinePickerStyle",
         "conformances": [
-            "SwiftUI.PickerStyle "
+            "PickerStyle "
         ]
     },
     {
@@ -2267,7 +2267,7 @@
         ],
         "name": "_HoverTableRowModifier",
         "conformances": [
-            "SwiftUI._TableRowContentModifier "
+            "_TableRowContentModifier "
         ]
     },
     {
@@ -2281,7 +2281,7 @@
         ],
         "name": "DigitalCrownEvent",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -2293,7 +2293,7 @@
         ],
         "name": "PaletteControlGroupStyle",
         "conformances": [
-            "SwiftUI.ControlGroupStyle "
+            "ControlGroupStyle "
         ]
     },
     {
@@ -2306,10 +2306,10 @@
             "LayerType"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "LayerType": "QuartzCore.CALayer"
+            "LayerType": "CALayer"
         },
         "condition_relations": {
             "LayerType": ":"
@@ -2325,7 +2325,7 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.DynamicProperty "
+            "DynamicProperty "
         ]
     },
     {
@@ -2344,7 +2344,7 @@
         ],
         "name": "SidebarAdaptableTabViewStyle",
         "conformances": [
-            "SwiftUI.TabViewStyle "
+            "TabViewStyle "
         ]
     },
     {
@@ -2360,7 +2360,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Document": "SwiftUI.ReferenceFileDocument"
+            "Document": "ReferenceFileDocument"
         },
         "condition_relations": {
             "Document": ":"
@@ -2375,7 +2375,7 @@
         ],
         "name": "RoundedBorderTextFieldStyle",
         "conformances": [
-            "SwiftUI.TextFieldStyle "
+            "TextFieldStyle "
         ]
     },
     {
@@ -2386,7 +2386,7 @@
         ],
         "name": "NavigationBarItem",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -2399,10 +2399,10 @@
             "Modifier"
         ],
         "conformances": [
-            "SwiftUI.Scene "
+            "Scene "
         ],
         "conditions": {
-            "Modifier": "SwiftUI._SceneModifier"
+            "Modifier": "_SceneModifier"
         },
         "condition_relations": {
             "Modifier": ":"
@@ -2415,8 +2415,8 @@
         ],
         "name": "ScenePadding",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -2430,7 +2430,7 @@
         ],
         "name": "OpenImmersiveSpaceAction",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -2442,8 +2442,8 @@
         ],
         "name": "TableColumnCustomizationBehavior",
         "conformances": [
-            "Swift.SetAlgebra",
-            "Swift.Sendable "
+            "SetAlgebra",
+            "Sendable "
         ]
     },
     {
@@ -2458,10 +2458,10 @@
             "DelegateType"
         ],
         "conformances": [
-            "SwiftUICore.DynamicProperty "
+            "DynamicProperty "
         ],
         "conditions": {
-            "DelegateType": "UIKit.UIApplicationDelegate"
+            "DelegateType": "UIApplicationDelegate"
         },
         "condition_relations": {
             "DelegateType": ":"
@@ -2479,10 +2479,10 @@
             "MenuItems"
         ],
         "conformances": [
-            "SwiftUI._TableRowContentModifier "
+            "_TableRowContentModifier "
         ],
         "conditions": {
-            "MenuItems": "SwiftUICore.View"
+            "MenuItems": "View"
         },
         "condition_relations": {
             "MenuItems": ":"
@@ -2501,11 +2501,11 @@
             "Preview"
         ],
         "conformances": [
-            "SwiftUI._TableRowContentModifier "
+            "_TableRowContentModifier "
         ],
         "conditions": {
-            "MenuItems": "SwiftUICore.View",
-            "Preview": "SwiftUICore.View"
+            "MenuItems": "View",
+            "Preview": "View"
         },
         "condition_relations": {
             "MenuItems": ":",
@@ -2564,7 +2564,7 @@
         ],
         "name": "AutomaticControlGroupStyle",
         "conformances": [
-            "SwiftUI.ControlGroupStyle "
+            "ControlGroupStyle "
         ]
     },
     {
@@ -2576,7 +2576,7 @@
         ],
         "name": "DefaultGroupBoxStyle",
         "conformances": [
-            "SwiftUI.GroupBoxStyle "
+            "GroupBoxStyle "
         ]
     },
     {
@@ -2589,10 +2589,10 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.DynamicProperty "
+            "DynamicProperty "
         ],
         "conditions": {
-            "Value": "Swift.Hashable"
+            "Value": "Hashable"
         },
         "condition_relations": {
             "Value": ":"
@@ -2615,7 +2615,7 @@
         ],
         "name": "AutomaticTextEditorStyle",
         "conformances": [
-            "SwiftUI.TextEditorStyle "
+            "TextEditorStyle "
         ]
     },
     {
@@ -2625,8 +2625,8 @@
         ],
         "name": "AnimationTimelineSchedule",
         "conformances": [
-            "SwiftUICore.TimelineSchedule",
-            "Swift.Sendable "
+            "TimelineSchedule",
+            "Sendable "
         ]
     },
     {
@@ -2636,7 +2636,7 @@
         ],
         "name": "PlainButtonStyle",
         "conformances": [
-            "SwiftUI.PrimitiveButtonStyle "
+            "PrimitiveButtonStyle "
         ]
     },
     {
@@ -2646,7 +2646,7 @@
         ],
         "name": "SubmitLabel",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -2656,7 +2656,7 @@
         ],
         "name": "_NavigationTransitionInputs",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -2666,7 +2666,7 @@
         ],
         "name": "_NavigationTransitionOutputs",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -2676,7 +2676,7 @@
         ],
         "name": "AutomaticNavigationTransition",
         "conformances": [
-            "SwiftUI.NavigationTransition "
+            "NavigationTransition "
         ]
     },
     {
@@ -2687,7 +2687,7 @@
         ],
         "name": "ZoomNavigationTransition",
         "conformances": [
-            "SwiftUI.NavigationTransition "
+            "NavigationTransition "
         ]
     },
     {
@@ -2697,7 +2697,7 @@
         ],
         "name": "Divider",
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -2708,7 +2708,7 @@
         ],
         "name": "ButtonMenuStyle",
         "conformances": [
-            "SwiftUI.MenuStyle "
+            "MenuStyle "
         ]
     },
     {
@@ -2718,7 +2718,7 @@
         ],
         "name": "ToolbarCustomizationBehavior",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -2744,7 +2744,7 @@
         ],
         "name": "SceneLaunchBehavior",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -2761,10 +2761,10 @@
             "Label"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View"
+            "Label": "View"
         },
         "condition_relations": {
             "Label": ":"
@@ -2781,7 +2781,7 @@
         ],
         "name": "WindowIdealSize",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -2794,7 +2794,7 @@
         ],
         "name": "PencilHoverPose",
         "conformances": [
-            "Swift.Hashable "
+            "Hashable "
         ]
     },
     {
@@ -2805,7 +2805,7 @@
         ],
         "name": "LimitedAvailabilityConfiguration",
         "conformances": [
-            "SwiftUI.WidgetConfiguration "
+            "WidgetConfiguration "
         ]
     },
     {
@@ -2815,7 +2815,7 @@
         ],
         "name": "RefreshAction",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -2837,7 +2837,7 @@
         ],
         "name": "ProminentDetailNavigationSplitViewStyle",
         "conformances": [
-            "SwiftUI.NavigationSplitViewStyle "
+            "NavigationSplitViewStyle "
         ]
     },
     {
@@ -2847,7 +2847,7 @@
         ],
         "name": "SearchFieldPlacement",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -2857,8 +2857,8 @@
         ],
         "name": "_ProjectionEffect",
         "conformances": [
-            "SwiftUICore.GeometryEffect",
-            "Swift.Equatable "
+            "GeometryEffect",
+            "Equatable "
         ]
     },
     {
@@ -2875,10 +2875,10 @@
             "Label"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View"
+            "Label": "View"
         },
         "condition_relations": {
             "Label": ":"
@@ -2895,7 +2895,7 @@
         ],
         "name": "DefaultSettingsLinkLabel",
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -2905,8 +2905,8 @@
         ],
         "name": "_TransformEffect",
         "conformances": [
-            "SwiftUICore.GeometryEffect",
-            "Swift.Equatable "
+            "GeometryEffect",
+            "Equatable "
         ]
     },
     {
@@ -2929,7 +2929,7 @@
         ],
         "name": "AccessoryBarButtonStyle",
         "conformances": [
-            "SwiftUI.PrimitiveButtonStyle "
+            "PrimitiveButtonStyle "
         ]
     },
     {
@@ -2942,7 +2942,7 @@
         ],
         "name": "AccessoryBarActionButtonStyle",
         "conformances": [
-            "SwiftUI.PrimitiveButtonStyle "
+            "PrimitiveButtonStyle "
         ]
     },
     {
@@ -2952,8 +2952,8 @@
         ],
         "name": "ButtonRole",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -2999,7 +2999,7 @@
         ],
         "name": "HiddenTitleBarWindowStyle",
         "conformances": [
-            "SwiftUI.WindowStyle "
+            "WindowStyle "
         ]
     },
     {
@@ -3009,7 +3009,7 @@
         ],
         "name": "IconOnlyLabelStyle",
         "conformances": [
-            "SwiftUI.LabelStyle "
+            "LabelStyle "
         ]
     },
     {
@@ -3027,8 +3027,8 @@
         ],
         "name": "AccessibilityTechnologies",
         "conformances": [
-            "Swift.SetAlgebra",
-            "Swift.Sendable "
+            "SetAlgebra",
+            "Sendable "
         ]
     },
     {
@@ -3042,7 +3042,7 @@
         ],
         "name": "MagnificationGesture",
         "conformances": [
-            "SwiftUICore.Gesture "
+            "Gesture "
         ]
     },
     {
@@ -3054,7 +3054,7 @@
         ],
         "name": "MagnifyGesture",
         "conformances": [
-            "SwiftUICore.Gesture "
+            "Gesture "
         ]
     },
     {
@@ -3072,7 +3072,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "MenuItems": "SwiftUICore.View"
+            "MenuItems": "View"
         },
         "condition_relations": {
             "MenuItems": ":"
@@ -3085,7 +3085,7 @@
         ],
         "name": "WindowToolbarFullScreenVisibility",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -3100,10 +3100,10 @@
             "Label"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View"
+            "Label": "View"
         },
         "condition_relations": {
             "Label": ":"
@@ -3124,8 +3124,8 @@
         ],
         "name": "SubmitTriggers",
         "conformances": [
-            "Swift.OptionSet",
-            "Swift.Sendable "
+            "OptionSet",
+            "Sendable "
         ]
     },
     {
@@ -3138,7 +3138,7 @@
         ],
         "name": "InsetGroupedListStyle",
         "conformances": [
-            "SwiftUI.ListStyle "
+            "ListStyle "
         ]
     },
     {
@@ -3148,7 +3148,7 @@
         ],
         "name": "_PlatformViewRepresentableLayoutOptions",
         "conformances": [
-            "Swift.OptionSet "
+            "OptionSet "
         ]
     },
     {
@@ -3162,7 +3162,7 @@
         ],
         "name": "OrnamentAttachmentAnchor",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -3175,10 +3175,10 @@
             "C"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "C": "SwiftUI.TabContent"
+            "C": "TabContent"
         },
         "condition_relations": {
             "C": ":"
@@ -3195,7 +3195,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "TabValue": "Swift.Hashable"
+            "TabValue": "Hashable"
         },
         "condition_relations": {
             "TabValue": ":"
@@ -3217,7 +3217,7 @@
         ],
         "name": "PageTabViewStyle",
         "conformances": [
-            "SwiftUI.TabViewStyle "
+            "TabViewStyle "
         ]
     },
     {
@@ -3229,8 +3229,8 @@
         ],
         "name": "PaletteSelectionEffect",
         "conformances": [
-            "Swift.Sendable",
-            "Swift.Equatable "
+            "Sendable",
+            "Equatable "
         ]
     },
     {
@@ -3249,7 +3249,7 @@
         ],
         "name": "AccessoryCircularCapacityGaugeStyle",
         "conformances": [
-            "SwiftUI.GaugeStyle "
+            "GaugeStyle "
         ]
     },
     {
@@ -3271,7 +3271,7 @@
         ],
         "name": "CircularGaugeStyle",
         "conformances": [
-            "SwiftUI.GaugeStyle "
+            "GaugeStyle "
         ]
     },
     {
@@ -3281,7 +3281,7 @@
         ],
         "name": "_TextFieldStyleLabel",
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -3297,11 +3297,11 @@
             "Background"
         ],
         "conformances": [
-            "UIKit.UIContentConfiguration "
+            "UIContentConfiguration "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View",
-            "Background": "SwiftUICore.View"
+            "Content": "View",
+            "Background": "View"
         },
         "condition_relations": {
             "Content": ":",
@@ -3320,10 +3320,10 @@
             "Style"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Style": "SwiftUICore.ShapeStyle"
+            "Style": "ShapeStyle"
         },
         "condition_relations": {
             "Style": ":"
@@ -3342,8 +3342,8 @@
         ],
         "conformances": [],
         "conditions": {
-            "Image": "CoreTransferable.Transferable",
-            "Icon": "CoreTransferable.Transferable"
+            "Image": "Transferable",
+            "Icon": "Transferable"
         },
         "condition_relations": {
             "Image": ":",
@@ -3361,10 +3361,10 @@
             "Key"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Key": "SwiftUICore.PreferenceKey"
+            "Key": "PreferenceKey"
         },
         "condition_relations": {
             "Key": ":"
@@ -3377,7 +3377,7 @@
         ],
         "name": "DefaultPickerStyle",
         "conformances": [
-            "SwiftUI.PickerStyle "
+            "PickerStyle "
         ]
     },
     {
@@ -3415,8 +3415,8 @@
         ],
         "name": "FormPresentationSizing",
         "conformances": [
-            "SwiftUI.PresentationSizing",
-            "Swift.Sendable "
+            "PresentationSizing",
+            "Sendable "
         ]
     },
     {
@@ -3426,8 +3426,8 @@
         ],
         "name": "PagePresentationSizing",
         "conformances": [
-            "SwiftUI.PresentationSizing",
-            "Swift.Sendable "
+            "PresentationSizing",
+            "Sendable "
         ]
     },
     {
@@ -3437,8 +3437,8 @@
         ],
         "name": "FittedPresentationSizing",
         "conformances": [
-            "SwiftUI.PresentationSizing",
-            "Swift.Sendable "
+            "PresentationSizing",
+            "Sendable "
         ]
     },
     {
@@ -3448,8 +3448,8 @@
         ],
         "name": "AutomaticPresentationSizing",
         "conformances": [
-            "SwiftUI.PresentationSizing",
-            "Swift.Sendable "
+            "PresentationSizing",
+            "Sendable "
         ]
     },
     {
@@ -3465,7 +3465,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Representable": "SwiftUI.UIViewControllerRepresentable"
+            "Representable": "UIViewControllerRepresentable"
         },
         "condition_relations": {
             "Representable": ":"
@@ -3493,7 +3493,7 @@
         ],
         "name": "AutomaticHoverEffect",
         "conformances": [
-            "SwiftUICore.CustomHoverEffect "
+            "CustomHoverEffect "
         ]
     },
     {
@@ -3505,7 +3505,7 @@
         ],
         "name": "HighlightHoverEffect",
         "conformances": [
-            "SwiftUICore.CustomHoverEffect "
+            "CustomHoverEffect "
         ]
     },
     {
@@ -3517,7 +3517,7 @@
         ],
         "name": "LiftHoverEffect",
         "conformances": [
-            "SwiftUICore.CustomHoverEffect "
+            "CustomHoverEffect "
         ]
     },
     {
@@ -3531,11 +3531,11 @@
             "Destination"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View",
-            "Destination": "SwiftUICore.View"
+            "Label": "View",
+            "Destination": "View"
         },
         "condition_relations": {
             "Label": ":",
@@ -3552,10 +3552,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -3568,7 +3568,7 @@
         ],
         "name": "_SizeFittingRoot",
         "conformances": [
-            "SwiftUICore._VariadicView.UnaryViewRoot "
+            "_VariadicView"
         ]
     },
     {
@@ -3589,10 +3589,10 @@
             "Provider"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Provider": "SwiftUI._ScrollableContentProvider"
+            "Provider": "_ScrollableContentProvider"
         },
         "condition_relations": {
             "Provider": ":"
@@ -3608,10 +3608,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUI._ScrollableContentProvider "
+            "_ScrollableContentProvider "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -3627,10 +3627,10 @@
             "Label"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View"
+            "Label": "View"
         },
         "condition_relations": {
             "Label": ":"
@@ -3643,7 +3643,7 @@
         ],
         "name": "_PagingViewConfig",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -3656,12 +3656,12 @@
             "Views"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Views": "Swift.RandomAccessCollection",
-            "Views.Element": "SwiftUICore.View",
-            "Views.Index": "Swift.Hashable"
+            "Views": "RandomAccessCollection",
+            "Views.Element": "View",
+            "Views.Index": "Hashable"
         },
         "condition_relations": {
             "Views": ":",
@@ -3676,7 +3676,7 @@
         ],
         "name": "PlainListStyle",
         "conformances": [
-            "SwiftUI.ListStyle "
+            "ListStyle "
         ]
     },
     {
@@ -3694,9 +3694,9 @@
         ],
         "name": "PreviewDevice",
         "conformances": [
-            "Swift.RawRepresentable",
-            "Swift.ExpressibleByStringLiteral",
-            "Swift.Sendable "
+            "RawRepresentable",
+            "ExpressibleByStringLiteral",
+            "Sendable "
         ]
     },
     {
@@ -3706,10 +3706,10 @@
         ],
         "name": "InterfaceOrientation",
         "conformances": [
-            "Swift.CaseIterable",
-            "Swift.Identifiable",
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "CaseIterable",
+            "Identifiable",
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -3727,8 +3727,8 @@
         ],
         "name": "ScrollAnchorRole",
         "conformances": [
-            "Swift.Hashable",
-            "Swift.Sendable "
+            "Hashable",
+            "Sendable "
         ]
     },
     {
@@ -3746,8 +3746,8 @@
         ],
         "name": "ScrollInputBehavior",
         "conformances": [
-            "Swift.Sendable",
-            "Swift.Equatable "
+            "Sendable",
+            "Equatable "
         ]
     },
     {
@@ -3757,8 +3757,8 @@
         ],
         "name": "ScrollInputKind",
         "conformances": [
-            "Swift.Sendable",
-            "Swift.Equatable "
+            "Sendable",
+            "Equatable "
         ]
     },
     {
@@ -3769,7 +3769,7 @@
         ],
         "name": "ScrollDismissesKeyboardMode",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -3779,7 +3779,7 @@
         ],
         "name": "ScrollBounceBehavior",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -3798,12 +3798,12 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUI.TableColumnContent "
+            "TableColumnContent "
         ],
         "conditions": {
-            "Data": "Swift.RandomAccessCollection",
-            "ID": "Swift.Hashable",
-            "Content": "SwiftUI.TableColumnContent"
+            "Data": "RandomAccessCollection",
+            "ID": "Hashable",
+            "Content": "TableColumnContent"
         },
         "condition_relations": {
             "Data": ":",
@@ -3818,8 +3818,8 @@
         ],
         "name": "AccessibilityDirectTouchOptions",
         "conformances": [
-            "Swift.OptionSet",
-            "Swift.Sendable "
+            "OptionSet",
+            "Sendable "
         ]
     },
     {
@@ -3829,7 +3829,7 @@
         ],
         "name": "ListItemTint",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -3842,10 +3842,10 @@
             "SelectionValue"
         ],
         "conformances": [
-            "SwiftUI.TabContent "
+            "TabContent "
         ],
         "conditions": {
-            "SelectionValue": "Swift.Hashable"
+            "SelectionValue": "Hashable"
         },
         "condition_relations": {
             "SelectionValue": ":"
@@ -3862,7 +3862,7 @@
         ],
         "name": "CheckboxToggleStyle",
         "conformances": [
-            "SwiftUI.ToggleStyle "
+            "ToggleStyle "
         ]
     },
     {
@@ -3876,7 +3876,7 @@
         ],
         "name": "RoundedBorderTextEditorStyle",
         "conformances": [
-            "SwiftUI.TextEditorStyle "
+            "TextEditorStyle "
         ]
     },
     {
@@ -3886,8 +3886,8 @@
         ],
         "name": "ContainerBackgroundPlacement",
         "conformances": [
-            "Swift.Sendable",
-            "Swift.Hashable "
+            "Sendable",
+            "Hashable "
         ]
     },
     {
@@ -3903,11 +3903,11 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View",
-            "Content": "SwiftUICore.View"
+            "Label": "View",
+            "Content": "View"
         },
         "condition_relations": {
             "Label": ":",
@@ -3923,7 +3923,7 @@
         ],
         "name": "InsetTableStyle",
         "conformances": [
-            "SwiftUI.TableStyle "
+            "TableStyle "
         ]
     },
     {
@@ -3940,10 +3940,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUI.ImmersiveSpaceContent "
+            "ImmersiveSpaceContent "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -3959,10 +3959,10 @@
             "Content"
         ],
         "conformances": [
-            "Swift.RandomAccessCollection "
+            "RandomAccessCollection "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -3980,8 +3980,8 @@
         ],
         "conformances": [],
         "conditions": {
-            "Style": "SwiftUI.PickerStyle",
-            "SelectionValue": "Swift.Hashable"
+            "Style": "PickerStyle",
+            "SelectionValue": "Hashable"
         },
         "condition_relations": {
             "Style": ":",
@@ -3996,7 +3996,7 @@
         ],
         "name": "SegmentedPickerStyle",
         "conformances": [
-            "SwiftUI.PickerStyle "
+            "PickerStyle "
         ]
     },
     {
@@ -4007,7 +4007,7 @@
         ],
         "name": "LinearCapacityGaugeStyle",
         "conformances": [
-            "SwiftUI.GaugeStyle "
+            "GaugeStyle "
         ]
     },
     {
@@ -4025,11 +4025,11 @@
             "Message"
         ],
         "conformances": [
-            "SwiftUI.Scene "
+            "Scene "
         ],
         "conditions": {
-            "Actions": "SwiftUICore.View",
-            "Message": "SwiftUICore.View"
+            "Actions": "View",
+            "Message": "View"
         },
         "condition_relations": {
             "Actions": ":",
@@ -4044,7 +4044,7 @@
         ],
         "name": "TabBarOnlyTabViewStyle",
         "conformances": [
-            "SwiftUI.TabViewStyle "
+            "TabViewStyle "
         ]
     },
     {
@@ -4054,7 +4054,7 @@
         ],
         "name": "__UniversalListStyle",
         "conformances": [
-            "SwiftUI.ListStyle "
+            "ListStyle "
         ]
     },
     {
@@ -4066,7 +4066,7 @@
         ],
         "name": "ListSectionSpacing",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -4091,7 +4091,7 @@
         ],
         "name": "WindowPlacement",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -4116,7 +4116,7 @@
         ],
         "name": "DisplayProxy",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -4141,10 +4141,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -4159,7 +4159,7 @@
         ],
         "name": "EmptyCommands",
         "conformances": [
-            "SwiftUI.Commands "
+            "Commands "
         ]
     },
     {
@@ -4195,10 +4195,10 @@
             "Label"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View"
+            "Label": "View"
         },
         "condition_relations": {
             "Label": ":"
@@ -4214,7 +4214,7 @@
         ],
         "name": "PencilDoubleTapGestureValue",
         "conformances": [
-            "Swift.Hashable "
+            "Hashable "
         ]
     },
     {
@@ -4227,7 +4227,7 @@
         ],
         "name": "PencilSqueezeGestureValue",
         "conformances": [
-            "Swift.Hashable "
+            "Hashable "
         ]
     },
     {
@@ -4245,8 +4245,8 @@
         ],
         "name": "TabRole",
         "conformances": [
-            "Swift.Hashable",
-            "Swift.Sendable "
+            "Hashable",
+            "Sendable "
         ]
     },
     {
@@ -4256,8 +4256,8 @@
         ],
         "name": "ToolbarCustomizationOptions",
         "conformances": [
-            "Swift.OptionSet",
-            "Swift.Sendable "
+            "OptionSet",
+            "Sendable "
         ]
     },
     {
@@ -4267,7 +4267,7 @@
         ],
         "name": "MenuActionDismissBehavior",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -4284,10 +4284,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -4307,10 +4307,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -4327,7 +4327,7 @@
         ],
         "name": "_SplitViewContainer",
         "conformances": [
-            "SwiftUICore._VariadicView.UnaryViewRoot "
+            "_VariadicView"
         ]
     },
     {
@@ -4341,7 +4341,7 @@
         ],
         "name": "PullDownMenuButtonStyle",
         "conformances": [
-            "SwiftUI.MenuButtonStyle "
+            "MenuButtonStyle "
         ]
     },
     {
@@ -4355,7 +4355,7 @@
         ],
         "name": "BorderlessPullDownMenuButtonStyle",
         "conformances": [
-            "SwiftUI.MenuButtonStyle "
+            "MenuButtonStyle "
         ]
     },
     {
@@ -4369,7 +4369,7 @@
         ],
         "name": "BorderlessButtonMenuButtonStyle",
         "conformances": [
-            "SwiftUI.MenuButtonStyle "
+            "MenuButtonStyle "
         ]
     },
     {
@@ -4383,7 +4383,7 @@
         ],
         "name": "_TexturedPullDownMenuButtonStyle",
         "conformances": [
-            "SwiftUI.MenuButtonStyle "
+            "MenuButtonStyle "
         ]
     },
     {
@@ -4395,7 +4395,7 @@
         ],
         "name": "TextEditingCommands",
         "conformances": [
-            "SwiftUI.Commands "
+            "Commands "
         ]
     },
     {
@@ -4407,7 +4407,7 @@
         ],
         "name": "TextFormattingCommands",
         "conformances": [
-            "SwiftUI.Commands "
+            "Commands "
         ]
     },
     {
@@ -4419,8 +4419,8 @@
         ],
         "name": "TableColumnAlignment",
         "conformances": [
-            "Swift.Hashable",
-            "Swift.Sendable "
+            "Hashable",
+            "Sendable "
         ]
     },
     {
@@ -4436,11 +4436,11 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View",
-            "Content": "SwiftUICore.View"
+            "Label": "View",
+            "Content": "View"
         },
         "condition_relations": {
             "Label": ":",
@@ -4457,7 +4457,7 @@
         ],
         "name": "PlainWindowStyle",
         "conformances": [
-            "SwiftUI.WindowStyle "
+            "WindowStyle "
         ]
     },
     {
@@ -4472,12 +4472,12 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View",
-            "SelectionValue": "Swift.Hashable",
-            "Content": "SwiftUICore.View"
+            "Label": "View",
+            "SelectionValue": "Hashable",
+            "Content": "View"
         },
         "condition_relations": {
             "Label": ":",
@@ -4494,7 +4494,7 @@
         ],
         "name": "PalettePickerStyle",
         "conformances": [
-            "SwiftUI.PickerStyle "
+            "PickerStyle "
         ]
     },
     {
@@ -4520,10 +4520,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -4539,10 +4539,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -4572,8 +4572,8 @@
         ],
         "conformances": [],
         "conditions": {
-            "Label": "SwiftUICore.View",
-            "Content": "SwiftUICore.View"
+            "Label": "View",
+            "Content": "View"
         },
         "condition_relations": {
             "Label": ":",
@@ -4589,7 +4589,7 @@
         ],
         "name": "SelectionShapeStyle",
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ]
     },
     {
@@ -4603,7 +4603,7 @@
         ],
         "name": "DefaultMenuButtonStyle",
         "conformances": [
-            "SwiftUI.MenuButtonStyle "
+            "MenuButtonStyle "
         ]
     },
     {
@@ -4613,7 +4613,7 @@
         ],
         "name": "TitleAndIconLabelStyle",
         "conformances": [
-            "SwiftUI.LabelStyle "
+            "LabelStyle "
         ]
     },
     {
@@ -4630,10 +4630,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUI.Scene "
+            "Scene "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -4649,10 +4649,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -4665,7 +4665,7 @@
         ],
         "name": "AutomaticNavigationSplitViewStyle",
         "conformances": [
-            "SwiftUI.NavigationSplitViewStyle "
+            "NavigationSplitViewStyle "
         ]
     },
     {
@@ -4675,7 +4675,7 @@
         ],
         "name": "_ResolvedMatchedTransitionSourceConfiguration",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -4685,7 +4685,7 @@
         ],
         "name": "EmptyMatchedTransitionSourceConfiguration",
         "conformances": [
-            "SwiftUI.MatchedTransitionSourceConfiguration "
+            "MatchedTransitionSourceConfiguration "
         ]
     },
     {
@@ -4699,7 +4699,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "ID": "Swift.Hashable"
+            "ID": "Hashable"
         },
         "condition_relations": {
             "ID": ":"
@@ -4716,10 +4716,10 @@
             "Root"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Root": "SwiftUICore.View"
+            "Root": "View"
         },
         "condition_relations": {
             "Root": ":"
@@ -4732,7 +4732,7 @@
         ],
         "name": "GroupedFormStyle",
         "conformances": [
-            "SwiftUI.FormStyle "
+            "FormStyle "
         ]
     },
     {
@@ -4742,8 +4742,8 @@
         ],
         "name": "ButtonBorderShape",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -4753,7 +4753,7 @@
         ],
         "name": "AccessibilityAttachmentModifier",
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ]
     },
     {
@@ -4767,7 +4767,7 @@
         ],
         "name": "DefaultNavigationViewStyle",
         "conformances": [
-            "SwiftUI.NavigationViewStyle "
+            "NavigationViewStyle "
         ]
     },
     {
@@ -4781,9 +4781,9 @@
         ],
         "name": "Viewpoint3D",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable",
-            "Swift.CustomDebugStringConvertible "
+            "Equatable",
+            "Sendable",
+            "CustomDebugStringConvertible "
         ]
     },
     {
@@ -4796,11 +4796,11 @@
             "Name"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier",
-            "Swift.Equatable "
+            "ViewModifier",
+            "Equatable "
         ],
         "conditions": {
-            "Name": "Swift.Hashable"
+            "Name": "Hashable"
         },
         "condition_relations": {
             "Name": ":"
@@ -4817,10 +4817,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -4838,11 +4838,11 @@
             "Label"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View",
-            "Label": "SwiftUICore.View"
+            "Content": "View",
+            "Label": "View"
         },
         "condition_relations": {
             "Content": ":",
@@ -4867,7 +4867,7 @@
         ],
         "name": "AccessoryLinearGaugeStyle",
         "conformances": [
-            "SwiftUI.GaugeStyle "
+            "GaugeStyle "
         ]
     },
     {
@@ -4883,11 +4883,11 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Data": "Swift.Hashable",
-            "Content": "SwiftUICore.View"
+            "Data": "Hashable",
+            "Content": "View"
         },
         "condition_relations": {
             "Data": ":",
@@ -4902,7 +4902,7 @@
         ],
         "name": "DefaultMenuStyle",
         "conformances": [
-            "SwiftUI.MenuStyle "
+            "MenuStyle "
         ]
     },
     {
@@ -4912,7 +4912,7 @@
         ],
         "name": "AccessibilitySystemRotor",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -4957,8 +4957,8 @@
         ],
         "conformances": [],
         "conditions": {
-            "RowValue": "Swift.Identifiable",
-            "Sort": "Foundation.SortComparator"
+            "RowValue": "Identifiable",
+            "Sort": "SortComparator"
         },
         "condition_relations": {
             "RowValue": ":",
@@ -4986,7 +4986,7 @@
         ],
         "name": "DefaultTabLabel",
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -5000,7 +5000,7 @@
         ],
         "name": "EllipticalListStyle",
         "conformances": [
-            "SwiftUI.ListStyle "
+            "ListStyle "
         ]
     },
     {
@@ -5012,7 +5012,7 @@
         ],
         "name": "NavigationControlGroupStyle",
         "conformances": [
-            "SwiftUI.ControlGroupStyle "
+            "ControlGroupStyle "
         ]
     },
     {
@@ -5026,7 +5026,7 @@
         ],
         "name": "VerticalPageTabViewStyle",
         "conformances": [
-            "SwiftUI.TabViewStyle "
+            "TabViewStyle "
         ]
     },
     {
@@ -5038,7 +5038,7 @@
         ],
         "name": "ToolbarCommands",
         "conformances": [
-            "SwiftUI.Commands "
+            "Commands "
         ]
     },
     {
@@ -5050,7 +5050,7 @@
         ],
         "name": "SidebarCommands",
         "conformances": [
-            "SwiftUI.Commands "
+            "Commands "
         ]
     },
     {
@@ -5062,7 +5062,7 @@
         ],
         "name": "InspectorCommands",
         "conformances": [
-            "SwiftUI.Commands "
+            "Commands "
         ]
     },
     {
@@ -5076,7 +5076,7 @@
         ],
         "name": "ImportFromDevicesCommands",
         "conformances": [
-            "SwiftUI.Commands "
+            "Commands "
         ]
     },
     {
@@ -5089,10 +5089,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -5109,8 +5109,8 @@
         ],
         "name": "VolumeViewpointUpdateStrategy",
         "conformances": [
-            "Swift.Sendable",
-            "Swift.Equatable "
+            "Sendable",
+            "Equatable "
         ]
     },
     {
@@ -5124,7 +5124,7 @@
         ],
         "name": "AutomaticMenuBarExtraStyle",
         "conformances": [
-            "SwiftUI.MenuBarExtraStyle "
+            "MenuBarExtraStyle "
         ]
     },
     {
@@ -5134,7 +5134,7 @@
         ],
         "name": "DefaultProgressViewStyle",
         "conformances": [
-            "SwiftUI.ProgressViewStyle "
+            "ProgressViewStyle "
         ]
     },
     {
@@ -5152,7 +5152,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Style": "SwiftUI.MenuBarExtraStyle"
+            "Style": "MenuBarExtraStyle"
         },
         "condition_relations": {
             "Style": ":"
@@ -5170,10 +5170,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUI.Commands "
+            "Commands "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -5197,10 +5197,10 @@
             "Label"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View"
+            "Label": "View"
         },
         "condition_relations": {
             "Label": ":"
@@ -5217,7 +5217,7 @@
         ],
         "name": "BorderlessButtonMenuStyle",
         "conformances": [
-            "SwiftUI.MenuStyle "
+            "MenuStyle "
         ]
     },
     {
@@ -5239,7 +5239,7 @@
         ],
         "name": "DialogSeverity",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -5250,7 +5250,7 @@
         ],
         "name": "MenuControlGroupStyle",
         "conformances": [
-            "SwiftUI.ControlGroupStyle "
+            "ControlGroupStyle "
         ]
     },
     {
@@ -5262,7 +5262,7 @@
         ],
         "name": "CompactMenuControlGroupStyle",
         "conformances": [
-            "SwiftUI.ControlGroupStyle "
+            "ControlGroupStyle "
         ]
     },
     {
@@ -5276,10 +5276,10 @@
             "Result"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Result": "SwiftUICore.ViewModifier"
+            "Result": "ViewModifier"
         },
         "condition_relations": {
             "Result": ":"
@@ -5296,10 +5296,10 @@
             "Result"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Result": "SwiftUICore.ViewModifier"
+            "Result": "ViewModifier"
         },
         "condition_relations": {
             "Result": ":"
@@ -5312,7 +5312,7 @@
         ],
         "name": "PlainTextFieldStyle",
         "conformances": [
-            "SwiftUI.TextFieldStyle "
+            "TextFieldStyle "
         ]
     },
     {
@@ -5330,7 +5330,7 @@
         ],
         "name": "BorderedButtonStyle",
         "conformances": [
-            "SwiftUI.PrimitiveButtonStyle "
+            "PrimitiveButtonStyle "
         ]
     },
     {
@@ -5348,7 +5348,7 @@
         ],
         "name": "DefaultTabViewStyle",
         "conformances": [
-            "SwiftUI.TabViewStyle "
+            "TabViewStyle "
         ]
     },
     {
@@ -5360,7 +5360,7 @@
         ],
         "name": "PlainTextEditorStyle",
         "conformances": [
-            "SwiftUI.TextEditorStyle "
+            "TextEditorStyle "
         ]
     },
     {
@@ -5372,7 +5372,7 @@
         ],
         "name": "WheelDatePickerStyle",
         "conformances": [
-            "SwiftUI.DatePickerStyle "
+            "DatePickerStyle "
         ]
     },
     {
@@ -5382,7 +5382,7 @@
         ],
         "name": "LongPressGesture",
         "conformances": [
-            "SwiftUICore.Gesture "
+            "Gesture "
         ]
     },
     {
@@ -5397,12 +5397,12 @@
             "Actions"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View",
-            "Description": "SwiftUICore.View",
-            "Actions": "SwiftUICore.View"
+            "Label": "View",
+            "Description": "View",
+            "Actions": "View"
         },
         "condition_relations": {
             "Label": ":",
@@ -5437,7 +5437,7 @@
         ],
         "name": "_DefaultFocusModifier",
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ]
     },
     {
@@ -5475,10 +5475,10 @@
             "Base"
         ],
         "conformances": [
-            "SwiftUI.Widget "
+            "Widget "
         ],
         "conditions": {
-            "Base": "SwiftUI.ControlWidget"
+            "Base": "ControlWidget"
         },
         "condition_relations": {
             "Base": ":"
@@ -5498,10 +5498,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.Gesture "
+            "Gesture "
         ],
         "conditions": {
-            "Content": "SwiftUICore.Gesture"
+            "Content": "Gesture"
         },
         "condition_relations": {
             "Content": ":"
@@ -5518,7 +5518,7 @@
         ],
         "name": "CardButtonStyle",
         "conformances": [
-            "SwiftUI.PrimitiveButtonStyle "
+            "PrimitiveButtonStyle "
         ]
     },
     {
@@ -5532,7 +5532,7 @@
         ],
         "name": "_DigitalCrownModifier",
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ]
     },
     {
@@ -5548,7 +5548,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Document": "SwiftUI.FileDocument"
+            "Document": "FileDocument"
         },
         "condition_relations": {
             "Document": ":"
@@ -5565,7 +5565,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -5582,7 +5582,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -5595,7 +5595,7 @@
         ],
         "name": "_GridCellSizeModifier",
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ]
     },
     {
@@ -5605,7 +5605,7 @@
         ],
         "name": "_GridAnchorModifier",
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ]
     },
     {
@@ -5615,7 +5615,7 @@
         ],
         "name": "_GridAlignmentModifier",
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ]
     },
     {
@@ -5625,7 +5625,7 @@
         ],
         "name": "_GridUnsizedAxesModifier",
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ]
     },
     {
@@ -5635,7 +5635,7 @@
         ],
         "name": "GridLayout",
         "conformances": [
-            "SwiftUICore._VariadicView.UnaryViewRoot "
+            "_VariadicView"
         ]
     },
     {
@@ -5645,7 +5645,7 @@
         ],
         "name": "_EventDirections",
         "conformances": [
-            "Swift.OptionSet "
+            "OptionSet "
         ]
     },
     {
@@ -5659,7 +5659,7 @@
             "Response"
         ],
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -5673,8 +5673,8 @@
         ],
         "name": "NSHostingSceneBridgingOptions",
         "conformances": [
-            "Swift.OptionSet",
-            "Swift.Sendable "
+            "OptionSet",
+            "Sendable "
         ]
     },
     {
@@ -5687,7 +5687,7 @@
         ],
         "name": "PencilPreferredAction",
         "conformances": [
-            "Swift.Hashable "
+            "Hashable "
         ]
     },
     {
@@ -5701,7 +5701,7 @@
         ],
         "name": "DoubleColumnNavigationViewStyle",
         "conformances": [
-            "SwiftUI.NavigationViewStyle "
+            "NavigationViewStyle "
         ]
     },
     {
@@ -5714,7 +5714,7 @@
         ],
         "name": "HelpLink",
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -5731,14 +5731,14 @@
             "Label"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Data": "Swift.RandomAccessCollection",
-            "PreviewImage": "CoreTransferable.Transferable",
-            "PreviewIcon": "CoreTransferable.Transferable",
-            "Label": "SwiftUICore.View",
-            "Data.Element": "CoreTransferable.Transferable"
+            "Data": "RandomAccessCollection",
+            "PreviewImage": "Transferable",
+            "PreviewIcon": "Transferable",
+            "Label": "View",
+            "Data.Element": "Transferable"
         },
         "condition_relations": {
             "Data": ":",
@@ -5756,7 +5756,7 @@
         ],
         "name": "DefaultShareLinkLabel",
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -5774,11 +5774,11 @@
             "Data"
         ],
         "conformances": [
-            "SwiftUI.Scene "
+            "Scene "
         ],
         "conditions": {
-            "Content": "SwiftUI.ImmersiveSpaceContent",
-            "Data": "Swift.Hashable"
+            "Content": "ImmersiveSpaceContent",
+            "Data": "Hashable"
         },
         "condition_relations": {
             "Content": ":",
@@ -5793,7 +5793,7 @@
         ],
         "name": "DefaultDatePickerStyle",
         "conformances": [
-            "SwiftUI.DatePickerStyle "
+            "DatePickerStyle "
         ]
     },
     {
@@ -5807,7 +5807,7 @@
         ],
         "name": "StepperFieldDatePickerStyle",
         "conformances": [
-            "SwiftUI.DatePickerStyle "
+            "DatePickerStyle "
         ]
     },
     {
@@ -5821,7 +5821,7 @@
         ],
         "name": "FieldDatePickerStyle",
         "conformances": [
-            "SwiftUI.DatePickerStyle "
+            "DatePickerStyle "
         ]
     },
     {
@@ -5833,7 +5833,7 @@
         ],
         "name": "GraphicalDatePickerStyle",
         "conformances": [
-            "SwiftUI.DatePickerStyle "
+            "DatePickerStyle "
         ]
     },
     {
@@ -5845,7 +5845,7 @@
         ],
         "name": "AutomaticTableStyle",
         "conformances": [
-            "SwiftUI.TableStyle "
+            "TableStyle "
         ]
     },
     {
@@ -5856,7 +5856,7 @@
         ],
         "name": "AccessoryLinearCapacityGaugeStyle",
         "conformances": [
-            "SwiftUI.GaugeStyle "
+            "GaugeStyle "
         ]
     },
     {
@@ -5866,7 +5866,7 @@
         ],
         "name": "DefaultToggleStyle",
         "conformances": [
-            "SwiftUI.ToggleStyle "
+            "ToggleStyle "
         ]
     },
     {
@@ -5880,7 +5880,7 @@
         ],
         "name": "CarouselListStyle",
         "conformances": [
-            "SwiftUI.ListStyle "
+            "ListStyle "
         ]
     },
     {
@@ -5902,10 +5902,10 @@
             "Key"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Key": "SwiftUICore.PreferenceKey"
+            "Key": "PreferenceKey"
         },
         "condition_relations": {
             "Key": ":"
@@ -5922,7 +5922,7 @@
         ],
         "name": "BorderedListStyle",
         "conformances": [
-            "SwiftUI.ListStyle "
+            "ListStyle "
         ]
     },
     {
@@ -5935,10 +5935,10 @@
             "ContentShape"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "ContentShape": "SwiftUICore.Shape"
+            "ContentShape": "Shape"
         },
         "condition_relations": {
             "ContentShape": ":"
@@ -5977,7 +5977,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Value": "Swift.Identifiable"
+            "Value": "Identifiable"
         },
         "condition_relations": {
             "Value": ":"
@@ -6001,11 +6001,11 @@
             "Identifier"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier",
-            "Swift.Equatable "
+            "ViewModifier",
+            "Equatable "
         ],
         "conditions": {
-            "Identifier": "Swift.Hashable"
+            "Identifier": "Hashable"
         },
         "condition_relations": {
             "Identifier": ":"
@@ -6021,11 +6021,11 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUI.ToolbarContent",
-            "SwiftUI.CustomizableToolbarContent "
+            "ToolbarContent",
+            "CustomizableToolbarContent "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -6041,10 +6041,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -6066,7 +6066,7 @@
         ],
         "name": "NavigationLinkPickerStyle",
         "conformances": [
-            "SwiftUI.PickerStyle "
+            "PickerStyle "
         ]
     },
     {
@@ -6088,7 +6088,7 @@
         ],
         "name": "AccessibilityQuickActionPromptStyle",
         "conformances": [
-            "SwiftUI.AccessibilityQuickActionStyle "
+            "AccessibilityQuickActionStyle "
         ]
     },
     {
@@ -6102,7 +6102,7 @@
         ],
         "name": "AccessibilityQuickActionOutlineStyle",
         "conformances": [
-            "SwiftUI.AccessibilityQuickActionStyle "
+            "AccessibilityQuickActionStyle "
         ]
     },
     {
@@ -6113,7 +6113,7 @@
         ],
         "name": "KeyPress",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -6130,13 +6130,13 @@
             "MarkedValueLabels"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View",
-            "CurrentValueLabel": "SwiftUICore.View",
-            "BoundsLabel": "SwiftUICore.View",
-            "MarkedValueLabels": "SwiftUICore.View"
+            "Label": "View",
+            "CurrentValueLabel": "View",
+            "BoundsLabel": "View",
+            "MarkedValueLabels": "View"
         },
         "condition_relations": {
             "Label": ":",
@@ -6156,7 +6156,7 @@
         ],
         "name": "UnifiedWindowToolbarStyle",
         "conformances": [
-            "SwiftUI.WindowToolbarStyle "
+            "WindowToolbarStyle "
         ]
     },
     {
@@ -6170,7 +6170,7 @@
         ],
         "name": "SnapshotResponse",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -6184,7 +6184,7 @@
         ],
         "name": "SnapshotData",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -6194,7 +6194,7 @@
         ],
         "name": "_HiddenModifier",
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ]
     },
     {
@@ -6208,10 +6208,10 @@
             "Label"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View"
+            "Label": "View"
         },
         "condition_relations": {
             "Label": ":"
@@ -6225,8 +6225,8 @@
         ],
         "name": "DatePickerComponents",
         "conformances": [
-            "Swift.OptionSet",
-            "Swift.Sendable "
+            "OptionSet",
+            "Sendable "
         ]
     },
     {
@@ -6246,7 +6246,7 @@
         ],
         "name": "CompactDatePickerStyle",
         "conformances": [
-            "SwiftUI.DatePickerStyle "
+            "DatePickerStyle "
         ]
     },
     {
@@ -6256,8 +6256,8 @@
         ],
         "name": "_OverlayLayout",
         "conformances": [
-            "SwiftUICore._VariadicView.UnaryViewRoot",
-            "SwiftUICore.Animatable "
+            "_VariadicView",
+            "Animatable "
         ]
     },
     {
@@ -6267,8 +6267,8 @@
         ],
         "name": "TextSelection",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Hashable "
+            "Equatable",
+            "Hashable "
         ]
     },
     {
@@ -6285,11 +6285,11 @@
             "T"
         ],
         "conformances": [
-            "SwiftUI.TableColumnContent "
+            "TableColumnContent "
         ],
         "conditions": {
-            "RowValue": "Swift.Identifiable",
-            "Sort": "Foundation.SortComparator"
+            "RowValue": "Identifiable",
+            "Sort": "SortComparator"
         },
         "condition_relations": {
             "RowValue": ":",
@@ -6306,7 +6306,7 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.DynamicProperty "
+            "DynamicProperty "
         ]
     },
     {
@@ -6319,7 +6319,7 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.DynamicProperty "
+            "DynamicProperty "
         ]
     },
     {
@@ -6337,8 +6337,8 @@
         ],
         "name": "Subview",
         "conformances": [
-            "SwiftUICore.View",
-            "Swift.Identifiable "
+            "View",
+            "Identifiable "
         ]
     },
     {
@@ -6352,7 +6352,7 @@
         ],
         "name": "GroupedTabViewStyle",
         "conformances": [
-            "SwiftUI.TabViewStyle "
+            "TabViewStyle "
         ]
     },
     {
@@ -6385,10 +6385,10 @@
             "Label"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View"
+            "Label": "View"
         },
         "condition_relations": {
             "Label": ":"
@@ -6404,10 +6404,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.Shape"
+            "Content": "Shape"
         },
         "condition_relations": {
             "Content": ":"
@@ -6423,10 +6423,10 @@
             "Result"
         ],
         "conformances": [
-            "Swift.RandomAccessCollection "
+            "RandomAccessCollection "
         ],
         "conditions": {
-            "Result": "CoreData.NSFetchRequestResult"
+            "Result": "NSFetchRequestResult"
         },
         "condition_relations": {
             "Result": ":"
@@ -6443,7 +6443,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Result": "CoreData.NSFetchRequestResult"
+            "Result": "NSFetchRequestResult"
         },
         "condition_relations": {
             "Result": ":"
@@ -6458,9 +6458,9 @@
         ],
         "name": "TabViewCustomization",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable",
-            "Swift.Codable "
+            "Equatable",
+            "Sendable",
+            "Codable "
         ]
     },
     {
@@ -6501,7 +6501,7 @@
         ],
         "name": "KeyboardShortcut",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -6512,7 +6512,7 @@
         ],
         "name": "KeyEquivalent",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -6527,12 +6527,12 @@
             "Detail"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Sidebar": "SwiftUICore.View",
-            "Content": "SwiftUICore.View",
-            "Detail": "SwiftUICore.View"
+            "Sidebar": "View",
+            "Content": "View",
+            "Detail": "View"
         },
         "condition_relations": {
             "Sidebar": ":",
@@ -6547,9 +6547,9 @@
         ],
         "name": "NavigationSplitViewVisibility",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Codable",
-            "Swift.Sendable "
+            "Equatable",
+            "Codable",
+            "Sendable "
         ]
     },
     {
@@ -6563,8 +6563,8 @@
         ],
         "name": "HoverEffectGroup",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -6577,7 +6577,7 @@
         ],
         "name": "EditButton",
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -6590,10 +6590,10 @@
             "Base"
         ],
         "conformances": [
-            "SwiftUICore.GeometryEffect "
+            "GeometryEffect "
         ],
         "conditions": {
-            "Base": "SwiftUICore.GeometryEffect"
+            "Base": "GeometryEffect"
         },
         "condition_relations": {
             "Base": ":"
@@ -6610,7 +6610,7 @@
         ],
         "name": "LinearGaugeStyle",
         "conformances": [
-            "SwiftUI.GaugeStyle "
+            "GaugeStyle "
         ]
     },
     {
@@ -6620,7 +6620,7 @@
         ],
         "name": "_EmptyScene",
         "conformances": [
-            "SwiftUI.Scene "
+            "Scene "
         ]
     },
     {
@@ -6635,10 +6635,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUI.Commands "
+            "Commands "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -6665,7 +6665,7 @@
         ],
         "name": "SquareBorderTextFieldStyle",
         "conformances": [
-            "SwiftUI.TextFieldStyle "
+            "TextFieldStyle "
         ]
     },
     {
@@ -6682,10 +6682,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -6699,7 +6699,7 @@
         ],
         "name": "PageIndexViewStyle",
         "conformances": [
-            "SwiftUI.IndexViewStyle "
+            "IndexViewStyle "
         ]
     },
     {
@@ -6712,10 +6712,10 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.DynamicProperty "
+            "DynamicProperty "
         ],
         "conditions": {
-            "Value": "Swift.Hashable"
+            "Value": "Hashable"
         },
         "condition_relations": {
             "Value": ":"
@@ -6728,8 +6728,8 @@
         ],
         "name": "ToolbarLabelStyle",
         "conformances": [
-            "Swift.Sendable",
-            "Swift.Equatable "
+            "Sendable",
+            "Equatable "
         ]
     },
     {
@@ -6739,7 +6739,7 @@
         ],
         "name": "BorderedProminentButtonStyle",
         "conformances": [
-            "SwiftUI.PrimitiveButtonStyle "
+            "PrimitiveButtonStyle "
         ]
     },
     {
@@ -6752,7 +6752,7 @@
         ],
         "name": "PointerStyle",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -6772,7 +6772,7 @@
         ],
         "name": "TabPlacement",
         "conformances": [
-            "Swift.Hashable "
+            "Hashable "
         ]
     },
     {
@@ -6791,8 +6791,8 @@
         ],
         "name": "PresentationDetent",
         "conformances": [
-            "Swift.Hashable",
-            "Swift.Sendable "
+            "Hashable",
+            "Sendable "
         ]
     },
     {
@@ -6802,7 +6802,7 @@
         ],
         "name": "PresentationAdaptation",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -6812,8 +6812,8 @@
         ],
         "name": "PresentationContentInteraction",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -6823,7 +6823,7 @@
         ],
         "name": "PresentationBackgroundInteraction",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -6837,7 +6837,7 @@
         ],
         "name": "BorderedTableStyle",
         "conformances": [
-            "SwiftUI.TableStyle "
+            "TableStyle "
         ]
     },
     {
@@ -6847,8 +6847,8 @@
         ],
         "name": "ButtonRepeatBehavior",
         "conformances": [
-            "Swift.Hashable",
-            "Swift.Sendable "
+            "Hashable",
+            "Sendable "
         ]
     },
     {
@@ -6858,7 +6858,7 @@
         ],
         "name": "_ButtonGesture",
         "conformances": [
-            "SwiftUICore.Gesture "
+            "Gesture "
         ]
     },
     {
@@ -6876,7 +6876,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Representable": "SwiftUI.UIGestureRecognizerRepresentable"
+            "Representable": "UIGestureRecognizerRepresentable"
         },
         "condition_relations": {
             "Representable": ":"
@@ -6913,8 +6913,8 @@
         ],
         "name": "NavigationSplitViewColumn",
         "conformances": [
-            "Swift.Hashable",
-            "Swift.Sendable "
+            "Hashable",
+            "Sendable "
         ]
     },
     {
@@ -6926,7 +6926,7 @@
         ],
         "name": "PasteButton",
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -6942,10 +6942,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUI.Scene "
+            "Scene "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -6964,7 +6964,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Representable": "SwiftUI.UIViewRepresentable"
+            "Representable": "UIViewRepresentable"
         },
         "condition_relations": {
             "Representable": ":"
@@ -6983,10 +6983,10 @@
             "T"
         ],
         "conformances": [
-            "SwiftUI.TableRowContent "
+            "TableRowContent "
         ],
         "conditions": {
-            "Value": "Swift.Identifiable"
+            "Value": "Identifiable"
         },
         "condition_relations": {
             "Value": ":"
@@ -6999,7 +6999,7 @@
         ],
         "name": "TitleOnlyLabelStyle",
         "conformances": [
-            "SwiftUI.LabelStyle "
+            "LabelStyle "
         ]
     },
     {
@@ -7009,8 +7009,8 @@
         ],
         "name": "FocusInteractions",
         "conformances": [
-            "Swift.OptionSet",
-            "Swift.Sendable "
+            "OptionSet",
+            "Sendable "
         ]
     },
     {
@@ -7020,7 +7020,7 @@
         ],
         "name": "_FocusableModifier",
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ]
     },
     {
@@ -7035,7 +7035,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Schedule": "SwiftUICore.TimelineSchedule"
+            "Schedule": "TimelineSchedule"
         },
         "condition_relations": {
             "Schedule": ":"
@@ -7049,7 +7049,7 @@
         ],
         "name": "DefaultGaugeStyle",
         "conformances": [
-            "SwiftUI.GaugeStyle "
+            "GaugeStyle "
         ]
     },
     {
@@ -7062,10 +7062,10 @@
             "Label"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View"
+            "Label": "View"
         },
         "condition_relations": {
             "Label": ":"
@@ -7078,7 +7078,7 @@
         ],
         "name": "AccessibilityChildBehavior",
         "conformances": [
-            "Swift.Hashable "
+            "Hashable "
         ]
     },
     {
@@ -7092,7 +7092,7 @@
         ],
         "name": "PopUpButtonPickerStyle",
         "conformances": [
-            "SwiftUI.PickerStyle "
+            "PickerStyle "
         ]
     },
     {
@@ -7102,7 +7102,7 @@
         ],
         "name": "ToolbarRole",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -7133,11 +7133,11 @@
             "DocumentView"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Actions": "SwiftUICore.View",
-            "DocumentView": "SwiftUICore.View"
+            "Actions": "View",
+            "DocumentView": "View"
         },
         "condition_relations": {
             "Actions": ":",
@@ -7164,7 +7164,7 @@
         ],
         "name": "DefaultDocumentGroupLaunchActions",
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -7174,7 +7174,7 @@
         ],
         "name": "GridItem",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -7187,10 +7187,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -7206,10 +7206,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -7236,11 +7236,11 @@
             "Result"
         ],
         "conformances": [
-            "Swift.RandomAccessCollection "
+            "RandomAccessCollection "
         ],
         "conditions": {
-            "SectionIdentifier": "Swift.Hashable",
-            "Result": "CoreData.NSFetchRequestResult"
+            "SectionIdentifier": "Hashable",
+            "Result": "NSFetchRequestResult"
         },
         "condition_relations": {
             "SectionIdentifier": ":",
@@ -7259,8 +7259,8 @@
         ],
         "conformances": [],
         "conditions": {
-            "SectionIdentifier": "Swift.Hashable",
-            "Result": "CoreData.NSFetchRequestResult"
+            "SectionIdentifier": "Hashable",
+            "Result": "NSFetchRequestResult"
         },
         "condition_relations": {
             "SectionIdentifier": ":",
@@ -7278,7 +7278,7 @@
         ],
         "name": "_WKStoryboardContent",
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -7288,8 +7288,8 @@
         ],
         "name": "SearchSuggestionsPlacement",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -7299,7 +7299,7 @@
         ],
         "name": "AutomaticFormStyle",
         "conformances": [
-            "SwiftUI.FormStyle "
+            "FormStyle "
         ]
     },
     {
@@ -7321,7 +7321,7 @@
         ],
         "name": "ExpandedWindowToolbarStyle",
         "conformances": [
-            "SwiftUI.WindowToolbarStyle "
+            "WindowToolbarStyle "
         ]
     },
     {
@@ -7332,8 +7332,8 @@
         ],
         "name": "UIHostingControllerSizingOptions",
         "conformances": [
-            "Swift.OptionSet",
-            "Swift.Sendable "
+            "OptionSet",
+            "Sendable "
         ]
     },
     {
@@ -7344,7 +7344,7 @@
         ],
         "name": "WindowBackgroundShapeStyle",
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ]
     },
     {
@@ -7355,7 +7355,7 @@
         ],
         "name": "MenuPickerStyle",
         "conformances": [
-            "SwiftUI.PickerStyle "
+            "PickerStyle "
         ]
     },
     {
@@ -7366,7 +7366,7 @@
         ],
         "name": "SpatialTapGesture",
         "conformances": [
-            "SwiftUICore.Gesture "
+            "Gesture "
         ]
     },
     {
@@ -7380,7 +7380,7 @@
         ],
         "name": "WindowDragGesture",
         "conformances": [
-            "SwiftUICore.Gesture "
+            "Gesture "
         ]
     },
     {
@@ -7393,10 +7393,10 @@
             "Label"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View"
+            "Label": "View"
         },
         "condition_relations": {
             "Label": ":"
@@ -7421,7 +7421,7 @@
         ],
         "name": "StackNavigationViewStyle",
         "conformances": [
-            "SwiftUI.NavigationViewStyle "
+            "NavigationViewStyle "
         ]
     },
     {
@@ -7435,11 +7435,11 @@
             "Icon"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Title": "SwiftUICore.View",
-            "Icon": "SwiftUICore.View"
+            "Title": "View",
+            "Icon": "View"
         },
         "condition_relations": {
             "Title": ":",
@@ -7459,11 +7459,11 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUI.TableRowContent "
+            "TableRowContent "
         ],
         "conditions": {
-            "Label": "SwiftUI.TableRowContent",
-            "Content": "SwiftUI.TableRowContent"
+            "Label": "TableRowContent",
+            "Content": "TableRowContent"
         },
         "condition_relations": {
             "Label": ":",
@@ -7479,8 +7479,8 @@
         ],
         "name": "BadgeProminence",
         "conformances": [
-            "Swift.Hashable",
-            "Swift.Sendable "
+            "Hashable",
+            "Sendable "
         ]
     },
     {
@@ -7498,7 +7498,7 @@
         ],
         "name": "SwitchToggleStyle",
         "conformances": [
-            "SwiftUI.ToggleStyle "
+            "ToggleStyle "
         ]
     },
     {
@@ -7508,7 +7508,7 @@
         ],
         "name": "AdaptableTabBarPlacement",
         "conformances": [
-            "Swift.Hashable "
+            "Hashable "
         ]
     },
     {
@@ -7523,10 +7523,10 @@
             "Label"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Label": "SwiftUICore.View"
+            "Label": "View"
         },
         "condition_relations": {
             "Label": ":"
@@ -7542,10 +7542,10 @@
             "ObjectType"
         ],
         "conformances": [
-            "SwiftUICore.DynamicProperty "
+            "DynamicProperty "
         ],
         "conditions": {
-            "ObjectType": "Combine.ObservableObject"
+            "ObjectType": "ObservableObject"
         },
         "condition_relations": {
             "ObjectType": ":"
@@ -7572,10 +7572,10 @@
             "Actions"
         ],
         "conformances": [
-            "SwiftUI.Scene "
+            "Scene "
         ],
         "conditions": {
-            "Actions": "SwiftUICore.View"
+            "Actions": "View"
         },
         "condition_relations": {
             "Actions": ":"
@@ -7588,8 +7588,8 @@
         ],
         "name": "AccessibilityActionKind",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -7603,11 +7603,11 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Sections": "SwiftUICore.View",
-            "Content": "SwiftUICore.View"
+            "Sections": "View",
+            "Content": "View"
         },
         "condition_relations": {
             "Sections": ":",
@@ -7621,7 +7621,7 @@
         ],
         "name": "SectionCollection",
         "conformances": [
-            "Swift.RandomAccessCollection "
+            "RandomAccessCollection "
         ]
     },
     {
@@ -7631,7 +7631,7 @@
         ],
         "name": "SectionConfiguration",
         "conformances": [
-            "Swift.Identifiable "
+            "Identifiable "
         ]
     },
     {
@@ -7642,7 +7642,7 @@
         ],
         "name": "_DisclosureIndicator",
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -7653,7 +7653,7 @@
         ],
         "name": "SpatialEventGesture",
         "conformances": [
-            "SwiftUICore.Gesture "
+            "Gesture "
         ]
     },
     {
@@ -7663,7 +7663,7 @@
         ],
         "name": "_ScrollableLayoutProxy",
         "conformances": [
-            "Swift.RandomAccessCollection "
+            "RandomAccessCollection "
         ]
     },
     {
@@ -7673,7 +7673,7 @@
         ],
         "name": "_ScrollableLayoutItem",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -7695,7 +7695,7 @@
         ],
         "name": "UnifiedCompactWindowToolbarStyle",
         "conformances": [
-            "SwiftUI.WindowToolbarStyle "
+            "WindowToolbarStyle "
         ]
     },
     {
@@ -7707,7 +7707,7 @@
         ],
         "name": "_DraggingModifier",
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ]
     },
     {
@@ -7717,7 +7717,7 @@
         ],
         "name": "_ScrollViewProxy",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -7736,7 +7736,7 @@
         ],
         "name": "AccessoryCircularGaugeStyle",
         "conformances": [
-            "SwiftUI.GaugeStyle "
+            "GaugeStyle "
         ]
     },
     {
@@ -7753,10 +7753,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUI.Scene "
+            "Scene "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -7779,7 +7779,7 @@
         ],
         "name": "_DatePickerStyleLabel",
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -7793,7 +7793,7 @@
         "availabilities": [],
         "name": "EventModifiers",
         "conformances": [
-            "Swift.OptionSet "
+            "OptionSet "
         ]
     },
     {
@@ -7803,8 +7803,8 @@
         ],
         "name": "ScrollGeometry",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -7812,7 +7812,7 @@
         "availabilities": [],
         "name": "_ScrollLayout",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -7823,10 +7823,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -7837,8 +7837,8 @@
         "availabilities": [],
         "name": "_ZStackLayout",
         "conformances": [
-            "SwiftUICore._VariadicView.UnaryViewRoot",
-            "SwiftUICore.Animatable "
+            "_VariadicView",
+            "Animatable "
         ]
     },
     {
@@ -7846,7 +7846,7 @@
         "availabilities": [],
         "name": "ZStackLayout",
         "conformances": [
-            "SwiftUICore.Layout "
+            "Layout "
         ]
     },
     {
@@ -7854,9 +7854,9 @@
         "availabilities": [],
         "name": "LinearGradient",
         "conformances": [
-            "SwiftUICore.ShapeStyle",
-            "SwiftUICore.View",
-            "Swift.Sendable "
+            "ShapeStyle",
+            "View",
+            "Sendable "
         ]
     },
     {
@@ -7864,9 +7864,9 @@
         "availabilities": [],
         "name": "RadialGradient",
         "conformances": [
-            "SwiftUICore.ShapeStyle",
-            "SwiftUICore.View",
-            "Swift.Sendable "
+            "ShapeStyle",
+            "View",
+            "Sendable "
         ]
     },
     {
@@ -7874,9 +7874,9 @@
         "availabilities": [],
         "name": "EllipticalGradient",
         "conformances": [
-            "SwiftUICore.ShapeStyle",
-            "SwiftUICore.View",
-            "Swift.Sendable "
+            "ShapeStyle",
+            "View",
+            "Sendable "
         ]
     },
     {
@@ -7884,9 +7884,9 @@
         "availabilities": [],
         "name": "AngularGradient",
         "conformances": [
-            "SwiftUICore.ShapeStyle",
-            "SwiftUICore.View",
-            "Swift.Sendable "
+            "ShapeStyle",
+            "View",
+            "Sendable "
         ]
     },
     {
@@ -7894,7 +7894,7 @@
         "availabilities": [],
         "name": "ScrollPosition",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -7908,8 +7908,8 @@
         "availabilities": [],
         "name": "_OffsetEffect",
         "conformances": [
-            "SwiftUICore.GeometryEffect",
-            "Swift.Equatable "
+            "GeometryEffect",
+            "Equatable "
         ]
     },
     {
@@ -7917,7 +7917,7 @@
         "availabilities": [],
         "name": "OffsetTransition",
         "conformances": [
-            "SwiftUICore.Transition "
+            "Transition "
         ]
     },
     {
@@ -7925,7 +7925,7 @@
         "availabilities": [],
         "name": "_AnyAnimatableData",
         "conformances": [
-            "SwiftUICore.VectorArithmetic "
+            "VectorArithmetic "
         ]
     },
     {
@@ -7933,7 +7933,7 @@
         "availabilities": [],
         "name": "_ColorMonochromeEffect",
         "conformances": [
-            "SwiftUICore.EnvironmentalModifier "
+            "EnvironmentalModifier "
         ]
     },
     {
@@ -7945,11 +7945,11 @@
             "Second"
         ],
         "conformances": [
-            "SwiftUICore.Gesture "
+            "Gesture "
         ],
         "conditions": {
-            "First": "SwiftUICore.Gesture",
-            "Second": "SwiftUICore.Gesture"
+            "First": "Gesture",
+            "Second": "Gesture"
         },
         "condition_relations": {
             "First": ":",
@@ -7964,10 +7964,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -7984,7 +7984,7 @@
         "availabilities": [],
         "name": "VStackLayout",
         "conformances": [
-            "SwiftUICore.Layout "
+            "Layout "
         ]
     },
     {
@@ -8008,7 +8008,7 @@
         ],
         "name": "EmptyHoverEffect",
         "conformances": [
-            "SwiftUICore.CustomHoverEffect "
+            "CustomHoverEffect "
         ]
     },
     {
@@ -8038,11 +8038,11 @@
             "Second"
         ],
         "conformances": [
-            "SwiftUICore.Gesture "
+            "Gesture "
         ],
         "conditions": {
-            "First": "SwiftUICore.Gesture",
-            "Second": "SwiftUICore.Gesture"
+            "First": "Gesture",
+            "Second": "Gesture"
         },
         "condition_relations": {
             "First": ":",
@@ -8054,8 +8054,8 @@
         "availabilities": [],
         "name": "_RotationEffect",
         "conformances": [
-            "SwiftUICore.GeometryEffect",
-            "Swift.Equatable "
+            "GeometryEffect",
+            "Equatable "
         ]
     },
     {
@@ -8063,9 +8063,9 @@
         "availabilities": [],
         "name": "AnyGradient",
         "conformances": [
-            "Swift.Hashable",
-            "SwiftUICore.ShapeStyle",
-            "Swift.Sendable "
+            "Hashable",
+            "ShapeStyle",
+            "Sendable "
         ]
     },
     {
@@ -8073,7 +8073,7 @@
         "availabilities": [],
         "name": "_AnyLinearGradient",
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ]
     },
     {
@@ -8081,7 +8081,7 @@
         "availabilities": [],
         "name": "_AnyRadialGradient",
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ]
     },
     {
@@ -8089,7 +8089,7 @@
         "availabilities": [],
         "name": "_AnyEllipticalGradient",
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ]
     },
     {
@@ -8097,7 +8097,7 @@
         "availabilities": [],
         "name": "_AnyAngularGradient",
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ]
     },
     {
@@ -8108,10 +8108,10 @@
             "Modifier"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Modifier": "SwiftUICore.ViewModifier"
+            "Modifier": "ViewModifier"
         },
         "condition_relations": {
             "Modifier": ":"
@@ -8125,7 +8125,7 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -8138,10 +8138,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.Keyframes "
+            "Keyframes "
         ],
         "conditions": {
-            "Content": "SwiftUICore.KeyframeTrackContent"
+            "Content": "KeyframeTrackContent"
         },
         "condition_relations": {
             "Content": ":"
@@ -8160,8 +8160,8 @@
         "availabilities": [],
         "name": "Namespace",
         "conformances": [
-            "SwiftUICore.DynamicProperty",
-            "Swift.Sendable "
+            "DynamicProperty",
+            "Sendable "
         ]
     },
     {
@@ -8169,7 +8169,7 @@
         "availabilities": [],
         "name": "ImagePaint",
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ]
     },
     {
@@ -8177,8 +8177,8 @@
         "availabilities": [],
         "name": "PeriodicTimelineSchedule",
         "conformances": [
-            "SwiftUICore.TimelineSchedule",
-            "Swift.Sendable "
+            "TimelineSchedule",
+            "Sendable "
         ]
     },
     {
@@ -8186,8 +8186,8 @@
         "availabilities": [],
         "name": "EveryMinuteTimelineSchedule",
         "conformances": [
-            "SwiftUICore.TimelineSchedule",
-            "Swift.Sendable "
+            "TimelineSchedule",
+            "Sendable "
         ]
     },
     {
@@ -8198,10 +8198,10 @@
             "Entries"
         ],
         "conformances": [
-            "SwiftUICore.TimelineSchedule "
+            "TimelineSchedule "
         ],
         "conditions": {
-            "Entries": "Swift.Sequence"
+            "Entries": "Sequence"
         },
         "condition_relations": {
             "Entries": ":"
@@ -8212,7 +8212,7 @@
         "availabilities": [],
         "name": "Gradient",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -8223,10 +8223,10 @@
             "Preference"
         ],
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ],
         "conditions": {
-            "Preference": "SwiftUICore.TextVariantPreference"
+            "Preference": "TextVariantPreference"
         },
         "condition_relations": {
             "Preference": ":"
@@ -8237,8 +8237,8 @@
         "availabilities": [],
         "name": "FixedTextVariant",
         "conformances": [
-            "SwiftUICore.TextVariantPreference",
-            "Swift.Sendable "
+            "TextVariantPreference",
+            "Sendable "
         ]
     },
     {
@@ -8246,8 +8246,8 @@
         "availabilities": [],
         "name": "SizeDependentTextVariant",
         "conformances": [
-            "SwiftUICore.TextVariantPreference",
-            "Swift.Sendable "
+            "TextVariantPreference",
+            "Sendable "
         ]
     },
     {
@@ -8260,11 +8260,11 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "KeyframePath": "SwiftUICore.Keyframes",
-            "Content": "SwiftUICore.View"
+            "KeyframePath": "Keyframes",
+            "Content": "View"
         },
         "condition_relations": {
             "KeyframePath": ":",
@@ -8285,7 +8285,7 @@
             "T"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -8293,8 +8293,8 @@
         "availabilities": [],
         "name": "_BlendModeEffect",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -8302,7 +8302,7 @@
         "availabilities": [],
         "name": "_Placement",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -8325,7 +8325,7 @@
         "availabilities": [],
         "name": "_ContrastEffect",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -8339,7 +8339,7 @@
         "availabilities": [],
         "name": "MatchedGeometryProperties",
         "conformances": [
-            "Swift.OptionSet "
+            "OptionSet "
         ]
     },
     {
@@ -8351,7 +8351,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "ID": "Swift.Hashable"
+            "ID": "Hashable"
         },
         "condition_relations": {
             "ID": ":"
@@ -8365,8 +8365,8 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier",
-            "SwiftUICore._GraphInputsModifier "
+            "ViewModifier",
+            "_GraphInputsModifier "
         ]
     },
     {
@@ -8380,8 +8380,8 @@
         "availabilities": [],
         "name": "Spring",
         "conformances": [
-            "Swift.Hashable",
-            "Swift.Sendable "
+            "Hashable",
+            "Sendable "
         ]
     },
     {
@@ -8392,10 +8392,10 @@
             "Overlay"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Overlay": "SwiftUICore.View"
+            "Overlay": "View"
         },
         "condition_relations": {
             "Overlay": ":"
@@ -8409,10 +8409,10 @@
             "Style"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Style": "SwiftUICore.ShapeStyle"
+            "Style": "ShapeStyle"
         },
         "condition_relations": {
             "Style": ":"
@@ -8427,11 +8427,11 @@
             "Bounds"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Style": "SwiftUICore.ShapeStyle",
-            "Bounds": "SwiftUICore.Shape"
+            "Style": "ShapeStyle",
+            "Bounds": "Shape"
         },
         "condition_relations": {
             "Style": ":",
@@ -8443,8 +8443,8 @@
         "availabilities": [],
         "name": "Font",
         "conformances": [
-            "Swift.Hashable",
-            "Swift.Sendable "
+            "Hashable",
+            "Sendable "
         ]
     },
     {
@@ -8491,7 +8491,7 @@
         "availabilities": [],
         "name": "MoveTransition",
         "conformances": [
-            "SwiftUICore.Transition "
+            "Transition "
         ]
     },
     {
@@ -8505,7 +8505,7 @@
         "availabilities": [],
         "name": "_BlurEffect",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -8513,7 +8513,7 @@
         "availabilities": [],
         "name": "AccessibilityTextContentType",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -8521,7 +8521,7 @@
         "availabilities": [],
         "name": "_ColorInvertEffect",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -8533,7 +8533,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Trait": "SwiftUICore._ViewTraitKey"
+            "Trait": "_ViewTraitKey"
         },
         "condition_relations": {
             "Trait": ":"
@@ -8548,7 +8548,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Trait": "SwiftUICore._ViewTraitKey"
+            "Trait": "_ViewTraitKey"
         },
         "condition_relations": {
             "Trait": ":"
@@ -8571,8 +8571,8 @@
         "availabilities": [],
         "name": "ContentShapeKinds",
         "conformances": [
-            "Swift.OptionSet",
-            "Swift.Sendable "
+            "OptionSet",
+            "Sendable "
         ]
     },
     {
@@ -8580,7 +8580,7 @@
         "availabilities": [],
         "name": "_GrayscaleEffect",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -8597,8 +8597,8 @@
         "availabilities": [],
         "name": "_Rotation3DEffect",
         "conformances": [
-            "SwiftUICore.GeometryEffect",
-            "Swift.Equatable "
+            "GeometryEffect",
+            "Equatable "
         ]
     },
     {
@@ -8612,7 +8612,7 @@
         ],
         "name": "EmptyHoverEffectContent",
         "conformances": [
-            "SwiftUICore.HoverEffectContent "
+            "HoverEffectContent "
         ]
     },
     {
@@ -8644,7 +8644,7 @@
         "availabilities": [],
         "name": "_OpacityEffect",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -8655,10 +8655,10 @@
             "Style"
         ],
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ],
         "conditions": {
-            "Style": "SwiftUICore.ShapeStyle"
+            "Style": "ShapeStyle"
         },
         "condition_relations": {
             "Style": ":"
@@ -8669,7 +8669,7 @@
         "availabilities": [],
         "name": "OpacityTransition",
         "conformances": [
-            "SwiftUICore.Transition "
+            "Transition "
         ]
     },
     {
@@ -8677,8 +8677,8 @@
         "availabilities": [],
         "name": "_ShadowEffect",
         "conformances": [
-            "SwiftUICore.EnvironmentalModifier",
-            "Swift.Equatable "
+            "EnvironmentalModifier",
+            "Equatable "
         ]
     },
     {
@@ -8686,8 +8686,8 @@
         "availabilities": [],
         "name": "_DrawingGroupEffect",
         "conformances": [
-            "SwiftUICore.ViewModifier",
-            "Swift.Equatable "
+            "ViewModifier",
+            "Equatable "
         ]
     },
     {
@@ -8695,7 +8695,7 @@
         "availabilities": [],
         "name": "_BrightnessEffect",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -8703,7 +8703,7 @@
         "availabilities": [],
         "name": "_GeometryGroupEffect",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -8715,11 +8715,11 @@
             "Removal"
         ],
         "conformances": [
-            "SwiftUICore.Transition "
+            "Transition "
         ],
         "conditions": {
-            "Insertion": "SwiftUICore.Transition",
-            "Removal": "SwiftUICore.Transition"
+            "Insertion": "Transition",
+            "Removal": "Transition"
         },
         "condition_relations": {
             "Insertion": ":",
@@ -8740,10 +8740,10 @@
             "ObjectType"
         ],
         "conformances": [
-            "SwiftUICore.DynamicProperty "
+            "DynamicProperty "
         ],
         "conditions": {
-            "ObjectType": "Combine.ObservableObject"
+            "ObjectType": "ObservableObject"
         },
         "condition_relations": {
             "ObjectType": ":"
@@ -8757,10 +8757,10 @@
             "Mask"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Mask": "SwiftUICore.View"
+            "Mask": "View"
         },
         "condition_relations": {
             "Mask": ":"
@@ -8774,10 +8774,10 @@
             "Mask"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Mask": "SwiftUICore.View"
+            "Mask": "View"
         },
         "condition_relations": {
             "Mask": ":"
@@ -8788,8 +8788,8 @@
         "availabilities": [],
         "name": "AccessibilityTraits",
         "conformances": [
-            "Swift.SetAlgebra",
-            "Swift.Sendable "
+            "SetAlgebra",
+            "Sendable "
         ]
     },
     {
@@ -8797,8 +8797,8 @@
         "availabilities": [],
         "name": "LocalizedStringKey",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.ExpressibleByStringInterpolation "
+            "Equatable",
+            "ExpressibleByStringInterpolation "
         ]
     },
     {
@@ -8809,7 +8809,7 @@
         ],
         "name": "EnabledTextSelectability",
         "conformances": [
-            "SwiftUICore.TextSelectability "
+            "TextSelectability "
         ]
     },
     {
@@ -8820,7 +8820,7 @@
         ],
         "name": "DisabledTextSelectability",
         "conformances": [
-            "SwiftUICore.TextSelectability "
+            "TextSelectability "
         ]
     },
     {
@@ -8831,10 +8831,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -8851,7 +8851,7 @@
         "availabilities": [],
         "name": "HStackLayout",
         "conformances": [
-            "SwiftUICore.Layout "
+            "Layout "
         ]
     },
     {
@@ -8859,7 +8859,7 @@
         "availabilities": [],
         "name": "_CompositingGroupEffect",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -8876,7 +8876,7 @@
         "availabilities": [],
         "name": "AnyShapeStyle",
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ]
     },
     {
@@ -8888,11 +8888,11 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Key": "SwiftUICore.PreferenceKey",
-            "Content": "SwiftUICore.View"
+            "Key": "PreferenceKey",
+            "Content": "View"
         },
         "condition_relations": {
             "Key": ":",
@@ -8913,10 +8913,10 @@
             "S"
         ],
         "conformances": [
-            "SwiftUICore.Shape "
+            "Shape "
         ],
         "conditions": {
-            "S": "SwiftUICore.Shape"
+            "S": "Shape"
         },
         "condition_relations": {
             "S": ":"
@@ -8931,7 +8931,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Content": "SwiftUICore.Gesture"
+            "Content": "Gesture"
         },
         "condition_relations": {
             "Content": ":"
@@ -8946,8 +8946,8 @@
         ],
         "conformances": [],
         "conditions": {
-            "Content": "SwiftUICore.Gesture",
-            "Content.Value": "Swift.Equatable"
+            "Content": "Gesture",
+            "Content.Value": "Equatable"
         },
         "condition_relations": {
             "Content": ":",
@@ -8974,7 +8974,7 @@
             "Value"
         ],
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -8988,8 +8988,8 @@
         "availabilities": [],
         "name": "RedactionReasons",
         "conformances": [
-            "Swift.OptionSet",
-            "Swift.Sendable "
+            "OptionSet",
+            "Sendable "
         ]
     },
     {
@@ -8997,7 +8997,7 @@
         "availabilities": [],
         "name": "FillStyle",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -9008,10 +9008,10 @@
             "Style"
         ],
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ],
         "conditions": {
-            "Style": "SwiftUICore.ShapeStyle"
+            "Style": "ShapeStyle"
         },
         "condition_relations": {
             "Style": ":"
@@ -9022,7 +9022,7 @@
         "availabilities": [],
         "name": "Material",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -9030,8 +9030,8 @@
         "availabilities": [],
         "name": "MaterialActiveAppearance",
         "conformances": [
-            "Swift.Sendable",
-            "Swift.Equatable "
+            "Sendable",
+            "Equatable "
         ]
     },
     {
@@ -9045,7 +9045,7 @@
         "availabilities": [],
         "name": "HierarchicalShapeStyle",
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ]
     },
     {
@@ -9056,10 +9056,10 @@
             "Base"
         ],
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ],
         "conditions": {
-            "Base": "SwiftUICore.ShapeStyle"
+            "Base": "ShapeStyle"
         },
         "condition_relations": {
             "Base": ":"
@@ -9070,7 +9070,7 @@
         "availabilities": [],
         "name": "SymbolRenderingMode",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -9080,8 +9080,8 @@
         ],
         "name": "ShaderLibrary",
         "conformances": [
-            "Swift.Equatable",
-            "@unchecked Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -9091,8 +9091,8 @@
         ],
         "name": "ShaderFunction",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -9102,8 +9102,8 @@
         ],
         "name": "Shader",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -9113,7 +9113,7 @@
         ],
         "name": "_ShaderFilterEffect",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -9133,7 +9133,7 @@
         "availabilities": [],
         "name": "SeparatorShapeStyle",
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ]
     },
     {
@@ -9144,10 +9144,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -9167,10 +9167,10 @@
             "ObjectType"
         ],
         "conformances": [
-            "SwiftUICore.DynamicProperty "
+            "DynamicProperty "
         ],
         "conditions": {
-            "ObjectType": "Combine.ObservableObject"
+            "ObjectType": "ObservableObject"
         },
         "condition_relations": {
             "ObjectType": ":"
@@ -9186,8 +9186,8 @@
         ],
         "conformances": [],
         "conditions": {
-            "Key": "SwiftUICore.PreferenceKey",
-            "Overlay": "SwiftUICore.View"
+            "Key": "PreferenceKey",
+            "Overlay": "View"
         },
         "condition_relations": {
             "Key": ":",
@@ -9204,8 +9204,8 @@
         ],
         "conformances": [],
         "conditions": {
-            "Key": "SwiftUICore.PreferenceKey",
-            "Overlay": "SwiftUICore.View"
+            "Key": "PreferenceKey",
+            "Overlay": "View"
         },
         "condition_relations": {
             "Key": ":",
@@ -9217,7 +9217,7 @@
         "availabilities": [],
         "name": "AnyLayout",
         "conformances": [
-            "SwiftUICore.Layout "
+            "Layout "
         ]
     },
     {
@@ -9225,7 +9225,7 @@
         "availabilities": [],
         "name": "LayoutProperties",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -9233,7 +9233,7 @@
         "availabilities": [],
         "name": "ProposedViewSize",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -9241,7 +9241,7 @@
         "availabilities": [],
         "name": "ViewSpacing",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -9249,9 +9249,9 @@
         "availabilities": [],
         "name": "LayoutSubviews",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.RandomAccessCollection",
-            "Swift.Sendable "
+            "Equatable",
+            "RandomAccessCollection",
+            "Sendable "
         ]
     },
     {
@@ -9259,7 +9259,7 @@
         "availabilities": [],
         "name": "LayoutSubview",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -9270,10 +9270,10 @@
             "K"
         ],
         "conformances": [
-            "SwiftUICore._ViewTraitKey "
+            "_ViewTraitKey "
         ],
         "conditions": {
-            "K": "SwiftUICore.LayoutValueKey"
+            "K": "LayoutValueKey"
         },
         "condition_relations": {
             "K": ":"
@@ -9287,10 +9287,10 @@
             "L"
         ],
         "conformances": [
-            "SwiftUICore._VariadicView.UnaryViewRoot "
+            "_VariadicView"
         ],
         "conditions": {
-            "L": "SwiftUICore.Layout"
+            "L": "Layout"
         },
         "condition_relations": {
             "L": ":"
@@ -9307,7 +9307,7 @@
         "availabilities": [],
         "name": "SlideTransition",
         "conformances": [
-            "SwiftUICore.Transition "
+            "Transition "
         ]
     },
     {
@@ -9315,8 +9315,8 @@
         "availabilities": [],
         "name": "ShadowStyle",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -9327,10 +9327,10 @@
             "Style"
         ],
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ],
         "conditions": {
-            "Style": "SwiftUICore.ShapeStyle"
+            "Style": "ShapeStyle"
         },
         "condition_relations": {
             "Style": ":"
@@ -9344,10 +9344,10 @@
             "S"
         ],
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ],
         "conditions": {
-            "S": "SwiftUICore.ShapeStyle"
+            "S": "ShapeStyle"
         },
         "condition_relations": {
             "S": ":"
@@ -9358,7 +9358,7 @@
         "availabilities": [],
         "name": "StrokeStyle",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -9366,8 +9366,8 @@
         "availabilities": [],
         "name": "TypesettingLanguage",
         "conformances": [
-            "Swift.Sendable",
-            "Swift.Equatable "
+            "Sendable",
+            "Equatable "
         ]
     },
     {
@@ -9375,8 +9375,8 @@
         "availabilities": [],
         "name": "BackgroundProminence",
         "conformances": [
-            "Swift.Hashable",
-            "Swift.Sendable "
+            "Hashable",
+            "Sendable "
         ]
     },
     {
@@ -9402,7 +9402,7 @@
         "availabilities": [],
         "name": "BackgroundStyle",
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ]
     },
     {
@@ -9414,7 +9414,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "S": "SwiftUICore.ShapeStyle"
+            "S": "ShapeStyle"
         },
         "condition_relations": {
             "S": ":"
@@ -9429,7 +9429,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Style": "SwiftUICore.ShapeStyle"
+            "Style": "ShapeStyle"
         },
         "condition_relations": {
             "Style": ":"
@@ -9445,8 +9445,8 @@
         ],
         "conformances": [],
         "conditions": {
-            "S1": "SwiftUICore.ShapeStyle",
-            "S2": "SwiftUICore.ShapeStyle"
+            "S1": "ShapeStyle",
+            "S2": "ShapeStyle"
         },
         "condition_relations": {
             "S1": ":",
@@ -9464,9 +9464,9 @@
         ],
         "conformances": [],
         "conditions": {
-            "S1": "SwiftUICore.ShapeStyle",
-            "S2": "SwiftUICore.ShapeStyle",
-            "S3": "SwiftUICore.ShapeStyle"
+            "S1": "ShapeStyle",
+            "S2": "ShapeStyle",
+            "S3": "ShapeStyle"
         },
         "condition_relations": {
             "S1": ":",
@@ -9479,7 +9479,7 @@
         "availabilities": [],
         "name": "ForegroundStyle",
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ]
     },
     {
@@ -9487,7 +9487,7 @@
         "availabilities": [],
         "name": "_ImplicitShapeStyle",
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ]
     },
     {
@@ -9510,10 +9510,10 @@
             "S"
         ],
         "conformances": [
-            "SwiftUICore.Shape "
+            "Shape "
         ],
         "conditions": {
-            "S": "SwiftUICore.Shape"
+            "S": "Shape"
         },
         "condition_relations": {
             "S": ":"
@@ -9524,7 +9524,7 @@
         "availabilities": [],
         "name": "UnitPoint",
         "conformances": [
-            "Swift.Hashable "
+            "Hashable "
         ]
     },
     {
@@ -9535,10 +9535,10 @@
             "Key"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Key": "SwiftUICore.PreferenceKey"
+            "Key": "PreferenceKey"
         },
         "condition_relations": {
             "Key": ":"
@@ -9558,10 +9558,10 @@
             "Key"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Key": "SwiftUICore.PreferenceKey"
+            "Key": "PreferenceKey"
         },
         "condition_relations": {
             "Key": ":"
@@ -9572,7 +9572,7 @@
         "availabilities": [],
         "name": "_LuminanceToAlphaEffect",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -9580,8 +9580,8 @@
         "availabilities": [],
         "name": "AnyShape",
         "conformances": [
-            "SwiftUICore.Shape",
-            "@unchecked Swift.Sendable "
+            "Shape",
+            "Sendable "
         ]
     },
     {
@@ -9594,7 +9594,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Content": "SwiftUICore.Gesture"
+            "Content": "Gesture"
         },
         "condition_relations": {
             "Content": ":"
@@ -9608,7 +9608,7 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.Gesture "
+            "Gesture "
         ]
     },
     {
@@ -9616,9 +9616,9 @@
         "availabilities": [],
         "name": "Path",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.LosslessStringConvertible",
-            "@unchecked Swift.Sendable "
+            "Equatable",
+            "LosslessStringConvertible",
+            "Sendable "
         ]
     },
     {
@@ -9626,7 +9626,7 @@
         "availabilities": [],
         "name": "Rectangle",
         "conformances": [
-            "SwiftUICore.Shape "
+            "Shape "
         ]
     },
     {
@@ -9634,7 +9634,7 @@
         "availabilities": [],
         "name": "RoundedRectangle",
         "conformances": [
-            "SwiftUICore.Shape "
+            "Shape "
         ]
     },
     {
@@ -9642,7 +9642,7 @@
         "availabilities": [],
         "name": "UnevenRoundedRectangle",
         "conformances": [
-            "SwiftUICore.Shape "
+            "Shape "
         ]
     },
     {
@@ -9650,7 +9650,7 @@
         "availabilities": [],
         "name": "Capsule",
         "conformances": [
-            "SwiftUICore.Shape "
+            "Shape "
         ]
     },
     {
@@ -9658,7 +9658,7 @@
         "availabilities": [],
         "name": "Ellipse",
         "conformances": [
-            "SwiftUICore.Shape "
+            "Shape "
         ]
     },
     {
@@ -9666,7 +9666,7 @@
         "availabilities": [],
         "name": "Circle",
         "conformances": [
-            "SwiftUICore.Shape "
+            "Shape "
         ]
     },
     {
@@ -9686,7 +9686,7 @@
         "availabilities": [],
         "name": "EdgeInsets",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -9694,7 +9694,7 @@
         "availabilities": [],
         "name": "_AppearanceActionModifier",
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ]
     },
     {
@@ -9706,7 +9706,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Key": "SwiftUICore.PreferenceKey"
+            "Key": "PreferenceKey"
         },
         "condition_relations": {
             "Key": ":"
@@ -9721,11 +9721,11 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Key": "SwiftUICore.PreferenceKey",
-            "Content": "SwiftUICore.View"
+            "Key": "PreferenceKey",
+            "Content": "View"
         },
         "condition_relations": {
             "Key": ":",
@@ -9740,8 +9740,8 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier",
-            "SwiftUICore._GraphInputsModifier "
+            "ViewModifier",
+            "_GraphInputsModifier "
         ]
     },
     {
@@ -9749,7 +9749,7 @@
         "availabilities": [],
         "name": "_DetachableProperties",
         "conformances": [
-            "Swift.OptionSet "
+            "OptionSet "
         ]
     },
     {
@@ -9762,12 +9762,12 @@
             "Child"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Detached": "SwiftUICore._Detachable",
-            "Content": "SwiftUICore.View",
-            "Child": "SwiftUICore.View"
+            "Detached": "_Detachable",
+            "Content": "View",
+            "Child": "View"
         },
         "condition_relations": {
             "Detached": ":",
@@ -9783,10 +9783,10 @@
             "Key"
         ],
         "conformances": [
-            "SwiftUICore._Detachable "
+            "_Detachable "
         ],
         "conditions": {
-            "Key": "SwiftUICore.PreferenceKey"
+            "Key": "PreferenceKey"
         },
         "condition_relations": {
             "Key": ":"
@@ -9797,7 +9797,7 @@
         "availabilities": [],
         "name": "_EmptyDetached",
         "conformances": [
-            "SwiftUICore._Detachable "
+            "_Detachable "
         ]
     },
     {
@@ -9808,10 +9808,10 @@
             "Detached"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Detached": "SwiftUICore._Detachable"
+            "Detached": "_Detachable"
         },
         "condition_relations": {
             "Detached": ":"
@@ -9822,7 +9822,7 @@
         "availabilities": [],
         "name": "HorizontalAlignment",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -9830,7 +9830,7 @@
         "availabilities": [],
         "name": "VerticalAlignment",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -9838,7 +9838,7 @@
         "availabilities": [],
         "name": "Alignment",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -9846,8 +9846,8 @@
         "availabilities": [],
         "name": "AlignmentKey",
         "conformances": [
-            "Swift.Hashable",
-            "Swift.Comparable "
+            "Hashable",
+            "Comparable "
         ]
     },
     {
@@ -9858,7 +9858,7 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.DynamicProperty "
+            "DynamicProperty "
         ]
     },
     {
@@ -9866,7 +9866,7 @@
         "availabilities": [],
         "name": "PushTransition",
         "conformances": [
-            "SwiftUICore.Transition "
+            "Transition "
         ]
     },
     {
@@ -9886,10 +9886,10 @@
             "Value"
         ],
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ],
         "conditions": {
-            "Value": "Swift.Equatable"
+            "Value": "Equatable"
         },
         "condition_relations": {
             "Value": ":"
@@ -9900,7 +9900,7 @@
         "availabilities": [],
         "name": "EnvironmentValues",
         "conformances": [
-            "Swift.CustomStringConvertible "
+            "CustomStringConvertible "
         ]
     },
     {
@@ -9911,11 +9911,11 @@
             "ClipShape"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier",
-            "SwiftUICore.Animatable "
+            "ViewModifier",
+            "Animatable "
         ],
         "conditions": {
-            "ClipShape": "SwiftUICore.Shape"
+            "ClipShape": "Shape"
         },
         "condition_relations": {
             "ClipShape": ":"
@@ -9929,11 +9929,11 @@
             "ClipShape"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier",
-            "SwiftUICore.Animatable "
+            "ViewModifier",
+            "Animatable "
         ],
         "conditions": {
-            "ClipShape": "SwiftUICore.Shape"
+            "ClipShape": "Shape"
         },
         "condition_relations": {
             "ClipShape": ":"
@@ -9948,11 +9948,11 @@
             "U"
         ],
         "conformances": [
-            "SwiftUICore.Shape "
+            "Shape "
         ],
         "conditions": {
-            "T": "SwiftUICore.Shape",
-            "U": "SwiftUICore.Shape"
+            "T": "Shape",
+            "U": "Shape"
         },
         "condition_relations": {
             "T": ":",
@@ -9968,11 +9968,11 @@
             "U"
         ],
         "conformances": [
-            "SwiftUICore.Shape "
+            "Shape "
         ],
         "conditions": {
-            "T": "SwiftUICore.Shape",
-            "U": "SwiftUICore.Shape"
+            "T": "Shape",
+            "U": "Shape"
         },
         "condition_relations": {
             "T": ":",
@@ -9988,11 +9988,11 @@
             "U"
         ],
         "conformances": [
-            "SwiftUICore.Shape "
+            "Shape "
         ],
         "conditions": {
-            "T": "SwiftUICore.Shape",
-            "U": "SwiftUICore.Shape"
+            "T": "Shape",
+            "U": "Shape"
         },
         "condition_relations": {
             "T": ":",
@@ -10008,11 +10008,11 @@
             "U"
         ],
         "conformances": [
-            "SwiftUICore.Shape "
+            "Shape "
         ],
         "conditions": {
-            "T": "SwiftUICore.Shape",
-            "U": "SwiftUICore.Shape"
+            "T": "Shape",
+            "U": "Shape"
         },
         "condition_relations": {
             "T": ":",
@@ -10028,11 +10028,11 @@
             "U"
         ],
         "conformances": [
-            "SwiftUICore.Shape "
+            "Shape "
         ],
         "conditions": {
-            "T": "SwiftUICore.Shape",
-            "U": "SwiftUICore.Shape"
+            "T": "Shape",
+            "U": "Shape"
         },
         "condition_relations": {
             "T": ":",
@@ -10048,11 +10048,11 @@
             "U"
         ],
         "conformances": [
-            "SwiftUICore.Shape "
+            "Shape "
         ],
         "conditions": {
-            "T": "SwiftUICore.Shape",
-            "U": "SwiftUICore.Shape"
+            "T": "Shape",
+            "U": "Shape"
         },
         "condition_relations": {
             "T": ":",
@@ -10067,10 +10067,10 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.DynamicProperty "
+            "DynamicProperty "
         ],
         "conditions": {
-            "Value": "Swift.BinaryFloatingPoint"
+            "Value": "BinaryFloatingPoint"
         },
         "condition_relations": {
             "Value": ":"
@@ -10083,7 +10083,7 @@
         ],
         "name": "_ScaledValue",
         "conformances": [
-            "SwiftUICore.DynamicProperty "
+            "DynamicProperty "
         ]
     },
     {
@@ -10122,7 +10122,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Renderer": "SwiftUICore.TextRenderer"
+            "Renderer": "TextRenderer"
         },
         "condition_relations": {
             "Renderer": ":"
@@ -10136,10 +10136,10 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Value": "Swift.Equatable"
+            "Value": "Equatable"
         },
         "condition_relations": {
             "Value": ":"
@@ -10153,10 +10153,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -10173,9 +10173,9 @@
         "availabilities": [],
         "name": "Color",
         "conformances": [
-            "Swift.Hashable",
-            "Swift.CustomStringConvertible",
-            "Swift.Sendable "
+            "Hashable",
+            "CustomStringConvertible",
+            "Sendable "
         ]
     },
     {
@@ -10186,10 +10186,10 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Value": "Swift.Equatable"
+            "Value": "Equatable"
         },
         "condition_relations": {
             "Value": ":"
@@ -10203,10 +10203,10 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Value": "Swift.Equatable"
+            "Value": "Equatable"
         },
         "condition_relations": {
             "Value": ":"
@@ -10221,7 +10221,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Value": "SwiftUICore.VectorArithmetic"
+            "Value": "VectorArithmetic"
         },
         "condition_relations": {
             "Value": ":"
@@ -10235,10 +10235,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -10253,11 +10253,11 @@
             "Second"
         ],
         "conformances": [
-            "SwiftUICore.VectorArithmetic "
+            "VectorArithmetic "
         ],
         "conditions": {
-            "First": "SwiftUICore.VectorArithmetic",
-            "Second": "SwiftUICore.VectorArithmetic"
+            "First": "VectorArithmetic",
+            "Second": "VectorArithmetic"
         },
         "condition_relations": {
             "First": ":",
@@ -10284,7 +10284,7 @@
         "availabilities": [],
         "name": "_LayoutTraits",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -10292,7 +10292,7 @@
         "availabilities": [],
         "name": "EmptyView",
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -10311,7 +10311,7 @@
         "availabilities": [],
         "name": "ContainerRelativeShape",
         "conformances": [
-            "SwiftUICore.Shape "
+            "Shape "
         ]
     },
     {
@@ -10323,7 +10323,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Shape": "SwiftUICore.InsettableShape"
+            "Shape": "InsettableShape"
         },
         "condition_relations": {
             "Shape": ":"
@@ -10338,7 +10338,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Value": "SwiftUICore.Animatable"
+            "Value": "Animatable"
         },
         "condition_relations": {
             "Value": ":"
@@ -10352,10 +10352,10 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.KeyframeTrackContent "
+            "KeyframeTrackContent "
         ],
         "conditions": {
-            "Value": "SwiftUICore.Animatable"
+            "Value": "Animatable"
         },
         "condition_relations": {
             "Value": ":"
@@ -10369,10 +10369,10 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.KeyframeTrackContent "
+            "KeyframeTrackContent "
         ],
         "conditions": {
-            "Value": "SwiftUICore.Animatable"
+            "Value": "Animatable"
         },
         "condition_relations": {
             "Value": ":"
@@ -10386,10 +10386,10 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.KeyframeTrackContent "
+            "KeyframeTrackContent "
         ],
         "conditions": {
-            "Value": "SwiftUICore.Animatable"
+            "Value": "Animatable"
         },
         "condition_relations": {
             "Value": ":"
@@ -10403,10 +10403,10 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.KeyframeTrackContent "
+            "KeyframeTrackContent "
         ],
         "conditions": {
-            "Value": "SwiftUICore.Animatable"
+            "Value": "Animatable"
         },
         "condition_relations": {
             "Value": ":"
@@ -10421,11 +10421,11 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Phase": "Swift.Equatable",
-            "Content": "SwiftUICore.View"
+            "Phase": "Equatable",
+            "Content": "View"
         },
         "condition_relations": {
             "Phase": ":",
@@ -10452,7 +10452,7 @@
         "availabilities": [],
         "name": "TapGesture",
         "conformances": [
-            "SwiftUICore.Gesture "
+            "Gesture "
         ]
     },
     {
@@ -10464,7 +10464,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Value": "SwiftUICore.Animatable"
+            "Value": "Animatable"
         },
         "condition_relations": {
             "Value": ":"
@@ -10478,10 +10478,10 @@
             "ObjectType"
         ],
         "conformances": [
-            "SwiftUICore.DynamicProperty "
+            "DynamicProperty "
         ],
         "conditions": {
-            "ObjectType": "Combine.ObservableObject"
+            "ObjectType": "ObservableObject"
         },
         "condition_relations": {
             "ObjectType": ":"
@@ -10492,7 +10492,7 @@
         "availabilities": [],
         "name": "AnyView",
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ]
     },
     {
@@ -10500,7 +10500,7 @@
         "availabilities": [],
         "name": "_EventDebugTriggers",
         "conformances": [
-            "Swift.OptionSet "
+            "OptionSet "
         ]
     },
     {
@@ -10508,7 +10508,7 @@
         "availabilities": [],
         "name": "ColorMatrix",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -10516,8 +10516,8 @@
         "availabilities": [],
         "name": "_ColorMatrix",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Codable "
+            "Equatable",
+            "Codable "
         ]
     },
     {
@@ -10529,7 +10529,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Backdrop": "SwiftUICore.View"
+            "Backdrop": "View"
         },
         "condition_relations": {
             "Backdrop": ":"
@@ -10546,7 +10546,7 @@
         "availabilities": [],
         "name": "EmptyAnimatableData",
         "conformances": [
-            "SwiftUICore.VectorArithmetic "
+            "VectorArithmetic "
         ]
     },
     {
@@ -10554,9 +10554,9 @@
         "availabilities": [],
         "name": "MeshGradient",
         "conformances": [
-            "SwiftUICore.ShapeStyle",
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "ShapeStyle",
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -10564,8 +10564,8 @@
         "availabilities": [],
         "name": "PinnedScrollableViews",
         "conformances": [
-            "Swift.OptionSet",
-            "Swift.Sendable "
+            "OptionSet",
+            "Sendable "
         ]
     },
     {
@@ -10576,10 +10576,10 @@
             "S"
         ],
         "conformances": [
-            "SwiftUICore.Shape "
+            "Shape "
         ],
         "conditions": {
-            "S": "SwiftUICore.Shape"
+            "S": "Shape"
         },
         "condition_relations": {
             "S": ":"
@@ -10590,7 +10590,7 @@
         "availabilities": [],
         "name": "EmptyModifier",
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ]
     },
     {
@@ -10608,8 +10608,8 @@
         "availabilities": [],
         "name": "SymbolVariants",
         "conformances": [
-            "Swift.Hashable",
-            "Swift.Sendable "
+            "Hashable",
+            "Sendable "
         ]
     },
     {
@@ -10620,10 +10620,10 @@
             "Background"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Background": "SwiftUICore.View"
+            "Background": "View"
         },
         "condition_relations": {
             "Background": ":"
@@ -10637,10 +10637,10 @@
             "Style"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Style": "SwiftUICore.ShapeStyle"
+            "Style": "ShapeStyle"
         },
         "condition_relations": {
             "Style": ":"
@@ -10655,11 +10655,11 @@
             "Bounds"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Style": "SwiftUICore.ShapeStyle",
-            "Bounds": "SwiftUICore.Shape"
+            "Style": "ShapeStyle",
+            "Bounds": "Shape"
         },
         "condition_relations": {
             "Style": ":",
@@ -10675,11 +10675,11 @@
             "Bounds"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Style": "SwiftUICore.ShapeStyle",
-            "Bounds": "SwiftUICore.InsettableShape"
+            "Style": "ShapeStyle",
+            "Bounds": "InsettableShape"
         },
         "condition_relations": {
             "Style": ":",
@@ -10694,7 +10694,7 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.DynamicProperty "
+            "DynamicProperty "
         ]
     },
     {
@@ -10706,7 +10706,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Value": "SwiftUICore.VectorArithmetic"
+            "Value": "VectorArithmetic"
         },
         "condition_relations": {
             "Value": ":"
@@ -10729,8 +10729,8 @@
         "availabilities": [],
         "name": "ContentTransition",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -10744,7 +10744,7 @@
         "availabilities": [],
         "name": "TransitionProperties",
         "conformances": [
-            "Swift.Sendable "
+            "Sendable "
         ]
     },
     {
@@ -10752,7 +10752,7 @@
         "availabilities": [],
         "name": "IdentityTransition",
         "conformances": [
-            "SwiftUICore.Transition "
+            "Transition "
         ]
     },
     {
@@ -10760,7 +10760,7 @@
         "availabilities": [],
         "name": "EmptyVisualEffect",
         "conformances": [
-            "SwiftUICore.VisualEffect "
+            "VisualEffect "
         ]
     },
     {
@@ -10768,8 +10768,8 @@
         "availabilities": [],
         "name": "NamedCoordinateSpace",
         "conformances": [
-            "SwiftUICore.CoordinateSpaceProtocol",
-            "Swift.Equatable "
+            "CoordinateSpaceProtocol",
+            "Equatable "
         ]
     },
     {
@@ -10777,7 +10777,7 @@
         "availabilities": [],
         "name": "LocalCoordinateSpace",
         "conformances": [
-            "SwiftUICore.CoordinateSpaceProtocol "
+            "CoordinateSpaceProtocol "
         ]
     },
     {
@@ -10785,7 +10785,7 @@
         "availabilities": [],
         "name": "GlobalCoordinateSpace",
         "conformances": [
-            "SwiftUICore.CoordinateSpaceProtocol "
+            "CoordinateSpaceProtocol "
         ]
     },
     {
@@ -10793,7 +10793,7 @@
         "availabilities": [],
         "name": "_SaturationEffect",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     },
     {
@@ -10835,8 +10835,8 @@
         ],
         "conformances": [],
         "conditions": {
-            "Data": "Swift.RandomAccessCollection",
-            "ID": "Swift.Hashable"
+            "Data": "RandomAccessCollection",
+            "ID": "Hashable"
         },
         "condition_relations": {
             "Data": ":",
@@ -10851,10 +10851,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.Shape "
+            "Shape "
         ],
         "conditions": {
-            "Content": "SwiftUICore.Shape"
+            "Content": "Shape"
         },
         "condition_relations": {
             "Content": ":"
@@ -10868,10 +10868,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.Shape "
+            "Shape "
         ],
         "conditions": {
-            "Content": "SwiftUICore.Shape"
+            "Content": "Shape"
         },
         "condition_relations": {
             "Content": ":"
@@ -10885,10 +10885,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.Shape "
+            "Shape "
         ],
         "conditions": {
-            "Content": "SwiftUICore.Shape"
+            "Content": "Shape"
         },
         "condition_relations": {
             "Content": ":"
@@ -10902,10 +10902,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.Shape "
+            "Shape "
         ],
         "conditions": {
-            "Content": "SwiftUICore.Shape"
+            "Content": "Shape"
         },
         "condition_relations": {
             "Content": ":"
@@ -10916,8 +10916,8 @@
         "availabilities": [],
         "name": "_ColorMultiplyEffect",
         "conformances": [
-            "SwiftUICore.EnvironmentalModifier",
-            "Swift.Equatable "
+            "EnvironmentalModifier",
+            "Equatable "
         ]
     },
     {
@@ -10929,7 +10929,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "Symbols": "SwiftUICore.View"
+            "Symbols": "View"
         },
         "condition_relations": {
             "Symbols": ":"
@@ -10944,7 +10944,7 @@
         ],
         "conformances": [],
         "conditions": {
-            "ClipShape": "SwiftUICore.Shape"
+            "ClipShape": "Shape"
         },
         "condition_relations": {
             "ClipShape": ":"
@@ -10955,8 +10955,8 @@
         "availabilities": [],
         "name": "_TransactionModifier",
         "conformances": [
-            "SwiftUICore.ViewModifier",
-            "SwiftUICore._GraphInputsModifier "
+            "ViewModifier",
+            "_GraphInputsModifier "
         ]
     },
     {
@@ -10967,11 +10967,11 @@
             "Value"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier",
-            "SwiftUICore._GraphInputsModifier "
+            "ViewModifier",
+            "_GraphInputsModifier "
         ],
         "conditions": {
-            "Value": "Swift.Equatable"
+            "Value": "Equatable"
         },
         "condition_relations": {
             "Value": ":"
@@ -10985,10 +10985,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Content": "SwiftUICore.ViewModifier"
+            "Content": "ViewModifier"
         },
         "condition_relations": {
             "Content": ":"
@@ -11003,11 +11003,11 @@
             "Style"
         ],
         "conformances": [
-            "SwiftUICore.View "
+            "View "
         ],
         "conditions": {
-            "Content": "SwiftUICore.Shape",
-            "Style": "SwiftUICore.ShapeStyle"
+            "Content": "Shape",
+            "Style": "ShapeStyle"
         },
         "condition_relations": {
             "Content": ":",
@@ -11024,12 +11024,12 @@
             "Background"
         ],
         "conformances": [
-            "SwiftUICore.ShapeView "
+            "ShapeView "
         ],
         "conditions": {
-            "Content": "SwiftUICore.Shape",
-            "Style": "SwiftUICore.ShapeStyle",
-            "Background": "SwiftUICore.View"
+            "Content": "Shape",
+            "Style": "ShapeStyle",
+            "Background": "View"
         },
         "condition_relations": {
             "Content": ":",
@@ -11047,12 +11047,12 @@
             "Background"
         ],
         "conformances": [
-            "SwiftUICore.ShapeView "
+            "ShapeView "
         ],
         "conditions": {
-            "Content": "SwiftUICore.Shape",
-            "Style": "SwiftUICore.ShapeStyle",
-            "Background": "SwiftUICore.View"
+            "Content": "Shape",
+            "Style": "ShapeStyle",
+            "Background": "View"
         },
         "condition_relations": {
             "Content": ":",
@@ -11070,12 +11070,12 @@
             "Background"
         ],
         "conformances": [
-            "SwiftUICore.ShapeView "
+            "ShapeView "
         ],
         "conditions": {
-            "Content": "SwiftUICore.InsettableShape",
-            "Style": "SwiftUICore.ShapeStyle",
-            "Background": "SwiftUICore.View"
+            "Content": "InsettableShape",
+            "Style": "ShapeStyle",
+            "Background": "View"
         },
         "condition_relations": {
             "Content": ":",
@@ -11088,7 +11088,7 @@
         "availabilities": [],
         "name": "BlurReplaceTransition",
         "conformances": [
-            "SwiftUICore.Transition "
+            "Transition "
         ]
     },
     {
@@ -11096,8 +11096,8 @@
         "availabilities": [],
         "name": "Text",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -11105,7 +11105,7 @@
         "availabilities": [],
         "name": "SafeAreaRegions",
         "conformances": [
-            "Swift.OptionSet "
+            "OptionSet "
         ]
     },
     {
@@ -11113,7 +11113,7 @@
         "availabilities": [],
         "name": "PreferredColorSchemeKey",
         "conformances": [
-            "SwiftUICore.PreferenceKey "
+            "PreferenceKey "
         ]
     },
     {
@@ -11121,8 +11121,8 @@
         "availabilities": [],
         "name": "Image",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -11130,7 +11130,7 @@
         "availabilities": [],
         "name": "GestureMask",
         "conformances": [
-            "Swift.OptionSet "
+            "OptionSet "
         ]
     },
     {
@@ -11138,8 +11138,8 @@
         "availabilities": [],
         "name": "_ScaleEffect",
         "conformances": [
-            "SwiftUICore.GeometryEffect",
-            "Swift.Equatable "
+            "GeometryEffect",
+            "Equatable "
         ]
     },
     {
@@ -11147,7 +11147,7 @@
         "availabilities": [],
         "name": "ScaleTransition",
         "conformances": [
-            "SwiftUICore.Transition "
+            "Transition "
         ]
     },
     {
@@ -11158,10 +11158,10 @@
             "Content"
         ],
         "conformances": [
-            "SwiftUICore.ViewModifier "
+            "ViewModifier "
         ],
         "conditions": {
-            "Content": "SwiftUICore.View"
+            "Content": "View"
         },
         "condition_relations": {
             "Content": ":"
@@ -11172,8 +11172,8 @@
         "availabilities": [],
         "name": "RectangleCornerRadii",
         "conformances": [
-            "Swift.Equatable",
-            "SwiftUICore.Animatable "
+            "Equatable",
+            "Animatable "
         ]
     },
     {
@@ -11181,8 +11181,8 @@
         "availabilities": [],
         "name": "Animation",
         "conformances": [
-            "Swift.Equatable",
-            "Swift.Sendable "
+            "Equatable",
+            "Sendable "
         ]
     },
     {
@@ -11190,7 +11190,7 @@
         "availabilities": [],
         "name": "TintShapeStyle",
         "conformances": [
-            "SwiftUICore.ShapeStyle "
+            "ShapeStyle "
         ]
     },
     {
@@ -11198,7 +11198,7 @@
         "availabilities": [],
         "name": "_HueRotationEffect",
         "conformances": [
-            "Swift.Equatable "
+            "Equatable "
         ]
     }
 ]
