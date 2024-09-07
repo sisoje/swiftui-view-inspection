@@ -50,10 +50,12 @@ typealias _DatePicker = SameBaseElement<DatePicker<Never>>
 @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
 typealias _DefaultDateProgressLabel = SameTypeElement<DefaultDateProgressLabel>
 
+#if swift(>=6.0)
 @available(iOS 18.0, macOS 15.0, visionOS 2.0, *)
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
 typealias _DefaultDocumentGroupLaunchActions = SameTypeElement<DefaultDocumentGroupLaunchActions>
+#endif
 
 @available(macOS 14.0, *)
 @available(iOS, unavailable)
@@ -66,15 +68,19 @@ typealias _DefaultSettingsLinkLabel = SameTypeElement<DefaultSettingsLinkLabel>
 @available(tvOS, unavailable)
 typealias _DefaultShareLinkLabel = SameTypeElement<DefaultShareLinkLabel>
 
+#if swift(>=6.0)
 @available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 typealias _DefaultTabLabel = SameTypeElement<DefaultTabLabel>
+#endif
 
+#if swift(>=6.0)
 @available(macOS 15.0, *)
 @available(iOS, unavailable)
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
 @available(visionOS, unavailable)
 typealias _DefaultWindowVisibilityToggleLabel = SameTypeElement<DefaultWindowVisibilityToggleLabel>
+#endif
 
 @available(iOS 14.0, macOS 11.0, *)
 @available(tvOS, unavailable)
@@ -84,6 +90,7 @@ typealias _DisclosureGroup = SameBaseElement<DisclosureGroup<Never,Never>>
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 typealias _Divider = SameTypeElement<Divider>
 
+#if swift(>=6.0)
 @available(iOS 18.0, *)
 @available(macOS, unavailable)
 @available(tvOS, unavailable)
@@ -92,6 +99,7 @@ typealias _Divider = SameTypeElement<Divider>
 @available(visionOS, unavailable)
 @available(macCatalyst, unavailable)
 typealias _DocumentLaunchView = SameBaseElement<DocumentLaunchView<Never,Never>>
+#endif
 
 @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
 typealias _EditableCollectionContent = SameBaseElement<EditableCollectionContent<Never,Never>>
@@ -144,11 +152,15 @@ typealias _Group = SameBaseElement<Group<Never>>
 @available(watchOS, unavailable)
 typealias _GroupBox = SameBaseElement<GroupBox<Never,Never>>
 
+#if swift(>=6.0)
 @available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 typealias _GroupElementsOfContent = SameBaseElement<GroupElementsOfContent<Never,Never>>
+#endif
 
+#if swift(>=6.0)
 @available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 typealias _GroupSectionsOfContent = SameBaseElement<GroupSectionsOfContent<Never,Never>>
+#endif
 
 @available(macOS 14.0, *)
 @available(iOS, unavailable)
@@ -217,8 +229,10 @@ typealias _Menu = SameBaseElement<Menu<Never,Never>>
 @available(visionOS, unavailable)
 typealias _MenuButton = SameBaseElement<MenuButton<Never,Never>>
 
+#if swift(>=6.0)
 @available(iOS 18.0, macOS 15.0, watchOS 11.0, tvOS 18.0, visionOS 2.0, *)
 typealias _MeshGradient = SameTypeElement<MeshGradient>
+#endif
 
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 typealias _ModifiedContent = SameBaseElement<ModifiedContent<Never,Never>>
@@ -245,10 +259,12 @@ typealias _NavigationStack = SameBaseElement<NavigationStack<Never,Never>>
 @available(visionOS, introduced: 1.0, deprecated: 100000.0, message: "use NavigationStack or NavigationSplitView instead")
 typealias _NavigationView = SameBaseElement<NavigationView<Never>>
 
+#if swift(>=6.0)
 @available(iOS 18.0, macOS 15.0, visionOS 2.0, *)
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
 typealias _NewDocumentButton = SameBaseElement<NewDocumentButton<Never>>
+#endif
 
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 typealias _OffsetShape = SameBaseElement<OffsetShape<Circle>>
@@ -285,8 +301,10 @@ typealias _PlaceholderContentView = SameBaseElement<PlaceholderContentView<Never
 @available(watchOS, unavailable)
 typealias _PresentedWindowContent = SameBaseElement<PresentedWindowContent<Int,Never>>
 
+#if swift(>=6.0)
 @available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 typealias _PreviewModifierContent = SameTypeElement<PreviewModifierContent>
+#endif
 
 @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
 typealias _ProgressView = SameBaseElement<ProgressView<Never,Never>>
@@ -352,14 +370,20 @@ typealias _StrokeShapeView = SameBaseElement<StrokeShapeView<Circle,Never,Never>
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 typealias _SubscriptionView = SameBaseElement<SubscriptionView<AnyPublisher<Void,Never>,Never>>
 
+#if swift(>=6.0)
 @available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 typealias _Subview = SameTypeElement<Subview>
+#endif
 
+#if swift(>=6.0)
 @available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 typealias _SubviewsCollection = SameTypeElement<SubviewsCollection>
+#endif
 
+#if swift(>=6.0)
 @available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 typealias _SubviewsCollectionSlice = SameTypeElement<SubviewsCollectionSlice>
+#endif
 
 @available(iOS 16.0, macOS 12.0, *)
 @available(tvOS, unavailable)
@@ -415,12 +439,14 @@ typealias _VSplitView = SameBaseElement<VSplitView<Never>>
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 typealias _VStack = SameBaseElement<VStack<Never>>
 
+#if swift(>=6.0)
 @available(macOS 15.0, *)
 @available(iOS, unavailable)
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
 @available(visionOS, unavailable)
 typealias _WindowVisibilityToggle = SameBaseElement<WindowVisibilityToggle<Never>>
+#endif
 
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 6.0, *)
 typealias _ZStack = SameBaseElement<ZStack<Never>>
