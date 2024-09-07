@@ -50,7 +50,7 @@ def parse_swift_generic_conditions(declaration):
     # Extract the part after 'where'
     where_clause = re.search(r'where\s+(.+)(?=\s*\{)', declaration)
     if not where_clause:
-        return []
+        return None
 
     conditions = where_clause.group(1)
     
@@ -66,7 +66,7 @@ def parse_swift_generic_conditions(declaration):
             parsed_conditions[left.strip()] = right.strip()
             parsed_types[left.strip()] = '==' if '==' in condition else ':'
     
-    return [parsed_conditions, parsed_types]
+    return {'conditions':parsed_conditions, 'condition_relations':parsed_types }
 
 interface0 = '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/SwiftUI.framework/Modules/SwiftUI.swiftmodule/arm64-apple-ios.swiftinterface'
 interface1 = '/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/SwiftUI.framework/Modules/SwiftUI.swiftmodule/arm64-apple-ios.swiftinterface'
@@ -83,15 +83,12 @@ for result in results:
 	if parsed_struct is None:
 		parsed_struct = parse_generic_struct(levo)
 
-	dic = {
-		'result': result,
-		'parsed_struct': parsed_struct,
-	}
+	dic = result
+	dic.update(parsed_struct)
 	
 	parsed_conditions = parse_swift_generic_conditions(line)
-	if len(parsed_conditions) > 0:
-		dic['conditions'] = parsed_conditions[0]
-		dic['condition_relations'] = parsed_conditions[1]
+	if parsed_conditions is not None:
+		dic.update(parsed_conditions)
 
 	parsed_results.append(dic)
 
