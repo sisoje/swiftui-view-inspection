@@ -26,6 +26,10 @@ extension ReflectionNode {
     var allNodes: [ReflectionNode] {
         children.reduce([self]) { $0 + $1.allNodes }
     }
+    
+    func inspectables<CP: ReflectionElement>(_ t: Inspectable<CP> = .some) -> [CP] {
+        allNodes.filter(CP.isValid).map(CP.init)
+    }
 
     func allElements<CP: ReflectionElement>(_ t: CP.Type = CP.self) -> [CP] {
         allNodes.filter(CP.isValid).map(CP.init)

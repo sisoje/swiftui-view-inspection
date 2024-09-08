@@ -569,12 +569,6 @@ extension TestElement.View._Image {
     }
 }
 
-extension TestElement.View._Button {
-    func tap() {
-        node.oneElement(TestElement.Value._closure.self).castValue()
-    }
-}
-
 extension TestElement.View._TextField {
     var text: Binding<String> {
         node.oneElement(TestElement.PropertyWrapper._Binding.self).tryCast() ?? .constant("")

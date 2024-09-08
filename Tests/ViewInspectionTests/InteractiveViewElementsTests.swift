@@ -13,7 +13,7 @@ final class InteractiveViewElementsTests: XCTestCase {}
 
     func test_Button() {
         var value = 0
-        Button("") { value = 1 }.inspection.oneElement(TestElement.View._Button.self).tap()
+        Button("") { value = 1 }.inspection.inspectables(.Button)[0].tap()
         XCTAssertEqual(value, 1)
     }
 
