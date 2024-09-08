@@ -534,10 +534,12 @@ extension Inspectable {
     @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
     static var StateObject: Inspectable<InspectableDynamicproperty._StateObject> { .some }
 
+#if canImport(UIKit)
     @available(iOS 14.0, tvOS 14.0, *)
     @available(macOS, unavailable)
     @available(watchOS, unavailable)
     static var UIApplicationDelegateAdaptor: Inspectable<InspectableDynamicproperty._UIApplicationDelegateAdaptor> { .some }
+#endif
 }
 
 // MARK: - modifiers

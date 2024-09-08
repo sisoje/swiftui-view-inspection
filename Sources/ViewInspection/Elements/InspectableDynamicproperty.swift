@@ -48,8 +48,10 @@ enum InspectableDynamicproperty {
     @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
     typealias _StateObject = SameBaseElement<StateObject<DummyOnservableOnject>>
 
+#if canImport(UIKit)
     @available(iOS 14.0, tvOS 14.0, *)
     @available(macOS, unavailable)
     @available(watchOS, unavailable)
     typealias _UIApplicationDelegateAdaptor = SameBaseElement<UIApplicationDelegateAdaptor<DummyDelegate>>
+#endif
 }

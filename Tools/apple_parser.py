@@ -17,6 +17,10 @@ def isnewswift(availabilities):
                 return True
     return False
 
+def isuikit(name):
+    return name == 'UIApplicationDelegateAdaptor'
+
+
 def get_names(entity):
     url = f'https://developer.apple.com/tutorials/data/documentation/swiftui/{entity}.json'
     response = requests.get(url)
@@ -80,6 +84,9 @@ for entity in ['view', 'gesture', 'dynamicproperty']:
         if isnewswift(availabilities):
             lines.insert(0, "#if swift(>=6.0)")
             lines.append("#endif")
+        if isuikit(name):
+            lines.insert(0, "#if canImport(UIKit)")
+            lines.append("#endif")
         types.append("\n".join(lines))
         
         lines = []
@@ -87,6 +94,9 @@ for entity in ['view', 'gesture', 'dynamicproperty']:
         lines.append(f"static var {name}: Inspectable<Inspectable{entity.capitalize()}._{name}> " + "{ .some }")
         if isnewswift(availabilities):
             lines.insert(0, "#if swift(>=6.0)")
+            lines.append("#endif")
+        if isuikit(name):
+            lines.insert(0, "#if canImport(UIKit)")
             lines.append("#endif")
         inspectables.append("\n".join(lines))
 

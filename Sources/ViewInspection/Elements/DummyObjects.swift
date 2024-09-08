@@ -1,9 +1,11 @@
 import SwiftUI
 
+#if canImport(UIKit)
 @available(iOS 14.0, tvOS 14.0, *)
 @available(macOS, unavailable)
 @available(watchOS, unavailable)
 final class DummyDelegate: NSObject, UIApplicationDelegate {}
+#endif
 
 final class DummyOnservableOnject: ObservableObject {}
 
