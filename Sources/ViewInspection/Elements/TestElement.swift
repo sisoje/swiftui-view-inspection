@@ -575,6 +575,12 @@ extension TestElement.View._Button {
     }
 }
 
+extension TestElement.View._TextField {
+    var text: Binding<String> {
+        node.oneElement(TestElement.PropertyWrapper._Binding.self).tryCast() ?? .constant("")
+    }
+}
+
 extension TestElement.View._Toggle {
     private enum DummyEnum {
         case case0

@@ -16,4 +16,12 @@ final class InteractiveViewElementsTests: XCTestCase {}
         Button("") { value = 1 }.inspection.oneElement(TestElement.View._Button.self).tap()
         XCTAssertEqual(value, 1)
     }
+
+    func test_TextField() {
+        let textFieldBinding = Binding<String>.variable("")
+        let textField = TextField("", text: textFieldBinding).inspection.oneElement(TestElement.View._TextField.self)
+        XCTAssertEqual(textFieldBinding.wrappedValue, "")
+        textField.text.wrappedValue = "a"
+        XCTAssertEqual(textFieldBinding.wrappedValue, "a")
+    }
 }

@@ -4,6 +4,12 @@ protocol ReflectionElement {
     static func isValid(_ node: ReflectionNode) -> Bool
 }
 
+extension ReflectionElement {
+    func tryCast<T>(_ t: T.Type = T.self) -> T? {
+        node.object as? T
+    }
+}
+
 protocol TypeDerivedElement: ReflectionElement {
     associatedtype RelatedType
 }
@@ -53,9 +59,5 @@ struct SomeClosureElement: ReflectionElement {
     let node: ReflectionNode
     static func isValid(_ node: ReflectionNode) -> Bool {
         node.typeInfo.typename.contains("->")
-    }
-
-    func cast<T>(_ t: T.Type = T.self) -> T {
-        CastingUtils.memoryCast(node.object, T.self)
     }
 }
