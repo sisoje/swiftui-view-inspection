@@ -10,7 +10,7 @@ final class PropertyWrappersTests: XCTestCase {}
             @Environment(\.colorScheme) private var colorScheme
             let body = EmptyView()
         }
-        let t = Dummy().inspection.all(.Environment)
+        let t = Dummy().inspect.all(.Environment)
         XCTAssertEqual(t.count, 2)
         XCTAssert(t[1].node.parent === t[0].node)
     }
@@ -20,7 +20,7 @@ final class PropertyWrappersTests: XCTestCase {}
             @State private var x = 0
             let body = EmptyView()
         }
-        XCTAssertEqual(Dummy().inspection.all(.State).count, 1)
+        XCTAssertEqual(Dummy().inspect.all(.State).count, 1)
     }
 
     func testBinding() {
@@ -28,6 +28,6 @@ final class PropertyWrappersTests: XCTestCase {}
             @Binding var x: Int
             let body = EmptyView()
         }
-        XCTAssertEqual(Dummy(x: .constant(1)).inspection.all(.Binding).count, 1)
+        XCTAssertEqual(Dummy(x: .constant(1)).inspect.all(.Binding).count, 1)
     }
 }

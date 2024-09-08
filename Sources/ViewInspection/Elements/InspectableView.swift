@@ -414,13 +414,13 @@ enum InspectableView {
 
 extension InspectableView._Button {
     func tap() {
-        node.one(.closure).castValue()
+        node.one(.closure)?.castValue()
     }
 }
 
 extension InspectableView._Text {
-    var string: String {
-        node.one(.String).castValue
+    var string: String? {
+        node.one(.String)?.castValue
     }
 }
 
@@ -432,7 +432,7 @@ extension InspectableView._Image {
 
 extension InspectableView._TextField {
     var text: Binding<String> {
-        node.one(.Binding).tryCast() ?? .constant("")
+        node.one(.Binding)?.tryCast() ?? .constant("")
     }
 }
 
@@ -443,7 +443,9 @@ extension InspectableView._Toggle {
     }
 
     var isOn: Binding<Bool> {
-        let binding = node.one(.Binding)
+        guard let binding = node.one(.Binding) else {
+            return .constant(true)
+        }
         if let boolBinding = binding.node.object as? Binding<Bool> {
             return boolBinding
         }

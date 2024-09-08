@@ -31,9 +31,7 @@ extension ReflectionNode {
         allNodes.filter(CP.isValid).map(CP.init)
     }
     
-    func one<CP: ReflectionElement>(_ t: Inspectable<CP> = .some) -> CP {
-        let t = all(t)
-        assert(t.count == 1)
-        return t[0]
+    func one<CP: ReflectionElement>(_ t: Inspectable<CP> = .some) -> CP? {
+        all(t).first
     }
 }
