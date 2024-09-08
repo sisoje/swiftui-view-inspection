@@ -45,7 +45,8 @@ preferedTypes = {
 
 for entity in ['view', 'gesture']:
     names = get_names(entity)
-    output = []
+    types = []
+    inspectables = []
     for struct in structs:
         name = struct['name']
 
@@ -56,7 +57,6 @@ for entity in ['view', 'gesture']:
         availabilities = [clean_availability_string(x) for x in availabilities]
         if '@available(*)' in availabilities:
             availabilities.remove('@available(*)')
-        lines = availabilities
         generics = struct.get('generics')
         if generics is None:
             t = f'typealias _{name} = SameTypeElement<{name}>'
@@ -67,22 +67,24 @@ for entity in ['view', 'gesture']:
             gen = ",".join(arr)
             t = f"typealias _{name} = SameBaseElement<{name}<{gen}>>"       
 
+        lines = []
+        lines += availabilities
         lines.append(t)
-        
         if isnewswift(availabilities):
             lines.insert(0, "#if swift(>=6.0)")
             lines.append("#endif")
+        types.append("\n".join(lines))
+        
+        lines = []
+        lines += availabilities
+        lines.append(f"static var {name}: Inspectable<Inspectable{entity.capitalize()}._{name}> " + "{ .some }")
+        if isnewswift(availabilities):
+            lines.insert(0, "#if swift(>=6.0)")
+            lines.append("#endif")
+        inspectables.append("\n".join(lines))
 
-        output.append(lines)
+    with open(f'{entity}_typealias.swift', 'w', encoding='utf-8') as f:
+        f.write("\n\n".join(types))
 
-    strings = ["\n".join(lines) for lines in output]
-
-    content = "\n\n".join(strings)
-
-    with open(f'{entity}.swift', 'w', encoding='utf-8') as f:
-        f.write(content)
-
-
-
-
-
+    with open(f'{entity}_enum.swift', 'w', encoding='utf-8') as f:
+        f.write("\n\n".join(inspectables))

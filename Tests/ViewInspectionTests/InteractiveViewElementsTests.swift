@@ -7,19 +7,19 @@ final class InteractiveViewElementsTests: XCTestCase {}
 @MainActor extension InteractiveViewElementsTests {
     func test_Toggle() {
         let b = Binding<Bool>.variable(false)
-        Toggle("", isOn: b).inspection.oneElement(TestElement.View._Toggle.self).toggle()
+        Toggle("", isOn: b).inspection.one(.Toggle).toggle()
         XCTAssertEqual(b.wrappedValue, true)
     }
 
     func test_Button() {
         var value = 0
-        Button("") { value = 1 }.inspection.inspectables(.Button)[0].tap()
+        Button("") { value = 1 }.inspection.one(.Button).tap()
         XCTAssertEqual(value, 1)
     }
 
     func test_TextField() {
         let textFieldBinding = Binding<String>.variable("")
-        let textField = TextField("", text: textFieldBinding).inspection.oneElement(TestElement.View._TextField.self)
+        let textField = TextField("", text: textFieldBinding).inspection.one(.TextField)
         XCTAssertEqual(textFieldBinding.wrappedValue, "")
         textField.text.wrappedValue = "a"
         XCTAssertEqual(textFieldBinding.wrappedValue, "a")

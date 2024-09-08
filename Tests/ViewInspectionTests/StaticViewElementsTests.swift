@@ -7,13 +7,13 @@ final class StaticViewElementsTests: XCTestCase {}
 @MainActor extension StaticViewElementsTests {
     func test_Text() {
         XCTAssertEqual(
-            Text("a").inspection.oneElement(TestElement.View._Text.self).string,
+            Text("a").inspection.one(.Text).string,
             "a"
         )
     }
 
     func test_Image() {
-        let ref = Image(systemName: "circle").inspection.oneElement(TestElement.View._Image.self)
+        let ref = Image(systemName: "circle").inspection.one(.Image)
         XCTAssertEqual(ref.name, "circle")
     }
 
@@ -22,9 +22,9 @@ final class StaticViewElementsTests: XCTestCase {}
         XCTAssertEqual(
             NavigationStack { Text("a") }
                 .inspection
-                .oneElement(TestElement.View._NavigationStack.self)
+                .one(.NavigationStack)
                 .node
-                .oneElement(TestElement.View._Text.self)
+                .one(.Text)
                 .string,
             "a"
         )
@@ -34,7 +34,7 @@ final class StaticViewElementsTests: XCTestCase {}
         XCTAssertEqual(
             GeometryReader { _ in }
                 .inspection
-                .allElements(TestElement.View._GeometryReader.self)
+                .all(.GeometryReader)
                 .count,
             1
         )
@@ -46,7 +46,7 @@ final class StaticViewElementsTests: XCTestCase {}
                 Text($0.description)
             }
             .inspection
-            .allElements(TestElement.View._ForEach.self)
+                .all(.ForEach)
             .count,
             2
         )
@@ -55,7 +55,7 @@ final class StaticViewElementsTests: XCTestCase {}
                 Text($0.description)
             }
             .inspection
-            .allElements(TestElement.View._Text.self)
+            .all(.Text)
             .count,
             0
         )

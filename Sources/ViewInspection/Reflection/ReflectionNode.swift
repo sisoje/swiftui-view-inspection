@@ -27,17 +27,13 @@ extension ReflectionNode {
         children.reduce([self]) { $0 + $1.allNodes }
     }
     
-    func inspectables<CP: ReflectionElement>(_ t: Inspectable<CP> = .some) -> [CP] {
-        allNodes.filter(CP.isValid).map(CP.init)
-    }
-
-    func allElements<CP: ReflectionElement>(_ t: CP.Type = CP.self) -> [CP] {
+    func all<CP: ReflectionElement>(_ t: Inspectable<CP> = .some) -> [CP] {
         allNodes.filter(CP.isValid).map(CP.init)
     }
     
-    func oneElement<CP: ReflectionElement>(_ t: CP.Type = CP.self) -> CP {
-        let arr: [CP] = allElements()
-        assert(arr.count == 1)
-        return arr[0]
+    func one<CP: ReflectionElement>(_ t: Inspectable<CP> = .some) -> CP {
+        let t = all(t)
+        assert(t.count == 1)
+        return t[0]
     }
 }
