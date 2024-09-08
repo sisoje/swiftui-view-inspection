@@ -34,6 +34,12 @@ with open('parsed.json', 'r') as file:
     structs = json.load(file)
     
 preferedTypes = {
+    'UIApplicationDelegate': 'DummyDelegate',
+    'NSObject': 'DummyDelegate',
+    'BinaryFloatingPoint': 'Double',
+    'Onservable': 'DummyOnservable',
+    'ObservableObject': 'DummyOnservableOnject',
+    'NSFetchRequestResult':  'NSDictionary',
     'View' : 'Never',
     'Shape': 'Circle',
     'InsettableShape': 'Circle',
@@ -43,8 +49,9 @@ preferedTypes = {
     'TimelineSchedule': 'AnimationTimelineSchedule',
 }
 
-for entity in ['view', 'gesture']:
+for entity in ['view', 'gesture', 'dynamicproperty']:
     names = get_names(entity)
+    print(names)
     types = []
     inspectables = []
     for struct in structs:

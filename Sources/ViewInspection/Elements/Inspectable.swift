@@ -484,12 +484,60 @@ extension Inspectable {
     #endif
 }
 
-// MARK: - property wrappers
+// MARK: - dynamic properties
 
 extension Inspectable {
-    static var State: Inspectable<SameBaseElement<State<Any>>> { .some }
-    static var Binding: Inspectable<SameBaseElement<Binding<Any>>> { .some }
-    static var Environment: Inspectable<SameBaseElement<Environment<Any>>> { .some }
+    @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
+    static var AccessibilityFocusState: Inspectable<InspectableDynamicproperty._AccessibilityFocusState> { .some }
+
+    @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
+    static var AppStorage: Inspectable<InspectableDynamicproperty._AppStorage> { .some }
+
+    static var Binding: Inspectable<InspectableDynamicproperty._Binding> { .some }
+
+    static var Environment: Inspectable<InspectableDynamicproperty._Environment> { .some }
+
+    static var EnvironmentObject: Inspectable<InspectableDynamicproperty._EnvironmentObject> { .some }
+
+    static var FetchRequest: Inspectable<InspectableDynamicproperty._FetchRequest> { .some }
+
+    @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
+    static var FocusedBinding: Inspectable<InspectableDynamicproperty._FocusedBinding> { .some }
+
+    @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
+    static var FocusedObject: Inspectable<InspectableDynamicproperty._FocusedObject> { .some }
+
+    @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
+    static var FocusedValue: Inspectable<InspectableDynamicproperty._FocusedValue> { .some }
+
+    @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
+    static var FocusState: Inspectable<InspectableDynamicproperty._FocusState> { .some }
+
+    static var GestureState: Inspectable<InspectableDynamicproperty._GestureState> { .some }
+
+    @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
+    static var Namespace: Inspectable<InspectableDynamicproperty._Namespace> { .some }
+
+    static var ObservedObject: Inspectable<InspectableDynamicproperty._ObservedObject> { .some }
+
+    @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
+    static var ScaledMetric: Inspectable<InspectableDynamicproperty._ScaledMetric> { .some }
+
+    @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
+    static var SceneStorage: Inspectable<InspectableDynamicproperty._SceneStorage> { .some }
+
+    @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
+    static var SectionedFetchRequest: Inspectable<InspectableDynamicproperty._SectionedFetchRequest> { .some }
+
+    static var State: Inspectable<InspectableDynamicproperty._State> { .some }
+
+    @available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *)
+    static var StateObject: Inspectable<InspectableDynamicproperty._StateObject> { .some }
+
+    @available(iOS 14.0, tvOS 14.0, *)
+    @available(macOS, unavailable)
+    @available(watchOS, unavailable)
+    static var UIApplicationDelegateAdaptor: Inspectable<InspectableDynamicproperty._UIApplicationDelegateAdaptor> { .some }
 }
 
 // MARK: - modifiers
@@ -504,13 +552,18 @@ extension Inspectable {
     static var Refreshable: Inspectable<InspectableModifier._Refreshable> { .some }
 }
 
-// MARK: - values
+// MARK: - closures
+
+extension Inspectable {
+    static var closure: Inspectable<InspectableClosure.action> { .some }
+    static var closureWithVoidParam: Inspectable<InspectableClosure.actionWithVoidParam> { .some }
+    static var asyncClosure: Inspectable<InspectableClosure.asyncAction> { .some }
+}
+
+// MARK: -  native
 
 extension Inspectable {
     static var Int: Inspectable<SameTypeElement<Int>> { .some }
     static var Bool: Inspectable<SameTypeElement<Bool>> { .some }
     static var String: Inspectable<SameTypeElement<String>> { .some }
-    static var closure: Inspectable<ClosureElement<() -> Void>> { .some }
-    static var closureWithVoidParam: Inspectable<ClosureElement<(()) -> Void>> { .some }
-    static var asyncClosure: Inspectable<ClosureElement<() async -> Void>> { .some }
 }
