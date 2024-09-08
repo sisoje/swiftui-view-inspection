@@ -1,7 +1,7 @@
 import SwiftUI
 
 extension View {
-    var inspect: ReflectionNode {
+    var snap: ReflectionNode {
         ReflectionNode(object: self)
     }
 }

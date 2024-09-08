@@ -5,8 +5,11 @@ protocol ReflectionElement {
 }
 
 extension ReflectionElement {
-    func tryCast<T>(_ t: T.Type = T.self) -> T? {
-        node.object as? T
+    func tryCast<T>(_ t: T.Type = T.self) throws -> T {
+        guard let obj = node.object as? T else {
+            throw ViewInspectionError.wrongType
+        }
+        return obj
     }
 }
 

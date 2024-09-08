@@ -5,26 +5,26 @@ import XCTest
 final class StaticViewElementsTests: XCTestCase {}
 
 @MainActor extension StaticViewElementsTests {
-    func test_Text() {
+    func test_Text() throws {
         XCTAssertEqual(
-            Text("a").inspect.one(.Text)?.string,
+            try Text("a").snap.one(.Text).string,
             "a"
         )
     }
 
-    func test_Image() {
-        let ref = Image(systemName: "circle").inspect.one(.Image)
-        XCTAssertEqual(ref?.name, "circle")
+    func test_Image() throws {
+        let ref = try Image(systemName: "circle").snap.one(.Image)
+        XCTAssertEqual(try ref.name, "circle")
     }
 
     @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
-    func test_NavigationStack() {
+    func test_NavigationStack() throws {
         XCTAssertEqual(
-            NavigationStack { Text("a") }
-                .inspect
-                .one(.NavigationStack)?
+            try NavigationStack { Text("a") }
+                .snap
+                .one(.NavigationStack)
                 .node
-                .one(.Text)?
+                .one(.Text)
                 .string,
             "a"
         )
@@ -33,7 +33,7 @@ final class StaticViewElementsTests: XCTestCase {}
     func test_GeometryReader() {
         XCTAssertEqual(
             GeometryReader { _ in }
-                .inspect
+                .snap
                 .all(.GeometryReader)
                 .count,
             1
@@ -45,7 +45,7 @@ final class StaticViewElementsTests: XCTestCase {}
             ForEach(Array(0 ... 1), id: \.self) {
                 Text($0.description)
             }
-            .inspect
+            .snap
                 .all(.ForEach)
             .count,
             2
@@ -54,7 +54,7 @@ final class StaticViewElementsTests: XCTestCase {}
             ForEach(Array(0 ... 1), id: \.self) {
                 Text($0.description)
             }
-            .inspect
+            .snap
             .all(.Text)
             .count,
             0

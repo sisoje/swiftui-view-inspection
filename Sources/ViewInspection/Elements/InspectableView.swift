@@ -413,26 +413,34 @@ enum InspectableView {
 }
 
 extension InspectableView._Button {
-    func tap() {
-        node.one(.closure)?.castValue()
+    func tap() throws {
+        try node.one(.closure).castValue()
     }
 }
 
 extension InspectableView._Text {
-    var string: String? {
-        node.one(.String)?.castValue
+    var string: String {
+        get throws {
+            try node.one(.String).castValue
+        }
     }
 }
 
 extension InspectableView._Image {
-    var name: String? {
-        node.all(.String).first { $0.node.label == "name" }?.castValue
+    var name: String {
+        get throws {
+            try node.one(.String) {
+                $0.node.label == "name"
+            }.castValue
+        }
     }
 }
 
 extension InspectableView._TextField {
     var text: Binding<String> {
-        node.one(.Binding)?.tryCast() ?? .constant("")
+        get throws {
+            try node.one(.Binding).tryCast()
+        }
     }
 }
 
@@ -443,21 +451,21 @@ extension InspectableView._Toggle {
     }
 
     var isOn: Binding<Bool> {
-        guard let binding = node.one(.Binding) else {
-            return .constant(true)
-        }
-        if let boolBinding = binding.node.object as? Binding<Bool> {
-            return boolBinding
-        }
-        let dummyBinding = CastingUtils.memoryCast(binding.node.object, Binding<DummyEnum>.self)
-        return Binding {
-            dummyBinding.wrappedValue == .case0
-        } set: {
-            dummyBinding.wrappedValue = $0 ? .case0 : .case1
+        get throws {
+            let binding = try node.one(.Binding)
+            if let boolBinding = binding.node.object as? Binding<Bool> {
+                return boolBinding
+            }
+            let dummyBinding = CastingUtils.memoryCast(binding.node.object, Binding<DummyEnum>.self)
+            return Binding {
+                dummyBinding.wrappedValue == .case0
+            } set: {
+                dummyBinding.wrappedValue = $0 ? .case0 : .case1
+            }
         }
     }
 
-    func toggle() {
-        isOn.wrappedValue.toggle()
+    func toggle() throws {
+        try isOn.wrappedValue.toggle()
     }
 }
