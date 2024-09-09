@@ -1,0 +1,18 @@
+[
+    "AnyGesture",
+    "DragGesture",
+    "ExclusiveGesture",
+    "GestureStateGesture",
+    "LongPressGesture",
+    "MagnificationGesture",
+    "MagnifyGesture",
+    "RotateGesture",
+    "RotateGesture3D",
+    "RotationGesture",
+    "SequenceGesture",
+    "SimultaneousGesture",
+    "SpatialEventGesture",
+    "SpatialTapGesture",
+    "TapGesture",
+    "WindowDragGesture"
+]

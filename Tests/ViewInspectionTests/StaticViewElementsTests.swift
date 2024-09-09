@@ -7,13 +7,13 @@ final class StaticViewElementsTests: XCTestCase {}
 @MainActor extension StaticViewElementsTests {
     func test_Text() throws {
         XCTAssertEqual(
-            try Text("a").snap.one(.Text).string,
+            try Text("a").snap.one(.text).string,
             "a"
         )
     }
 
     func test_Image() throws {
-        let ref = try Image(systemName: "circle").snap.one(.Image)
+        let ref = try Image(systemName: "circle").snap.one(.image)
         XCTAssertEqual(try ref.name, "circle")
     }
 
@@ -22,9 +22,9 @@ final class StaticViewElementsTests: XCTestCase {}
         XCTAssertEqual(
             try NavigationStack { Text("a") }
                 .snap
-                .one(.NavigationStack)
+                .one(.navigationStack)
                 .node
-                .one(.Text)
+                .one(.text)
                 .string,
             "a"
         )
@@ -34,7 +34,7 @@ final class StaticViewElementsTests: XCTestCase {}
         XCTAssertEqual(
             GeometryReader { _ in }
                 .snap
-                .all(.GeometryReader)
+                .all(.geometryReader)
                 .count,
             1
         )
@@ -46,7 +46,7 @@ final class StaticViewElementsTests: XCTestCase {}
                 Text($0.description)
             }
             .snap
-                .all(.ForEach)
+                .all(.forEach)
             .count,
             2
         )
@@ -55,7 +55,7 @@ final class StaticViewElementsTests: XCTestCase {}
                 Text($0.description)
             }
             .snap
-            .all(.Text)
+            .all(.text)
             .count,
             0
         )

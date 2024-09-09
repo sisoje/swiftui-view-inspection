@@ -4,6 +4,10 @@ import json
 defoltna = ['iOS 13.0', 'macOS 10.15', 'tvOS 13.0', 'watchOS 6.0', 'visionOS 1.0']
 newswift = ['iOS 18.0', 'macOS 15.0', 'tvOS 18.0', 'watchOS 11.0', 'visionOS 2.0']
 
+def decapitalize(s):
+    if not s:
+        return s
+    return s[0].lower() + s[1:]
 
 def clean_availability_string(availability):
     for default in defoltna:
@@ -17,11 +21,14 @@ def isnewswift(availabilities):
                 return True
     return False
 
-def isuikit(name):
-    return name == 'UIApplicationDelegateAdaptor'
-
-
 def get_names(entity):
+    fname = f'Tools/{entity}.json'
+    try:
+        with open(fname, 'r') as file:
+            return json.load(file)
+    except:
+        None
+
     url = f'https://developer.apple.com/tutorials/data/documentation/swiftui/{entity}.json'
     response = requests.get(url)
     doc = response.json()
@@ -32,14 +39,17 @@ def get_names(entity):
             break
     identifiers = conf['identifiers']
     names = [x.split("/")[-1] for x in identifiers]
+    with open(fname, 'w', encoding='utf-8') as f:
+        json.dump(names, f, ensure_ascii=False, indent=4)
     return names
 
-with open('parsed.json', 'r') as file:
+with open('Tools/swiftui.json', 'r') as file:
     structs = json.load(file)
     
 preferedTypes = {
-    'UIApplicationDelegate': 'DummyDelegate',
-    'NSObject': 'DummyDelegate',
+    'NSApplicationDelegate': 'NSDummyDelegate',
+    'UIApplicationDelegate': 'UIDummyDelegate',
+    'NSObject': 'NSObject',
     'BinaryFloatingPoint': 'Double',
     'Onservable': 'DummyOnservable',
     'ObservableObject': 'DummyOnservableOnject',
@@ -70,7 +80,7 @@ for entity in ['view', 'gesture', 'dynamicproperty']:
             availabilities.remove('@available(*)')
         generics = struct.get('generics')
         if generics is None:
-            t = f'typealias _{name} = SameTypeElement<{name}>'
+            t = f'typealias _{name} = SameBaseElement<{name}>'
         else:
             conditions = struct.get('conditions', {})
             arr = [conditions.get(gen, ['Never'])[-1] for gen in generics]
@@ -84,24 +94,36 @@ for entity in ['view', 'gesture', 'dynamicproperty']:
         if isnewswift(availabilities):
             lines.insert(0, "#if swift(>=6.0)")
             lines.append("#endif")
-        if isuikit(name):
-            lines.insert(0, "#if canImport(UIKit)")
+        if name == 'UIApplicationDelegateAdaptor':
+            lines.insert(0, "#if os(iOS) || os(tvOS)")
+            lines.append("#endif")
+        if name =='NSApplicationDelegateAdaptor':
+            lines.insert(0, "#if os(macOS)")
             lines.append("#endif")
         types.append("\n".join(lines))
         
         lines = []
         lines += availabilities
-        lines.append(f"static var {name}: Inspectable<Inspectable{entity.capitalize()}._{name}> " + "{ .some }")
+        lines.append(f"static var {decapitalize(name)}: AnyInspectable<InspectableType._{name}> " + "{ .some }")
         if isnewswift(availabilities):
             lines.insert(0, "#if swift(>=6.0)")
             lines.append("#endif")
-        if isuikit(name):
-            lines.insert(0, "#if canImport(UIKit)")
+        if name == 'UIApplicationDelegateAdaptor':
+            lines.insert(0, "#if os(iOS) || os(tvOS)")
+            lines.append("#endif")
+        if name =='NSApplicationDelegateAdaptor':
+            lines.insert(0, "#if os(macOS)")
             lines.append("#endif")
         inspectables.append("\n".join(lines))
 
-    with open(f'{entity}_typealias.swift', 'w', encoding='utf-8') as f:
-        f.write("\n\n".join(types))
+    imports = ['import SwiftUI']
+    if entity == 'view':
+        imports.append('import Combine')
 
-    with open(f'{entity}_enum.swift', 'w', encoding='utf-8') as f:
-        f.write("\n\n".join(inspectables))
+    with open(f'Sources/ViewInspection/Generated/InspectableType+{entity.capitalize()}.swift', 'w', encoding='utf-8') as f:
+        content = "\n".join(imports) + "\n\nextension InspectableType {\n" + "\n\n".join(types) + "\n}"
+        f.write(content)
+
+    with open(f'Sources/ViewInspection/Generated/AnyInspectable+{entity.capitalize()}.swift', 'w', encoding='utf-8') as f:
+        content = "extension AnyInspectable {\n" + "\n\n".join(inspectables) + "\n}"
+        f.write(content)

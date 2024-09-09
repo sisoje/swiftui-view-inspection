@@ -1,28 +1,27 @@
 import re
 import json
+import glob
 
 def parse_file(input_file):
-    try:
-        output = []
-        with open(input_file) as f:
-            lines = [line.rstrip() for line in f]
+    output = []
+    with open(input_file) as f:
+        lines = [line.rstrip() for line in f]
 
-            for idx, line in enumerate(lines):
-                if not line.startswith(" ") and "public struct" in line:
-                    linije = []
-                    i = idx - 1
-                    while lines[i].startswith('@'):
-                        if lines[i].startswith('@available'):
-                            linije.insert(0, lines[i])
-                        i -= 1
+        for idx, line in enumerate(lines):
+            if not line.startswith(" ") and "public struct" in line:
+                linije = []
+                i = idx - 1
+                while lines[i].startswith('@'):
+                    if lines[i].startswith('@available'):
+                        linije.insert(0, lines[i])
+                    i -= 1
 
-                    output.append({
-                        'struct': line,
-                        'availabilities': linije
-                    })
-        return output
-    except:
-        return []
+                output.append({
+                    'struct': line,
+                    'availabilities': linije
+                })
+    return output
+
 
 
 def parse_generic_struct(line):
@@ -78,13 +77,16 @@ def parse_swift_generic_conditions(declaration):
     
     return { 'conditions': parsed_conditions }
 
+results = []
+for plat in ['iPhoneOS', 'MacOSX']:
+    for f in ['SwiftUI', 'SwiftUICore']:
+        interface = f'/Applications/Xcode-beta.app/Contents/Developer/Platforms/{plat}.platform/Developer/SDKs/{plat}.sdk/System/Library/Frameworks/{f}.framework/'
+        for file in glob.glob(f'{interface}/**/*.swiftinterface', recursive=True):
+            print(file)
+            results += parse_file(file)
 
-interface0 = '/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/SwiftUI.framework/Modules/SwiftUI.swiftmodule/arm64-apple-ios.swiftinterface'
-interface1 = '/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/SwiftUI.framework/Modules/SwiftUI.swiftmodule/arm64-apple-ios.swiftinterface'
-interface2 = '/Applications/Xcode-beta.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/SwiftUICore.framework/Modules/SwiftUICore.swiftmodule/arm64-apple-ios.swiftinterface'
-parsed = "parsed.json"
+parsed = "Tools/swiftui.json"
 
-results = parse_file(interface0) + parse_file(interface1) + parse_file(interface2)
 parsed_results = []
 
 for result in results:
@@ -105,5 +107,13 @@ for result in results:
 
 parsed_results = sorted(parsed_results, key=lambda x: x['name'].lower())
 
+seen_names = set()
+unique_data = []
+
+for item in parsed_results:
+    if item["name"] not in seen_names:
+        unique_data.append(item)
+        seen_names.add(item["name"])
+
 with open(parsed, 'w', encoding='utf-8') as f:
-    json.dump(parsed_results, f, ensure_ascii=False, indent=4)
+    json.dump(unique_data, f, ensure_ascii=False, indent=4)

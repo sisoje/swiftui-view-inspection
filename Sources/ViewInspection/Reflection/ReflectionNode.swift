@@ -23,15 +23,15 @@ final class ReflectionNode: @unchecked Sendable {
 // MARK: - Utilities
 
 extension ReflectionNode {
-    private var allNodes: [ReflectionNode] {
-        children.reduce([self]) { $0 + $1.allNodes }
+    var tree: [ReflectionNode] {
+        children.reduce([self]) { $0 + $1.tree }
     }
 
-    func all<CP: ReflectionElement>(_ t: Inspectable<CP> = .some, _ filter: (CP) -> Bool = { _ in true }) -> [CP] {
-        allNodes.filter(CP.isValid).map(CP.init).filter(filter)
+    func all<CP: ReflectionElement>(_ t: AnyInspectable<CP> = .some, _ filter: (CP) -> Bool = { _ in true }) -> [CP] {
+        tree.filter(CP.isValid).map(CP.init).filter(filter)
     }
 
-    func one<CP: ReflectionElement>(_ t: Inspectable<CP> = .some, _ filter: (CP) -> Bool = { _ in true }) throws -> CP {
+    func one<CP: ReflectionElement>(_ t: AnyInspectable<CP> = .some, _ filter: (CP) -> Bool = { _ in true }) throws -> CP {
         let items = all(t, filter)
         if items.count != 1 {
             throw ViewInspectionError.wrongNumberOfItems
