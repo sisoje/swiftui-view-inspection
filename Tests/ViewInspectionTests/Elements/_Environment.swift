@@ -3,7 +3,7 @@ import XCTest
 @testable import ViewInspection
 
 @MainActor final class Test_Environment: XCTestCase {
-    func testEnvironment() {
+    func test_Environment() {
         struct Dummy: View {
             @Environment(\.colorScheme) private var colorScheme
             let body = EmptyView()

@@ -3,7 +3,7 @@ import XCTest
 @testable import ViewInspection
 
 @MainActor final class Test_Binding: XCTestCase {
-    func testBinding() throws {
+    func test_Binding() throws {
         struct Dummy: View {
             @Binding var x: Int
             let body = EmptyView()
