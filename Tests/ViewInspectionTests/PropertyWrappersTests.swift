@@ -15,19 +15,19 @@ final class PropertyWrappersTests: XCTestCase {}
         XCTAssert(t[1].node.parent === t[0].node)
     }
 
-    func testState() {
+    func testState() throws {
         struct Dummy: View {
             @State private var x = 0
             let body = EmptyView()
         }
-        XCTAssertEqual(Dummy().snap.all(.state).count, 1)
+        try Dummy().snap.one(.state)
     }
 
-    func testBinding() {
+    func testBinding() throws {
         struct Dummy: View {
             @Binding var x: Int
             let body = EmptyView()
         }
-        XCTAssertEqual(Dummy(x: .constant(1)).snap.all(.binding).count, 1)
+        try Dummy(x: .constant(1)).snap.one(.binding)
     }
 }
