@@ -8,7 +8,6 @@ static var exclusiveGesture: AnyInspectable<InspectableType._ExclusiveGesture> {
 
 static var gestureStateGesture: AnyInspectable<InspectableType._GestureStateGesture> { .some }
 
-@available(tvOS 14.0, *)
 static var longPressGesture: AnyInspectable<InspectableType._LongPressGesture> { .some }
 
 @available(iOS, introduced: 13.0, deprecated: 100000.0, renamed: "MagnifyGesture")
@@ -40,7 +39,7 @@ static var sequenceGesture: AnyInspectable<InspectableType._SequenceGesture> { .
 static var simultaneousGesture: AnyInspectable<InspectableType._SimultaneousGesture> { .some }
 
 #if swift(>=6.0)
-@available(iOS 18.0, macOS 15.0, watchOS 11.0, *)
+@available(iOS 18.0, macOS 15.0, *)
 @available(tvOS, unavailable)
 static var spatialEventGesture: AnyInspectable<InspectableType._SpatialEventGesture> { .some }
 #endif

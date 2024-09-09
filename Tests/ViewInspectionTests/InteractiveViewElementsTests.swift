@@ -6,7 +6,7 @@ final class InteractiveViewElementsTests: XCTestCase {}
 
 @MainActor extension InteractiveViewElementsTests {
     func test_Toggle() throws {
-        let b = Binding<Bool>.variable(false)
+        let b = Binding.variable(false)
         try Toggle("", isOn: b).snap.one(.toggle).toggle()
         XCTAssertEqual(b.wrappedValue, true)
     }
@@ -18,18 +18,18 @@ final class InteractiveViewElementsTests: XCTestCase {}
     }
 
     func test_TextField() throws {
-        let textFieldBinding = Binding<String>.variable("")
-        let textField = try TextField("", text: textFieldBinding).snap.one(.textField)
-        XCTAssertEqual(textFieldBinding.wrappedValue, "")
+        let binding = Binding.variable("")
+        let textField = try TextField("", text: binding).snap.one(.textField)
+        XCTAssertEqual(binding.wrappedValue, "")
         try textField.text.wrappedValue = "a"
-        XCTAssertEqual(textFieldBinding.wrappedValue, "a")
+        XCTAssertEqual(binding.wrappedValue, "a")
     }
     
     func test_Slider() throws {
-        let binding: Binding<Float> = .variable(0)
-        let sliderBinding = try Slider(value: binding).snap.one(.slider).value
+        let binding = Binding.variable(0.0)
+        let slider = try Slider(value: binding).snap.one(.slider)
         XCTAssertEqual(binding.wrappedValue, 0)
-        sliderBinding.wrappedValue = 1
+        try slider.value.wrappedValue = 1
         XCTAssertEqual(binding.wrappedValue, 1)
     }
 }

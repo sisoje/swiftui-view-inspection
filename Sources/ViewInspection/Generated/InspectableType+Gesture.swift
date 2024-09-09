@@ -10,7 +10,6 @@ typealias _ExclusiveGesture = SameBaseElement<ExclusiveGesture<Never,Never>>
 
 typealias _GestureStateGesture = SameBaseElement<GestureStateGesture<Never,Never>>
 
-@available(tvOS 14.0, *)
 typealias _LongPressGesture = SameBaseElement<LongPressGesture>
 
 @available(iOS, introduced: 13.0, deprecated: 100000.0, renamed: "MagnifyGesture")
@@ -42,7 +41,7 @@ typealias _SequenceGesture = SameBaseElement<SequenceGesture<Never,Never>>
 typealias _SimultaneousGesture = SameBaseElement<SimultaneousGesture<Never,Never>>
 
 #if swift(>=6.0)
-@available(iOS 18.0, macOS 15.0, watchOS 11.0, *)
+@available(iOS 18.0, macOS 15.0, *)
 @available(tvOS, unavailable)
 typealias _SpatialEventGesture = SameBaseElement<SpatialEventGesture>
 #endif

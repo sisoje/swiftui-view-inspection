@@ -1,7 +1,16 @@
 import requests
 import json
+import re
 
-defoltna = ['iOS 13.0', 'macOS 10.15', 'tvOS 13.0', 'watchOS 6.0', 'visionOS 1.0']
+# Define the supported versions
+supported_versions = {
+    "iOS": "15.0",
+    "macOS": "12.0",
+    "tvOS": "15.0",
+    "watchOS": "8.0",
+    "visionOS": "1.0"
+}
+
 newswift = ['iOS 18.0', 'macOS 15.0', 'tvOS 18.0', 'watchOS 11.0', 'visionOS 2.0']
 
 def decapitalize(s):
@@ -9,10 +18,27 @@ def decapitalize(s):
         return s
     return s[0].lower() + s[1:]
 
+
 def clean_availability_string(availability):
-    for default in defoltna:
-        availability = availability.replace(f"{default}, ", "")
-    return availability
+    # Regex pattern to find platform names and their versions
+    pattern = re.compile(r"(iOS|macOS|tvOS|watchOS|visionOS)\s(\d+\.\d+)")
+    
+    # Find all matches (platform and version)
+    matches = pattern.findall(availability)
+    
+    new_availability = availability
+    
+    # Iterate through the matches
+    for platform, version in matches:
+        supported_version = supported_versions.get(platform)
+        
+        # If the version is less than or equal to the supported version, remove it
+        if supported_version and version <= supported_version:
+            # Remove the platform and version pair (including the comma and space)
+            new_availability = re.sub(f"{platform}\s{version},\s?", "", new_availability)
+    
+    return new_availability
+
 
 def isnewswift(availabilities):
     for n in newswift:
