@@ -39,7 +39,7 @@ static var sequenceGesture: AnyInspectable<InspectableType._SequenceGesture> { .
 static var simultaneousGesture: AnyInspectable<InspectableType._SimultaneousGesture> { .some }
 
 #if swift(>=6.0)
-@available(iOS 18.0, macOS 15.0, *)
+@available(iOS 18.0, macOS 15.0, watchOS 11.0, *)
 @available(tvOS, unavailable)
 static var spatialEventGesture: AnyInspectable<InspectableType._SpatialEventGesture> { .some }
 #endif

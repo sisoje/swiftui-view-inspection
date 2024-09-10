@@ -20,24 +20,15 @@ def decapitalize(s):
 
 
 def clean_availability_string(availability):
-    # Regex pattern to find platform names and their versions
-    pattern = re.compile(r"(iOS|macOS|tvOS|watchOS|visionOS)\s(\d+\.\d+)")
-    
-    # Find all matches (platform and version)
-    matches = pattern.findall(availability)
-    
-    new_availability = availability
-    
-    # Iterate through the matches
-    for platform, version in matches:
-        supported_version = supported_versions.get(platform)
-        
-        # If the version is less than or equal to the supported version, remove it
-        if supported_version and version <= supported_version:
-            # Remove the platform and version pair (including the comma and space)
-            new_availability = re.sub(f"{platform}\s{version},\s?", "", new_availability)
-    
-    return new_availability
+    ava = availability
+    for plat, vers in supported_versions.items():
+        pattern = plat + r" (\d+\.\d+), "
+        match = re.search(pattern, ava)
+        if match:
+            aversion = match.group(1)
+            if float(aversion) <= float(vers):
+                ava = re.sub(pattern, "", ava)
+    return ava
 
 
 def isnewswift(availabilities):
@@ -48,7 +39,7 @@ def isnewswift(availabilities):
     return False
 
 def get_names(entity):
-    fname = f'Tools/{entity}.json'
+    fname = f"{entity}.json"
     try:
         with open(fname, 'r') as file:
             return json.load(file)
@@ -69,7 +60,7 @@ def get_names(entity):
         json.dump(names, f, ensure_ascii=False, indent=4)
     return names
 
-with open('Tools/swiftui.json', 'r') as file:
+with open('swiftui.json', 'r') as file:
     structs = json.load(file)
     
 preferedTypes = {
@@ -91,7 +82,6 @@ preferedTypes = {
 
 for entity in ['view', 'gesture', 'dynamicproperty']:
     names = get_names(entity)
-    print(names)
     types = []
     inspectables = []
     for struct in structs:
@@ -146,10 +136,10 @@ for entity in ['view', 'gesture', 'dynamicproperty']:
     if entity == 'view':
         imports.append('import Combine')
 
-    with open(f'Sources/ViewInspection/Generated/InspectableType+{entity.capitalize()}.swift', 'w', encoding='utf-8') as f:
+    with open(f'../Sources/ViewInspection/Generated/InspectableType+{entity.capitalize()}.swift', 'w', encoding='utf-8') as f:
         content = "\n".join(imports) + "\n\nextension InspectableType {\n" + "\n\n".join(types) + "\n}"
         f.write(content)
 
-    with open(f'Sources/ViewInspection/Generated/AnyInspectable+{entity.capitalize()}.swift', 'w', encoding='utf-8') as f:
+    with open(f'../Sources/ViewInspection/Generated/AnyInspectable+{entity.capitalize()}.swift', 'w', encoding='utf-8') as f:
         content = "extension AnyInspectable {\n" + "\n\n".join(inspectables) + "\n}"
         f.write(content)

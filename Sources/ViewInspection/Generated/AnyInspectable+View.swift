@@ -26,13 +26,14 @@ static var colorPicker: AnyInspectable<InspectableType._ColorPicker> { .some }
 
 static var containerRelativeShape: AnyInspectable<InspectableType._ContainerRelativeShape> { .some }
 
-@available(iOS 17.0, macOS 14.0, tvOS 17.0, *)
+@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
 static var contentUnavailableView: AnyInspectable<InspectableType._ContentUnavailableView> { .some }
 
 @available(tvOS 17.0, *)
 @available(watchOS, unavailable)
 static var controlGroup: AnyInspectable<InspectableType._ControlGroup> { .some }
 
+@available(watchOS 10.0, *)
 @available(tvOS, unavailable)
 static var datePicker: AnyInspectable<InspectableType._DatePicker> { .some }
 
@@ -58,7 +59,7 @@ static var defaultSettingsLinkLabel: AnyInspectable<InspectableType._DefaultSett
 static var defaultShareLinkLabel: AnyInspectable<InspectableType._DefaultShareLinkLabel> { .some }
 
 #if swift(>=6.0)
-@available(iOS 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, *)
+@available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 static var defaultTabLabel: AnyInspectable<InspectableType._DefaultTabLabel> { .some }
 #endif
 
@@ -104,7 +105,7 @@ static var emptyView: AnyInspectable<InspectableType._EmptyView> { .some }
 
 static var equatableView: AnyInspectable<InspectableType._EquatableView> { .some }
 
-@available(iOS 17.0, macOS 14.0, tvOS 17.0, *)
+@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
 static var fillShapeView: AnyInspectable<InspectableType._FillShapeView> { .some }
 
 static var forEach: AnyInspectable<InspectableType._ForEach> { .some }
@@ -130,12 +131,12 @@ static var group: AnyInspectable<InspectableType._Group> { .some }
 static var groupBox: AnyInspectable<InspectableType._GroupBox> { .some }
 
 #if swift(>=6.0)
-@available(iOS 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, *)
+@available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 static var groupElementsOfContent: AnyInspectable<InspectableType._GroupElementsOfContent> { .some }
 #endif
 
 #if swift(>=6.0)
-@available(iOS 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, *)
+@available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 static var groupSectionsOfContent: AnyInspectable<InspectableType._GroupSectionsOfContent> { .some }
 #endif
 
@@ -155,7 +156,7 @@ static var hStack: AnyInspectable<InspectableType._HStack> { .some }
 
 static var image: AnyInspectable<InspectableType._Image> { .some }
 
-@available(iOS 17.0, macOS 14.0, tvOS 17.0, *)
+@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
 static var keyframeAnimator: AnyInspectable<InspectableType._KeyframeAnimator> { .some }
 
 static var label: AnyInspectable<InspectableType._Label> { .some }
@@ -196,7 +197,7 @@ static var menu: AnyInspectable<InspectableType._Menu> { .some }
 static var menuButton: AnyInspectable<InspectableType._MenuButton> { .some }
 
 #if swift(>=6.0)
-@available(iOS 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, *)
+@available(iOS 18.0, macOS 15.0, watchOS 11.0, tvOS 18.0, visionOS 2.0, *)
 static var meshGradient: AnyInspectable<InspectableType._MeshGradient> { .some }
 #endif
 
@@ -247,12 +248,12 @@ static var pasteButton: AnyInspectable<InspectableType._PasteButton> { .some }
 
 static var path: AnyInspectable<InspectableType._Path> { .some }
 
-@available(iOS 17.0, macOS 14.0, tvOS 17.0, *)
+@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
 static var phaseAnimator: AnyInspectable<InspectableType._PhaseAnimator> { .some }
 
 static var picker: AnyInspectable<InspectableType._Picker> { .some }
 
-@available(iOS 17.0, macOS 14.0, tvOS 17.0, *)
+@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
 static var placeholderContentView: AnyInspectable<InspectableType._PlaceholderContentView> { .some }
 
 @available(iOS 16.0, macOS 13.0, *)
@@ -261,7 +262,7 @@ static var placeholderContentView: AnyInspectable<InspectableType._PlaceholderCo
 static var presentedWindowContent: AnyInspectable<InspectableType._PresentedWindowContent> { .some }
 
 #if swift(>=6.0)
-@available(iOS 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, *)
+@available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 static var previewModifierContent: AnyInspectable<InspectableType._PreviewModifierContent> { .some }
 #endif
 
@@ -308,26 +309,26 @@ static var spacer: AnyInspectable<InspectableType._Spacer> { .some }
 @available(tvOS, unavailable)
 static var stepper: AnyInspectable<InspectableType._Stepper> { .some }
 
-@available(iOS 17.0, macOS 14.0, tvOS 17.0, *)
+@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
 static var strokeBorderShapeView: AnyInspectable<InspectableType._StrokeBorderShapeView> { .some }
 
-@available(iOS 17.0, macOS 14.0, tvOS 17.0, *)
+@available(iOS 17.0, macOS 14.0, tvOS 17.0, watchOS 10.0, *)
 static var strokeShapeView: AnyInspectable<InspectableType._StrokeShapeView> { .some }
 
 static var subscriptionView: AnyInspectable<InspectableType._SubscriptionView> { .some }
 
 #if swift(>=6.0)
-@available(iOS 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, *)
+@available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 static var subview: AnyInspectable<InspectableType._Subview> { .some }
 #endif
 
 #if swift(>=6.0)
-@available(iOS 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, *)
+@available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 static var subviewsCollection: AnyInspectable<InspectableType._SubviewsCollection> { .some }
 #endif
 
 #if swift(>=6.0)
-@available(iOS 18.0, macOS 15.0, tvOS 18.0, visionOS 2.0, *)
+@available(iOS 18.0, macOS 15.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, *)
 static var subviewsCollectionSlice: AnyInspectable<InspectableType._SubviewsCollectionSlice> { .some }
 #endif
 

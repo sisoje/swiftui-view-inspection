@@ -80,12 +80,12 @@ def parse_swift_generic_conditions(declaration):
 results = []
 for plat in ['iPhoneOS', 'MacOSX']:
     for f in ['SwiftUI', 'SwiftUICore']:
-        interface = f'/Applications/Xcode-beta.app/Contents/Developer/Platforms/{plat}.platform/Developer/SDKs/{plat}.sdk/System/Library/Frameworks/{f}.framework/'
+        interface = f'/Applications/Xcode.app/Contents/Developer/Platforms/{plat}.platform/Developer/SDKs/{plat}.sdk/System/Library/Frameworks/{f}.framework/'
         for file in glob.glob(f'{interface}/**/*.swiftinterface', recursive=True):
             print(file)
             results += parse_file(file)
 
-parsed = "Tools/swiftui.json"
+parsed = "swiftui.json"
 
 parsed_results = []
 
