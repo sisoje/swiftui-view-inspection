@@ -1,6 +1,6 @@
 import SwiftUI
-import XCTest
 @testable import ViewInspection
+import XCTest
 
 @MainActor final class Test_SecureField: XCTestCase {
     func test_SecureField() throws {

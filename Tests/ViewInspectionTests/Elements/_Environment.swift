@@ -1,6 +1,6 @@
 import SwiftUI
-import XCTest
 @testable import ViewInspection
+import XCTest
 
 @MainActor final class Test_Environment: XCTestCase {
     func test_Environment() {

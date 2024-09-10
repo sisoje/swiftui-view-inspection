@@ -27,7 +27,7 @@ extension ReflectionNode {
         children.reduce([self]) { $0 + $1.nodes }
     }
 
-    func all<CP: InspectionElement>(_ t: AnyInspectable<CP> = .some, _ filter: (CP) -> Bool = { _ in true }) -> [CP] {
+    func all<CP: InspectionElement>(_: AnyInspectable<CP> = .some, _ filter: (CP) -> Bool = { _ in true }) -> [CP] {
         nodes.filter(CP.isValid).map(CP.init).filter(filter)
     }
 

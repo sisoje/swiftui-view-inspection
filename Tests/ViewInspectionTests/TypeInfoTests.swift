@@ -1,6 +1,6 @@
 import SwiftUI
-import XCTest
 @testable import ViewInspection
+import XCTest
 
 final class TypeInfoTests: XCTestCase {
     func test_TypeInfo_Binding() {

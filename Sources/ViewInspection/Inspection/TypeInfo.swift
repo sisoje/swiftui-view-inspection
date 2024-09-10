@@ -44,7 +44,7 @@ extension TypeInfo {
         typename = String(reflecting: type(of: object))
     }
 
-    init<T>(type: T.Type = T.self) {
+    init<T>(type _: T.Type = T.self) {
         typename = String(reflecting: T.self)
     }
 }

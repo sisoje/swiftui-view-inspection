@@ -1,6 +1,6 @@
 import SwiftUI
-import XCTest
 @testable import ViewInspection
+import XCTest
 
 @MainActor final class Test_VStack: XCTestCase {
     func test_VStack() throws {

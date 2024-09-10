@@ -5,7 +5,7 @@ protocol InspectionElement {
 }
 
 extension InspectionElement {
-    func tryCast<T>(_ t: T.Type = T.self) throws -> T {
+    func tryCast<T>(_: T.Type = T.self) throws -> T {
         guard let obj = node.object as? T else {
             throw InspectionError.wrongType
         }

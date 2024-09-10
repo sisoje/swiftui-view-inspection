@@ -26,7 +26,7 @@ jobs:
   test_on_macos:
     strategy:
       matrix:
-        xcode-version: ['latest-stable', 'latest']
+        xcode-version: ['15', 'latest-stable', 'latest']
 
     runs-on: macos-latest
 

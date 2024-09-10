@@ -1,6 +1,6 @@
 import SwiftUI
-import XCTest
 @testable import ViewInspection
+import XCTest
 
 @MainActor final class Test_TextField: XCTestCase {
     func test_TextField() throws {
