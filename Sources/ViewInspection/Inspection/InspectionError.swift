@@ -1,4 +1,4 @@
-enum ViewInspectionError: Error {
+enum InspectionError: Error {
     case wrongNumberOfItems
     case wrongType
 }

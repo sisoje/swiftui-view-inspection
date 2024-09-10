@@ -1,19 +1,19 @@
-protocol ReflectionElement {
+protocol InspectionElement {
     var node: ReflectionNode { get }
     init(node: ReflectionNode)
     static func isValid(_ node: ReflectionNode) -> Bool
 }
 
-extension ReflectionElement {
+extension InspectionElement {
     func tryCast<T>(_ t: T.Type = T.self) throws -> T {
         guard let obj = node.object as? T else {
-            throw ViewInspectionError.wrongType
+            throw InspectionError.wrongType
         }
         return obj
     }
 }
 
-protocol TypeDerivedElement: ReflectionElement {
+protocol TypeDerivedElement: InspectionElement {
     associatedtype RelatedType
 }
 
@@ -35,7 +35,7 @@ struct SameBaseElement<T>: TypeDerivedElement {
     static func isValid(_ node: ReflectionNode) -> Bool { node.typeInfo.baseTypename == typeInfo.baseTypename }
 }
 
-protocol ModifierDerivedElement: ReflectionElement {
+protocol ModifierDerivedElement: InspectionElement {
     static func makeModifiedContent() -> Any
 }
 
@@ -58,7 +58,7 @@ struct ClosureElement<T>: CastableTypeDerivedElement {
     static func isValid(_ node: ReflectionNode) -> Bool { node.typeInfo.typename.hasSuffix(typeInfo.typename) }
 }
 
-struct SomeClosureElement: ReflectionElement {
+struct SomeClosureElement: InspectionElement {
     let node: ReflectionNode
     static func isValid(_ node: ReflectionNode) -> Bool {
         node.typeInfo.typename.contains("->")

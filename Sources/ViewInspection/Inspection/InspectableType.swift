@@ -1,3 +1,1 @@
-import SwiftUI
-
 enum InspectableType {}
