@@ -1,7 +1,9 @@
 import SwiftUI
 
 extension InspectableType._Button {
-    func action() throws {
-        try node.one(.closure).castValue()
+    var closure: () -> Void {
+        get throws {
+            try node.one(.inspectableClosure()).castValue
+        }
     }
 }

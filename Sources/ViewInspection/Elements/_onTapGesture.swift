@@ -2,7 +2,12 @@ import SwiftUI
 
 @available(tvOS 16.0, *)
 extension InspectableType._onTapGesture {
-    func tap() throws {
-        try node.one(.closureWithVoidParam).castValue(())
+    var closure: () -> Void {
+        get throws {
+            let originalClosure: (()) -> Void = try node.one(.inspectableClosure()).castValue
+            return {
+                originalClosure(())
+            }
+        }
     }
 }

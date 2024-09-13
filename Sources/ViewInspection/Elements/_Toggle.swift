@@ -1,7 +1,7 @@
 import SwiftUI
 
 extension InspectableType._Toggle {
-    var isOn: Binding<Bool> {
+    var binding: Binding<Bool> {
         get throws {
             let binding = try node.one(.binding)
             if let boolBinding = binding.node.object as? Binding<Bool> {
@@ -14,9 +14,5 @@ extension InspectableType._Toggle {
                 dummyBinding.wrappedValue = $0 ? .case0 : .case1
             }
         }
-    }
-
-    func toggle() throws {
-        try isOn.wrappedValue.toggle()
     }
 }

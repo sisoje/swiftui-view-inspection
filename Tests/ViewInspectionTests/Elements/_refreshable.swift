@@ -6,7 +6,7 @@ import XCTest
     @available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 8.0, *)
     func test_refreshable() async throws {
         var x = 0
-        try await EmptyView().refreshable { x = 1 }.snap.one(.refreshable).refresh()
+        try await EmptyView().refreshable { x = 1 }.snap.one(.refreshable).closure()
         XCTAssert(x == 1)
     }
 }
