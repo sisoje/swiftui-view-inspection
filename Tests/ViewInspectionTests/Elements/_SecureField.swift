@@ -7,7 +7,7 @@ import XCTest
         let binding = Binding.variable("")
         let secureField = try SecureField("", text: binding).snap.one(.secureField)
         XCTAssertEqual(binding.wrappedValue, "")
-        try secureField.text.wrappedValue = "password123"
+        try secureField.binding.wrappedValue = "password123"
         XCTAssertEqual(binding.wrappedValue, "password123")
     }
 }

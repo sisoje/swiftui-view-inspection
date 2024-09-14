@@ -7,7 +7,7 @@ import XCTest
         let binding = Binding.variable("")
         let textField = try TextField("", text: binding).snap.one(.textField)
         XCTAssertEqual(binding.wrappedValue, "")
-        try textField.text.wrappedValue = "a"
+        try textField.binding.wrappedValue = "a"
         XCTAssertEqual(binding.wrappedValue, "a")
     }
 }
