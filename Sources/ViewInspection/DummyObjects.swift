@@ -1,12 +1,10 @@
 import SwiftUI
 
-#if os(iOS) || os(tvOS)
-    @available(iOS 14.0, tvOS 14.0, *)
+#if canImport(UIKit) && !os(watchOS)
     final class UIDummyDelegate: NSObject, UIApplicationDelegate {}
 #endif
 
-#if os(macOS)
-    @available(macOS 11.0, *)
+#if canImport(AppKit)
     final class NSDummyDelegate: NSObject, NSApplicationDelegate {}
 #endif
 
