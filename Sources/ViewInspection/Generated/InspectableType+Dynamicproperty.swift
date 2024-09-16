@@ -9,14 +9,14 @@ typealias _Binding = SameBaseElement<Binding<Never>>
 
 typealias _Environment = SameBaseElement<Environment<Never>>
 
-typealias _EnvironmentObject = SameBaseElement<EnvironmentObject<DummyOnservableOnject>>
+typealias _EnvironmentObject = SameBaseElement<EnvironmentObject<_PreviewHost>>
 
 typealias _FetchRequest = SameBaseElement<FetchRequest<NSDictionary>>
 
 typealias _FocusedBinding = SameBaseElement<FocusedBinding<Never>>
 
 @available(iOS 16.0, macOS 13.0, tvOS 16.0, watchOS 9.0, *)
-typealias _FocusedObject = SameBaseElement<FocusedObject<DummyOnservableOnject>>
+typealias _FocusedObject = SameBaseElement<FocusedObject<_PreviewHost>>
 
 typealias _FocusedValue = SameBaseElement<FocusedValue<Never>>
 
@@ -34,7 +34,7 @@ typealias _Namespace = SameBaseElement<Namespace>
 typealias _NSApplicationDelegateAdaptor = SameBaseElement<NSApplicationDelegateAdaptor<NSDummyDelegate>>
 #endif
 
-typealias _ObservedObject = SameBaseElement<ObservedObject<DummyOnservableOnject>>
+typealias _ObservedObject = SameBaseElement<ObservedObject<_PreviewHost>>
 
 typealias _ScaledMetric = SameBaseElement<ScaledMetric<Double>>
 
@@ -44,7 +44,7 @@ typealias _SectionedFetchRequest = SameBaseElement<SectionedFetchRequest<Int,NSD
 
 typealias _State = SameBaseElement<State<Never>>
 
-typealias _StateObject = SameBaseElement<StateObject<DummyOnservableOnject>>
+typealias _StateObject = SameBaseElement<StateObject<_PreviewHost>>
 
 #if os(iOS) || os(tvOS)
 @available(macOS, unavailable)
